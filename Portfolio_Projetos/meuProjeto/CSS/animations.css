@@ -1,0 +1,94 @@
+/*----------------- BANNER CONTAINER APRESENTACAO------------------------- ------------------*/
+
+@keyframes direita-esquerda-wrapped-about {
+    0% {
+        transform: translateX(25%);
+        background-color: rgba(2, 2, 2, 0);
+    }
+
+    50% {
+        background-color: rgba(2, 2, 2, 0.1);
+    }
+
+    100% {
+        transform: translateX(0);
+    }
+}
+
+@keyframes esquerda-direita-wrapped-about {
+    0% {
+        transform: translateX(-25%);
+
+    }
+
+
+    100% {
+        transform: translateX(0);
+    }
+}
+
+@keyframes h1-myname-animation {
+    0% {
+        opacity: 0;
+        transform: scale(0);
+
+    }
+
+    25% {
+        opacity: 0.05;
+        text-shadow: 2px 2px 7px white;
+    }
+
+    50% {
+        opacity: 0.4;
+        text-shadow: 2px 2px 15px white;
+    }
+
+    75% {
+        opacity: 0.7;
+        text-shadow: 2px 2px 20px white;
+    }
+
+    100% {
+        opacity: 0.9;
+        transform: scale(1);
+        text-shadow: 5px 5px 40px white;
+    }
+}
+
+@keyframes p-icons {
+    0% {
+        opacity: 0;
+    }
+
+    50% {
+        opacity: 0.3;
+
+    }
+
+    85% {
+        opacity: 0.6;
+    }
+
+    100% {
+        opacity: 0.9;
+
+    }
+
+}
+
+@keyframes span-beta-version_animation {
+    0% {
+        opacity: 0;
+        transform: scale(0);
+    }
+
+
+    95% {
+        opacity: 0.9;
+        transform: scale(1);
+    }
+
+}
+
+/*___________________________________FIM BANNER CONTAINER APRESENTACAO ______________________________________*/

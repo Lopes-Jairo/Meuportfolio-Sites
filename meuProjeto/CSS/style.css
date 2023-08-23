@@ -231,7 +231,6 @@ strong {
     text-align: center;
     color: #400382;
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-    animation: card-animation2 4s;
 }
 
 .all-projects-wrapped {}
@@ -245,19 +244,6 @@ strong {
     border-bottom-right-radius: 0.6rem;
 }
 
-.wrapped-projeto-card:nth-child(1) {
-    animation: card-animation 4s;
-}
-
-
-.wrapped-projeto-card:nth-child(2) {
-    animation: card-animation2 4s;
-}
-
-
-.wrapped-projeto-card:nth-child(3) {
-    animation: card-animation3 4s;
-}
 
 .wrapped-projeto-card img {
     flex: 1 1 auto;

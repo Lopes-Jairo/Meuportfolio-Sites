@@ -92,3 +92,58 @@
 }
 
 /*___________________________________FIM BANNER CONTAINER APRESENTACAO ______________________________________*/
+
+
+
+
+
+
+
+
+/*---------------------------------------- PROJETOS ------------------------- ------------------*/
+
+@keyframes card-animation {
+    0% {
+        opacity: 0;
+        transform: translateX(-100%);
+    }
+
+
+    95% {
+        opacity: 0.9;
+        transform: scale(1);
+    }
+
+}
+
+
+@keyframes card-animation2 {
+    0% {
+        opacity: 0;
+        transform: scale(0);
+    }
+
+
+    95% {
+        opacity: 0.9;
+        transform: scale(1);
+    }
+
+}
+
+
+@keyframes card-animation3 {
+    0% {
+        opacity: 0;
+        transform: translateX(100%);
+    }
+
+
+    95% {
+        opacity: 0.9;
+        transform: scale(1);
+    }
+
+}
+
+/*___________________________________FIM PROJETOS ______________________________________*/

@@ -67,13 +67,12 @@
 
     .all-projects-wrapped {
         display: grid;
-        grid-template-columns: repeat(2, 1fr);
-        max-width: 80%;
+        grid-template-columns: repeat(auto-fill, minmax(30rem, 1fr));
+        max-width: 60%;
         margin: auto;
         gap: 5rem;
         margin-top: 4rem;
     }
-
 
 
     /*________________________________ FIM PROJETOS __________________________*/

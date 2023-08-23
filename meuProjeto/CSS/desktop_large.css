@@ -67,18 +67,16 @@
 
     .all-projects-wrapped {
         display: grid;
-        grid-template-columns: repeat(3, 1fr);
-        max-width: 85%;
+        grid-template-columns: repeat(auto-fill, minmax(30rem, 1fr));
+        max-width: 70%;
         margin: auto;
         gap: 5rem;
         margin-top: 4rem;
     }
 
 
-    .wrapped-projeto-card {
-        display: flex;
-        flex-direction: column;
-    }
+
+
 
     /*________________________________ FIM PROJETOS __________________________*/
 

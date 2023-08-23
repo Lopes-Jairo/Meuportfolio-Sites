@@ -96,12 +96,12 @@
     }
 
     .all-projects-wrapped {
-        display: flex;
-        flex-direction: column;
+        display: grid;
+        grid-template-columns: 1fr;
         margin: auto;
         margin-top: 4rem;
         gap: 6rem;
-        width: 70%;
+        width: 90%;
     }
 
 

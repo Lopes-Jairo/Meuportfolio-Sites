@@ -39,6 +39,9 @@
         font-size: 5.5rem;
     }
 
+    .job_h2 {
+        font-size: 3rem;
+    }
 
     .beta-version-cursor-about-me_span {
         width: 90%;
@@ -73,6 +76,17 @@
         margin-top: 4rem;
     }
 
+
+    @media screen and (min-width:1600px) {
+        .wrapped-projeto-card {
+            transition: transform 0.3s;
+        }
+
+        .wrapped-projeto-card:hover,
+        .wrapped-projeto-card:focus {
+            transform: scale(1.05);
+        }
+    }
 
 
 

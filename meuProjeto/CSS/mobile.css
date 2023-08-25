@@ -48,6 +48,7 @@
 
     .my-name_h1 {
         font-size: 4rem;
+        margin-bottom: 2rem;
     }
 
     .wrapped-about-sobre-mim {
@@ -55,6 +56,9 @@
         width: 70%;
     }
 
+    .wrapped-icons_p a {
+        margin-bottom: 5rem;
+    }
 
     /*___________________________________FIM BANNER CONTAINER APRESENTACAO ______________________________________*/
 

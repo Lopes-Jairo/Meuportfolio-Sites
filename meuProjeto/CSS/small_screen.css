@@ -126,25 +126,30 @@
 
     /*------------------------------------------------ FOOTER -----------------------------------------------------------------*/
 
-    .footer section {
+
+    .footer {
+        align-items: center;
+
+    }
+
+
+    .footer-icons-wrapped {
         display: flex;
         flex-direction: column;
-        justify-self: center;
-        align-items: center;
-        padding: 1.4rem 0;
-        gap: 2rem;
+        align-items: start;
+        gap: 3rem;
+        width: 100%;
+        padding-left: 10%;
+
     }
+
+
 
 
 
     /*________________________________________________FIM FOOTER ___________________________________________________________________*/
 
 
-
-    .footer section p {
-        display: none;
-        font-family: Arial, Helvetica, sans-serif;
-    }
 
 
 

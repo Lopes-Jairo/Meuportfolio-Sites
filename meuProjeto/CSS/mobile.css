@@ -92,17 +92,27 @@
 
     /*------------------------------------------------ FOOTER -----------------------------------------------------------------*/
 
-    .footer section {
-        display: flex;
-        flex-direction: column;
-        justify-self: center;
+    .footer {
         align-items: center;
-        padding: 1.4rem 0;
-        gap: 2rem;
+
     }
 
-    .footer section p {
-        display: none;
+
+    .footer-icons-wrapped {
+        display: flex;
+        flex-direction: column;
+        align-items: start;
+        gap: 3rem;
+        width: 100%;
+        padding-left: 10%;
+    }
+
+    .wrapped-icons {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 1rem;
+        color: aliceblue;
     }
 
 

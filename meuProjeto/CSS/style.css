@@ -305,18 +305,13 @@ strong {
     flex-direction: column;
     align-items: center;
     background-color: var(--roxoMain);
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    background-size: cover;
-    background-position: center;
     color: aliceblue;
-    padding-bottom: 5rem;
+    padding-bottom: 10rem;
 }
 
 .contato-container h1 {
     font-family: 'Josefin Sans', sans-serif;
     margin: 6.5rem 0;
-    font-size: 4.5rem;
     text-align: center;
 }
 
@@ -340,13 +335,11 @@ form {
 
 
 label {
-    font-size: 3rem;
     color: var(--CorTextos2);
 }
 
 /*---------- estilizando input de email*/
 .input-email {
-    font-size: 2rem;
     padding: 1rem;
     border-bottom: 3px solid var(--roxoMain);
     background-color: transparent;
@@ -366,7 +359,6 @@ label {
 
 /*---------- estilizando input de Mensagem*/
 .input-mensagem {
-    font-size: 2rem;
     padding-top: 1.5rem;
     resize: none;
     margin-bottom: 1rem;
@@ -376,8 +368,7 @@ label {
 .input-submit {
     background-color: var(--roxoMain);
     color: aliceblue;
-    padding: 2rem 0;
-    font-size: 2rem;
+    padding: 1rem 0;
     font-weight: bold;
 }
 
@@ -406,7 +397,7 @@ label {
     background-image: linear-gradient(to right, var(--corIdentidade), var(--corSecundaria));
     color: var(--CorTextos);
     font-weight: bold;
-    padding-top: 3rem;
+    padding: 3rem 0;
 }
 
 

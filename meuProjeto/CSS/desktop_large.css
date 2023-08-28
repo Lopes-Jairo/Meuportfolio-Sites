@@ -64,7 +64,7 @@
     }
 
     .projetos h1 {
-        font-size: 4.5rem;
+        font-size: 4rem;
     }
 
     .all-projects-wrapped {
@@ -99,9 +99,13 @@
 
     form {
         width: 60%;
+        max-width: 60rem;
     }
 
 
+    .contato-container h1 {
+        font-size: 4rem;
+    }
 
 
 

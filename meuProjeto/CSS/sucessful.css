@@ -43,24 +43,8 @@ body {
 }
 
 
-@media (min-width:700px) and (max-width:1030px) {
-    .container-sucess {
-        width: 80%;
-    }
-}
-
-
-@media (max-width:699px) {
-    .container-sucess {
-        width: 90%;
-    }
-}
-
-
-
 .send-icon {
     width: 15rem;
-    z-index: 2;
 }
 
 section {
@@ -72,17 +56,13 @@ section {
 section h1 {
     font-size: 4.5rem;
     color: var(--roxoMain);
-    font-family: 'belanosima';
+    font-family: 'josefins sans';
+    text-align: center;
 }
 
-section p {
-    font-size: 2rem;
-}
 
 a {
-    font-size: 2.5rem;
     background-color: var(--roxoMain);
-    padding: 2.5rem;
     color: aliceblue;
     text-decoration: none;
     border-radius: 0.5rem;
@@ -93,8 +73,159 @@ a {
     width: 100%;
 }
 
-.icon-rocket-mail {
-    margin-top: 5rem;
-    width: 5rem;
-    animation: move-loop 2s 0s infinite;
+
+
+/*--------------------------------------- MEDIA QUERIES -------------------------------------------------------------------*/
+
+/*SMALLSCREEN*/
+@media (max-width:499px) {
+    .container-sucess {
+        width: 90%;
+    }
+
+    .send-icon {
+        width: 7rem;
+    }
+
+    section h1 {
+        font-size: 2.5rem;
+        color: var(--roxoMain);
+    }
+
+    section p {
+        font-size: 1.5rem;
+    }
+
+    a {
+        font-size: 1.5rem;
+        background-color: var(--roxoMain);
+        padding: 1.5rem;
+    }
+
+    .wrapped-rocket {
+        width: 100%;
+    }
+
+    .icon-rocket-mail {
+        margin-top: 2.5rem;
+        width: 5rem;
+        animation: move-loop 2.5s 0s infinite;
+    }
+
 }
+
+
+
+/*MOBILE*/
+@media (min-width:500px) and (max-width:800px) {
+    .container-sucess {
+        width: 90%;
+    }
+
+    .send-icon {
+        width: 10rem;
+    }
+
+    section h1 {
+        font-size: 3rem;
+        color: var(--roxoMain);
+    }
+
+    section p {
+        font-size: 2rem;
+    }
+
+    a {
+        font-size: 2rem;
+        background-color: var(--roxoMain);
+        padding: 2.5rem;
+    }
+
+    .wrapped-rocket {
+        width: 100%;
+    }
+
+    .icon-rocket-mail {
+        margin-top: 2.5rem;
+        width: 5rem;
+        animation: move-loop 3.5s 0s infinite;
+    }
+}
+
+
+
+/*DESKTOP*/
+@media (min-width:801px) and (max-width:1300px) {
+    .container-sucess {
+        width: 70%;
+    }
+
+    .send-icon {
+        width: 13rem;
+    }
+
+    section h1 {
+        font-size: 3.5rem;
+        color: var(--roxoMain);
+    }
+
+    section p {
+        font-size: 2.5rem;
+    }
+
+    a {
+        font-size: 2.5rem;
+        background-color: var(--roxoMain);
+        padding: 2.5rem;
+    }
+
+    .wrapped-rocket {
+        width: 100%;
+    }
+
+    .icon-rocket-mail {
+        margin-top: 2.5rem;
+        width: 5rem;
+        animation: move-loop 4s 0s infinite;
+    }
+}
+
+
+/*LARGE DESKTOP*/
+@media (min-width:1301px) {
+    .container-sucess {
+        width: 70%;
+    }
+
+    .send-icon {
+        width: 15rem;
+    }
+
+    section h1 {
+        font-size: 4.5rem;
+        color: var(--roxoMain);
+    }
+
+    section p {
+        font-size: 2.5rem;
+    }
+
+    a {
+        font-size: 3rem;
+        background-color: var(--roxoMain);
+        padding: 2.5rem;
+    }
+
+    .wrapped-rocket {
+        width: 100%;
+    }
+
+    .icon-rocket-mail {
+        margin-top: 5rem;
+        width: 5rem;
+        animation: move-loop 4s 0s infinite;
+    }
+}
+
+
+/*_________________________________________ FIM MEDIA QUERIES ____________________________________________________________*/

@@ -7,7 +7,7 @@
     --corIdentidade: rgb(0, 0, 0, 0.95);
     --corSecundaria: rgb(0, 0, 0, 0.95);
 
-    --roxoMain: #400382eb;
+    --roxoMain: #340368eb;
     --CorTextos: rgba(240, 248, 255, 0.837);
     --CorTextos2: #0b0c0cd5;
     --bordaNav: rgb(0, 0, 0, 0.5);
@@ -236,7 +236,7 @@ strong {
 .projetos h1 {
     text-align: center;
     color: #400382;
-    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-family: 'Josefin Sans', sans-serif;
 }
 
 .all-projects-wrapped {}
@@ -295,6 +295,106 @@ strong {
 
 
 
+
+
+/*------------------------------------------------ CONTATO FORMULARIO -----------------------------------------------------------------*/
+
+.contato-container {
+    grid-column: 1 / -1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: var(--roxoMain);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center;
+    color: aliceblue;
+    padding-bottom: 5rem;
+}
+
+.contato-container h1 {
+    font-family: 'Josefin Sans', sans-serif;
+    margin: 6.5rem 0;
+    font-size: 4.5rem;
+    text-align: center;
+}
+
+
+form {
+    display: flex;
+    flex-direction: column;
+    padding: 4rem;
+    gap: 4rem;
+    background-color: aliceblue;
+    max-width: 80rem;
+    border-radius: 1rem;
+    box-shadow: 1px 1px 15px 4px rgb(0, 0, 0, 0.5);
+}
+
+.form-top,
+.form-bottom {
+    display: flex;
+    flex-direction: column;
+}
+
+
+label {
+    font-size: 3rem;
+    color: var(--CorTextos2);
+}
+
+/*---------- estilizando input de email*/
+.input-email {
+    font-size: 2rem;
+    padding: 1rem;
+    border-bottom: 3px solid var(--roxoMain);
+    background-color: transparent;
+}
+
+.input-email:focus:invalid {
+    border-bottom-color: red;
+}
+
+.input-email:focus:valid {
+    border-bottom-color: green;
+}
+
+/*____________FIM  estilizando input de email*/
+
+
+
+/*---------- estilizando input de Mensagem*/
+.input-mensagem {
+    font-size: 2rem;
+    padding-top: 1.5rem;
+    resize: none;
+    margin-bottom: 1rem;
+    background-color: #dee1e2;
+}
+
+.input-submit {
+    background-color: var(--roxoMain);
+    color: aliceblue;
+    padding: 2rem 0;
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+/*__________ FIM estilizando input de Mensagem*/
+
+
+
+/*________________________________________________FIM CONTATO FORMULARIO ___________________________________________________________________*/
+
+
+
+
+
+
+
+
+
 /*------------------------------------------------ FOOTER -----------------------------------------------------------------*/
 
 
@@ -336,7 +436,7 @@ strong {
 
 
 .footer-dev-wrapped {
-    background-color: var(--roxoMain);
+    background-color: var(--CorTextos2);
     padding: 1rem;
     width: 100%;
     text-align: center;

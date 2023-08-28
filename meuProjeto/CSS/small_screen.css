@@ -124,6 +124,20 @@
 
 
 
+
+    form {
+        width: 95%;
+    }
+
+
+
+
+
+
+
+
+
+
     /*------------------------------------------------ FOOTER -----------------------------------------------------------------*/
 
 
@@ -135,11 +149,10 @@
 
     .footer-icons-wrapped {
         display: flex;
-        flex-direction: column;
         align-items: start;
         gap: 3rem;
         width: 100%;
-        padding-left: 10%;
+
 
     }
 

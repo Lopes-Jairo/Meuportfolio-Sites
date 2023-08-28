@@ -91,3 +91,18 @@
 }
 
 /*___________________________________FIM BANNER CONTAINER APRESENTACAO ______________________________________*/
+
+
+
+
+
+
+@keyframes move-loop {
+    0% {
+        transform: translateX(0);
+    }
+
+    100% {
+        transform: translateX(1000%);
+    }
+}

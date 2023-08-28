@@ -1,0 +1,100 @@
+@import url('https://fonts.googleapis.com/css2?family=Anton&family=Belanosima&family=Roboto:ital,wght@1,300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Anton&family=Belanosima&family=Josefin+Sans:wght@300;400;600&family=Poppins:wght@500;600&family=Roboto:ital,wght@1,300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Anton&family=Belanosima&family=Josefin+Sans:wght@300;400;600&family=Poppins:wght@500;600&family=Roboto:ital,wght@1,300&family=Source+Code+Pro&display=swap');
+
+
+:root {
+    font-size: 62.5%;
+    --roxoMain: #340368eb;
+    --CorTextos: rgba(240, 248, 255, 0.837);
+}
+
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    outline: none;
+    border: none;
+}
+
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.6rem;
+    background-color: var(--roxoMain);
+    padding-top: 10rem;
+}
+
+
+.container-sucess {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 3rem;
+    width: 60%;
+    padding: 2rem;
+    background-color: aliceblue;
+    box-shadow: 2px 2px 5px 1px rgb(0, 0, 0, 0.5);
+    border-radius: 1rem;
+    overflow: hidden;
+}
+
+
+@media (min-width:700px) and (max-width:1030px) {
+    .container-sucess {
+        width: 80%;
+    }
+}
+
+
+@media (max-width:699px) {
+    .container-sucess {
+        width: 90%;
+    }
+}
+
+
+
+.send-icon {
+    width: 15rem;
+    z-index: 2;
+}
+
+section {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+section h1 {
+    font-size: 4.5rem;
+    color: var(--roxoMain);
+    font-family: 'belanosima';
+}
+
+section p {
+    font-size: 2rem;
+}
+
+a {
+    font-size: 2.5rem;
+    background-color: var(--roxoMain);
+    padding: 2.5rem;
+    color: aliceblue;
+    text-decoration: none;
+    border-radius: 0.5rem;
+    font-weight: bold;
+}
+
+.wrapped-rocket {
+    width: 100%;
+}
+
+.icon-rocket-mail {
+    margin-top: 5rem;
+    width: 5rem;
+    animation: move-loop 2s 0s infinite;
+}

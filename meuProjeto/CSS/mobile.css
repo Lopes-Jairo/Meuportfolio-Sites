@@ -90,6 +90,17 @@
 
 
 
+    form {
+        width: 90%;
+    }
+
+
+
+
+
+
+
+
     /*------------------------------------------------ FOOTER -----------------------------------------------------------------*/
 
     .footer {
@@ -100,11 +111,9 @@
 
     .footer-icons-wrapped {
         display: flex;
-        flex-direction: column;
         align-items: start;
         gap: 3rem;
         width: 100%;
-        padding-left: 10%;
     }
 
     .wrapped-icons {

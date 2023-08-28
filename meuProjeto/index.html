@@ -109,15 +109,30 @@
 
         </div>
 
-        <footer class="footer" id="contato-anchor">
+
+        <div class="contato-container" id="contato-anchor">
+            <h1>Contato</h1>
+            <form action="https://formsubmit.co/lopes.1993@proton.me" method="POST">
+
+                <section class="form-top">
+                    <label for="email">Email</label>
+                    <input class="input-email" type="email" name="email" id="email"
+                        placeholder="Email para entrarmos em contato" required>
+                </section>
+
+                <section class="form-bottom">
+                    <label for="msg">Digite sua mensagem</label>
+                    <textarea class="input-mensagem" type="text" id="msg" name="name" rows="10" required> </textarea>
+                    <input class="input-submit" type="submit" value="Enviar">
+                    <input type="hidden" name="_next" value="sucessful.html">
+                </section>
+
+            </form>
+
+        </div>
+
+        <footer class="footer">
             <section class="footer-icons-wrapped">
-
-                <p class="wrapped-icons">
-                    <svg class="icon-footer">
-                        <use xlink:href="Assets/icomoon-svg/symbol-defs.svg#icon-envelop"> </use>
-                    </svg>lopes.1993@proton.me
-                </p>
-
                 <a class="wrapped-icons" href="https://github.com/JairoLopes" target="_blank">
                     <svg class="icon-footer">
                         <use xlink:href="Assets/icomoon-svg/symbol-defs.svg#icon-github"> </use>
@@ -136,10 +151,6 @@
         </footer>
 
     </div>
-
-
-
-
 
 </body>
 

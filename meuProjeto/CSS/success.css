@@ -1,0 +1,173 @@
+@import url('https://fonts.googleapis.com/css2?family=Anton&family=Belanosima&family=Fjalla+One&family=Josefin+Sans:wght@300;400;600&family=Oswald&family=Poppins:wght@200;300;400;500;600&family=Roboto:ital,wght@0,400;0,700;1,300&family=Signika&family=Source+Code+Pro&display=swap');
+
+:root {
+    font-size: 62.5%;
+
+    --dark-style: linear-gradient(to right, #420350, #3f0252, #44035e, #3d005c, #240339);
+    --secundaryStyle: #9818ae;
+
+    --dark-style2: #1f072c;
+    --turquesa: #00ffcc;
+
+    --shadows: 0 1.4rem 1.5rem rgb(0, 0, 0, 0.3), 0 1rem 1rem rgb(0, 0, 0, 0.5);
+}
+
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    border: none;
+    outline: none;
+    font-family: 'Poppins', sans-serif;
+
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: var(--dark-style);
+    color: #fff;
+    min-width: 350px;
+    margin-top: 5%;
+}
+
+
+
+.popup-success {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--dark-style2);
+    padding: 0 5rem;
+    border-radius: 8px;
+    width: 80%;
+    max-width: 100rem;
+}
+
+
+.arrow-success {
+    font-size: 20rem;
+    transform: rotate(10deg);
+    color: var(--turquesa);
+}
+
+
+.message-success {
+    display: flex;
+    flex-direction: column;
+    gap: 5rem;
+    transform: translateY(-8rem);
+
+}
+
+
+.message-success h1 {
+    font-size: 5rem;
+    text-align: center;
+}
+
+
+.message-success p {
+    font-size: 1.6rem;
+    font-style: italic;
+}
+
+
+.rollback-success {}
+
+
+.rollback-success a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2rem;
+    font-weight: bold;
+    color: var(--turquesa);
+    overflow: hidden;
+}
+
+
+.rollback-success a i {
+    font-size: 7rem;
+}
+
+
+
+@media (max-width:599px) {
+    .popup-success {
+        margin-top: 10%;
+        width: 95%;
+        gap: 3rem;
+    }
+
+
+    .arrow-success {
+        font-size: 15rem;
+    }
+
+
+    .message-success {}
+
+
+    .message-success h1 {
+        font-size: 2.5rem;
+    }
+
+    .message-success p {
+        font-size: 1.0rem;
+    }
+
+
+    .rollback-success {}
+
+
+    .rollback-success a {
+        font-size: 1.2rem;
+
+    }
+
+    .rollback-success a i {
+        font-size: 4rem;
+    }
+}
+
+
+@media (min-width:600px) and (max-width:800px) {
+    .popup-success {
+        width: 90%;
+    }
+
+
+    .arrow-success {
+        font-size: 20rem;
+    }
+
+
+    .message-success {}
+
+
+    .message-success h1 {
+        font-size: 3.5rem;
+    }
+
+    .message-success p {
+        font-size: 1.3rem;
+    }
+
+
+    .rollback-success {}
+
+
+    .rollback-success a {
+        font-size: 2rem;
+
+    }
+
+    .rollback-success a i {
+        font-size: 5rem;
+    }
+}

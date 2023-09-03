@@ -1,159 +1,238 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="Assets/icomoon-svg/style.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="CSS/main.css">
+
     <link rel="stylesheet" href="CSS/animations.css">
-    <link rel="stylesheet" href="CSS/style.css">
-    <link rel="stylesheet" href="CSS/small_screen.css">
+    <link rel="stylesheet" href="CSS/small.css">
     <link rel="stylesheet" href="CSS/mobile.css">
+    <link rel="stylesheet" href="CSS/tablets.css">
+    <link rel="stylesheet" href="CSS/laptops.css">
     <link rel="stylesheet" href="CSS/desktop.css">
-    <link rel="stylesheet" href="CSS/desktop_large.css">
-    <link rel="shortcut icon" href="Assets/icons/rocket.ico" type="image/x-icon">
-    <title>Meu Portfólio</title>
+    <title>Portfólio</title>
 </head>
 
 <body>
 
-    <div class="grid-container" id="topo-anchor">
-        <nav class="nav">
-            <a href="#topo-anchor" class="titulo-header_a">
-                <h1 class="titulo-header_h1">Meu Portfólio</h1>
-            </a>
+    <div class="grid-container" id="top_anchor">
 
-            <button class="btn_menu">&#9776;</button>
-            <ul class="menu-itens_ul">
-                <li> <a class="link-menu-ul_a" href="#topo-anchor">Home</a></li>
-                <li> <a class="link-menu-ul_a" href="#projetos-anchor">Projetos</a></li>
-                <li> <a class="link-menu-ul_a" href="#contato-anchor">Contato</a></li>
-            </ul>
-        </nav>
 
-        <div class="banner-hero-wrapped">
-            <div class="about-me">
-                <h1 class="my-name_h1">Jairo Lopes</h1>
-                <h2 class="job_h2">Desenvolvedor Web</h2>
+        <header class="header">
+            <a href="#" class="logo">Portfólio.</a>
 
-                <article class="wrapped-about-sobre-mim direita-esquerda">
-                    <p class="sobre-mim_p">
-                        Sou graduado em redes de computadores, e especializado em desenvolvimento Front-end, priorizando
-                        o desenvolvimento de
-                        páginas
-                        responsivas e com boa performance, <wbr>abrangendo conhecimentos em <strong>HTML</strong>,
-                        <strong>CSS</strong>,
-                        <strong>Javascript</strong>, <strong>Bootstrap</strong> entre outros.
-                    </p>
-                </article>
+            <!--MENU HAMBURGUER-->
+            <input type="checkbox" id="check">
+            <label for="check" class="menu-burguer">
+                <i class='bx bx-menu' id="menu-icon"></i>
+                <i class='bx bx-x' id="close-icon"></i>
+            </label>
 
-                <article class="wrapped-about-icons esquerda-direita">
-                    <p class="wrapped-icons_p">
-                        <a href="https://github.com/JairoLopes" target="_blank">
-                            <svg class="icon">
-                                <use xlink:href="Assets/icomoon-svg/symbol-defs.svg#icon-github"> </use>
-                            </svg>Github</a>
+            <nav class="navbar">
+                <a href="#top_anchor">Home</a>
+                <a href="#projects_anchor">Projetos</a>
+                <a href="#skills_anchor">Habilidades</a>
+                <a href="#contact_anchor">Contato</a>
+            </nav>
+        </header>
 
-                        <a href="https://www.linkedin.com/in/jairo-lopes-6351b5197/" target="_blank">
-                            <svg class="icon">
-                                <use xlink:href="Assets/icomoon-svg/symbol-defs.svg#icon-linkedin2"> </use>
-                            </svg>Linkedin</a>
-                    </p>
-                </article>
+        <section class="home">
 
-                <span class="beta-version-cursor-about-me_span">Versão beta</span>
+            <div class="home-icons-content">
+                <a href="https://www.linkedin.com/in/jairo-lopes-6351b5197/" target="_blank"><i
+                        class='bx bxl-github'></i>Github</a>
+                <a href="https://github.com/JairoLopes" target="_blank"><i class='bx bxl-linkedin'></i>Linkedin</a>
             </div>
-        </div>
 
-        <div class="projetos" id="projetos-anchor">
-            <h1>Meus Projetos</h1>
+            <div class="home-content">
+                <h1>Olá, Sou Jairo Lopes</h1>
+                <h3>Desenvolvedor Frontend</h3>
+                <p>
+                    Graduado em redes de computadores, e especializado em desenvolvimento Front-end, priorizando o
+                    desenvolvimento de páginas responsivas e com boa performance, abrangendo conhecimentos em HTML, CSS,
+                    Javascript, Bootstrap entre outros.
+                </p>
+                <a href="#" class="btn">Contactar</a>
+            </div>
 
-            <div class="all-projects-wrapped">
-
-                <div class="wrapped-projeto-card">
-                    <img src="Imagens/loading.png" alt="">
-                    <div class="card-description-wrapped">
-                        <h2>Site Nutricionista</h2>
-                        <h3>(Em desenvolvimento)</h3>
-                        <p>
-                            Uma landing-page responsiva feita para um nutricionista.
-                        </p>
-                        <a href="#">Em breve</a>
-                    </div>
-                </div>
-
-                <div class="wrapped-projeto-card">
-                    <img src="Imagens/coming-soon.png" alt="">
-                    <div class="card-description-wrapped">
-                        <h2>Formulário por encomenda</h2>
-                        <h3>(Na fila)</h3>
-                        <p>
-                            Click-through landing page solicitada por encomenda
-                        </p>
-                        <a href="#">Em breve</a>
-                    </div>
-                </div>
-
-                <div class="wrapped-projeto-card">
-                    <img src="Imagens/coming-soon.png" alt="">
-                    <div class="card-description-wrapped">
-                        <h2>Landing page</h2>
-                        <h3>(Na fila)</h3>
-                        <p>
-                            Projeto em fase de estruturação
-                        </p>
-                        <a href="#">Em breve</a>
+            <div class="home-img">
+                <div class="glowing-circle">
+                    <span></span>
+                    <span></span>
+                    <div class="image">
+                        <img src="img/profile.png" alt="">
                     </div>
                 </div>
             </div>
+            <span class="anchorHidden" id="projects_anchor"></span>
+        </section>
 
-        </div>
+        <section class="projetos">
+
+            <h1>Projetos</h1>
+
+            <div class="cards-wrapper">
+
+                <div class="card">
+
+                    <div class="wrapped-img-card">
+                        <img src="img/project_Nutri.png" alt="">
+                    </div>
+
+                    <div class="content-card">
+                        <h3>Site Nutricionista</h3>
+                        <p>Uma landing-page responsiva de uma nutricionista nutricionistavrvreververververververv.</p>
+                    </div>
+                    <a href="#">Em breve</a>
+                </div>
 
 
-        <div class="contato-container" id="contato-anchor">
+                <div class="card">
+
+                    <div class="wrapped-img-card">
+                        <img src="img/project_Nutri.png" alt="">
+                    </div>
+
+                    <div class="content-card">
+                        <h3>Site Nutricionista</h3>
+                        <p>Uma landing-page responsiva de uma nutricionista nutricionista.</p>
+                    </div>
+                    <a href="#">Em breve</a>
+                </div>
+
+
+                <div class="card">
+
+                    <div class="wrapped-img-card">
+                        <img src="img/project_Nutri.png" alt="">
+                    </div>
+
+                    <div class="content-card">
+                        <h3>Site Nutricionista</h3>
+                        <p>Uma landing-page responsiva de uma nutricionista nutricionista.</p>
+                    </div>
+                    <a href="#">Em breve</a>
+                </div>
+
+
+            </div>
+
+
+        </section>
+
+        <section class="skills" id="skills_anchor">
+            <h1>Habilidades</h1>
+
+            <div class="skills-bars">
+
+
+                <li>
+                    <h3>html</h3>
+                    <span class="bar">
+                        <span class="html">
+
+                        </span>
+                    </span>
+                </li>
+
+                <li>
+                    <h3>css</h3>
+                    <span class="bar">
+                        <span class="css">
+
+                        </span>
+                    </span>
+                </li>
+
+                <li>
+                    <h3>javascript</h3>
+                    <span class="bar">
+                        <span class="javascript">
+
+                        </span>
+                    </span>
+                </li>
+
+                <li>
+                    <h3>Bootstrap</h3>
+                    <span class="bar">
+                        <span class="bootstrap">
+
+                        </span>
+                    </span>
+                </li>
+
+            </div>
+
+
+        </section>
+
+
+        <section class="contato" id="contact_anchor">
             <h1>Contato</h1>
-            <form action="https://formsubmit.co/bc80fc5f2e7280d6484499595e254526" method="POST">
 
-                <section class="form-top">
+            <form action="https://formsubmit.co/lopes.93@proton.me" method="POST">
+
+                <div class="input-box">
                     <label for="email">Email</label>
-                    <input class="input-email" type="email" name="email" id="email"
-                        placeholder="Email para entrarmos em contato" required>
+                    <input type="email" name="email" id="email" placeholder="Digite seu Email" required>
+                </div>
 
-                    <input type="hidden" name="_subject" value="Novo Email de Cliente">
-                </section>
 
-                <section class="form-bottom">
-                    <label for="msg">Digite sua mensagem</label>
-                    <textarea class="input-mensagem" type="text" id="msg" name="name" rows="10" required> </textarea>
-
+                <div class="input-box">
+                    <label for="msg">Mensagem</label>
+                    <textarea name="name" id="msg" cols="30" rows="10" required></textarea>
                     <input class="input-submit" type="submit" value="Enviar">
-                    <input type="hidden" name="_next" value="https://jairolopes.netlify.app/sendemail">
-                </section>
+                </div>
+
+
+
+                <div class="inputs-hidden">
+                    <input type="hidden" name="_subject" value="Novo Email de Cliente">
+                    <input type="hidden" name="_next" value="https://jairolopes.netlify.app/success">
+                </div>
 
             </form>
 
-        </div>
+        </section>
+
 
         <footer class="footer">
-            <section class="footer-icons-wrapped">
-                <a class="wrapped-icons" href="https://github.com/JairoLopes" target="_blank">
-                    <svg class="icon-footer">
-                        <use xlink:href="Assets/icomoon-svg/symbol-defs.svg#icon-github"> </use>
-                    </svg>Github</a>
+            <div class="icons-footer-wrapper">
+                <a href="https://www.linkedin.com/in/jairo-lopes-6351b5197/" target="_blank">
+                    <i class='bx bxl-github'></i>
+                    Github
+                </a>
 
-                <a class="wrapped-icons" href="https://www.linkedin.com/in/jairo-lopes-6351b5197/" target="_blank">
-                    <svg class="icon-footer">
-                        <use xlink:href="Assets/icomoon-svg/symbol-defs.svg#icon-linkedin2"> </use>
-                    </svg>Linkedin</a>
+                <a href="https://www.linkedin.com/in/jairo-lopes-6351b5197/" target="_blank">
+                    <i class='bx bxl-linkedin'></i>
+                    Linkedin
+                </a>
 
-            </section>
+                <a href="https://ko-fi.com/lopes" target="_blank">
+                    <i class='bx bxs-coffee'></i>
+                    Ko-Fi
+                </a>
 
-            <section class="footer-dev-wrapped">
+            </div>
+
+            <div class="menu-links-footer">
+                <a href="#top_anchor">Home</a>
+                <a href="#projects_anchor">Projetos</a>
+                <a href="#skills_anchor">Habilidades</a>
+                <a href="#contact_anchor">Contato</a>
+            </div>
+
+            <div class="developer-footer">
                 <p>Desenvolvido por Jairo Lopes</p>
-            </section>
+            </div>
         </footer>
-
     </div>
+
+
 
 </body>
 

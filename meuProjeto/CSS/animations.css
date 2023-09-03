@@ -1,108 +1,89 @@
-/*----------------- BANNER CONTAINER APRESENTACAO------------------------- ------------------*/
-
-@keyframes direita-esquerda-wrapped-about {
+@keyframes slideTop {
     0% {
-        transform: translateX(25%);
-        background-color: rgba(2, 2, 2, 0);
-    }
-
-    50% {
-        background-color: rgba(2, 2, 2, 0.1);
+        opacity: 0;
+        transform: translateY(10rem);
     }
 
     100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes slideBottom {
+    0% {
+        opacity: 0;
+        transform: translateY(-10rem);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+
+@keyframes slideRight {
+    0% {
+        opacity: 0;
+        transform: translateX(-10rem);
+    }
+
+    100% {
+        opacity: 1;
         transform: translateX(0);
     }
 }
 
-@keyframes esquerda-direita-wrapped-about {
-    0% {
-        transform: translateX(-25%);
 
+
+@keyframes slideLeft {
+    0% {
+        opacity: 0;
+        transform: translateX(10rem);
     }
 
-
     100% {
+        opacity: 1;
         transform: translateX(0);
     }
 }
 
-@keyframes h1-myname-animation {
-    0% {
-        opacity: 0;
-        transform: scale(0);
 
-    }
 
-    25% {
-        opacity: 0.05;
-    }
-
-    50% {
-        opacity: 0.4;
-
-    }
-
-    75% {
-        opacity: 0.7;
-
-    }
-
-    100% {
-        opacity: 0.9;
-        transform: scale(1);
-
-    }
-}
-
-@keyframes p-icons {
-    0% {
-        opacity: 0;
-    }
-
-    50% {
-        opacity: 0.3;
-
-    }
-
-    85% {
-        opacity: 0.6;
-    }
-
-    100% {
-        opacity: 0.9;
-
-    }
-
-}
-
-@keyframes span-beta-version_animation {
+@keyframes zoomIn {
     0% {
         opacity: 0;
         transform: scale(0);
     }
 
-
-    95% {
-        opacity: 0.9;
+    100% {
+        opacity: 1;
         transform: scale(1);
     }
-
 }
 
-/*___________________________________FIM BANNER CONTAINER APRESENTACAO ______________________________________*/
 
-
-
-
-
-
-@keyframes move-loop {
+@keyframes floatImage {
     0% {
-        transform: translateX(0);
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-3.5rem);
     }
 
     100% {
-        transform: translateX(1200px);
+        transform: translateY(0);
+    }
+}
+
+
+
+
+@keyframes bar-animation {
+    0% {
+        width: 0;
     }
 }

@@ -1,131 +1,345 @@
-@media screen and (min-width:500px) and (max-width:800px) {
+/*Ajustes para mobile telas normais*/
+@media (min-width:581px) and (max-width:768px) {
+    /*------------------------------- HEADER NAVBAR ----------------------------------------------- */
 
-    /*----------------- NAV ------------------*/
-    .nav {
+    .logo {
+        font-size: 2.5rem;
+    }
+
+
+    /*--------------- CONFIGURANDO MENU HAMBURGUER NA TELA MOBILE */
+
+    /*Se o checkbox for marcado, o proximo FILHO dentro da tag menu-burger com id #menu-icon será estilizado*/
+    #check:checked~.menu-burguer #menu-icon {
+        display: none;
+    }
+
+
+    /*Se o checkbox for marcado, o proximo FILHO dentro da tag menu-burger com id #close-icon será estilizado*/
+    #check:checked~.menu-burguer #close-icon {
+        display: block;
+    }
+
+
+
+    .menu-burguer {
+        display: inline-flex;
+        position: absolute;
+        right: 5%;
+        font-size: 4rem;
+    }
+
+
+    .navbar {
+        display: flex;
         flex-direction: column;
+        align-items: center;
+        gap: 3rem;
+
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        height: 0;
+
+        background-image: var(--dark-style);
+        overflow: hidden;
+        transition: all 0.4s ease;
+    }
+
+
+    #check:checked~.navbar {
+        height: 25rem;
+        padding: 2rem 0;
+    }
+
+    .navbar a {
+        font-size: 1.7rem;
+    }
+
+    /*____________________ FIM DA CONFIGURAÇÃO DO MENU HAMBURGUER*/
+
+    /*____________________ END HEADER NAVBAR ________________________________________________________*/
+
+
+
+
+
+
+
+
+
+    /*-------------------------------------------- HOME -----------------------------------------------*/
+
+    .home {
+        display: grid;
+        grid-template-columns: repeat(12, 1fr);
+        grid-template-rows: 2fr 2fr 1fr;
+        row-gap: 3rem;
+    }
+
+
+
+    /*---------------------- TERCEIRA ROW -----------*/
+    .home-icons-content {
+        grid-column: 1 / -1;
+        grid-row: 3;
+
+
+        display: flex;
+        justify-content: center;
+        gap: 3rem;
+    }
+
+
+    /*Texto do icone*/
+    .home-icons-content a {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        font-size: 1.5rem;
+
+    }
+
+
+    .home-icons-content a i {
+        font-size: 5rem;
+    }
+
+
+    /*---------------------- SEGUNDA ROW -----------*/
+    .home-content {
+        grid-column: 1 / -1;
+        grid-row: 2;
+
         align-items: center;
     }
 
-    .titulo-header_h1 {
-        margin: 2rem 0;
+
+
+    .home-content h1 {
+        font-size: 3.5rem;
+
     }
 
-    .btn_menu {
-        display: block;
-        position: fixed;
-        top: 1rem;
-        right: 1rem;
+
+    .home-content h3 {
+        font-size: 2.2rem;
+
     }
 
-    .menu-itens_ul {
+    .home-content p {
+        padding: 0 10%;
+        font-size: 1.6rem;
+        text-align: start;
+
+    }
+
+
+    .btn {
+        width: 18rem;
+        height: 4.8rem;
+        font-size: 2rem;
+    }
+
+    /*____________________________________________END HOME ____________________________________________*/
+
+
+
+    /*--------------------------------------- HOME IMG ---------------------------------------------------------*/
+
+    /*---------------------- PRIMEIRA ROW -----------*/
+    .home-img {
+        grid-column: 1 / -1;
+        grid-row: 1;
         display: flex;
-        flex-direction: column;
-        gap: 1rem;
-        text-align: center;
-        max-height: 0;
-        overflow: hidden;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .home-img .glowing-circle {}
+
+
+    .home-img .glowing-circle::after {}
+
+
+    /*foto, precisa estar com tamanho e altura definida para aparecer, sem isso ela nao aparece*/
+    .glowing-circle .image {
+        width: 23rem;
+        height: 23rem;
+    }
+
+
+    .image img {}
+
+    /*____________________________________________END HOME IMG ____________________________________________*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    /*----------------------------------------- PROJETOS ------------------------------------------------------*/
+    .projetos {}
+
+
+    .projetos h1 {
+        font-size: 3.5rem;
+        margin: 6rem 0;
+    }
+
+    .cards-wrapper {
         width: 100%;
-        transition: max-height 0.5s ease-out;
+        padding: 0 2rem;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 2rem;
     }
 
-    .btn_menu:focus~.menu-itens_ul {
-        max-height: 100vh;
+    .card {
+        align-items: center;
+        padding: 1rem;
+        border-radius: 5px;
     }
 
-    /*__________________ FIM DO NAV _____________________________________*/
+    .wrapped-img-card {
+        width: 100%;
+        flex: 1 1 auto;
+        padding: 1rem;
+        text-align: center;
+        font-size: 5rem;
+    }
+
+    .wrapped-img-card img {}
+
+    .content-card {
+        text-align: center;
+        padding: 1rem;
+    }
+
+    .content-card h3 {
+        margin: 2rem 0;
+        font-size: 1.8rem;
+    }
+
+    .content-card p {
+        font-size: 1.4rem;
+        text-align: start;
+    }
+
+    .card a {
+        font-size: 1.4rem;
+    }
+
+    /*_______________________________________ END PROJETOS _______________________________________________________*/
 
 
 
-    /*----------------- BANNER CONTAINER APRESENTACAO ------------------*/
 
-    .banner-hero-wrapped {
-        background-image: linear-gradient(rgba(64, 3, 130, 0.7), rgb(0, 0, 0, 1)), url(../Imagens/Universe_Mobile.jpg);
-        background-repeat: no-repeat;
-        background-attachment: fixed;
-        background-size: cover;
+
+
+
+
+
+
+
+    /*----------------------------------------- SKILLS ------------------------------------------------------*/
+
+
+    .skills {
+        margin: 10% 0;
     }
 
 
-    .my-name_h1 {
-        font-size: 4rem;
-        margin-bottom: 2rem;
+    .skills h1 {
+        font-size: 3.5rem;
     }
 
-    .wrapped-about-sobre-mim {
-        line-height: 2.6rem;
-        width: 70%;
+    .skills-bars {
+        width: 90%;
     }
 
-    .wrapped-icons_p a {
+    .skills-bars li {}
+
+
+    .skills-bars li h3 {
+        font-size: 2rem;
+    }
+
+
+    .bar {}
+
+
+    .bar span {}
+
+    /*_______________________________________ END SKILLS _______________________________________________________*/
+
+
+
+
+
+
+
+
+    /*--------------------------------------CONTATO -------------------------------------------------------------*/
+
+    .contato {}
+
+
+    .contato h1 {
+        font-size: 3.5rem;
         margin-bottom: 5rem;
     }
 
-    /*___________________________________FIM BANNER CONTAINER APRESENTACAO ______________________________________*/
-
-
-
-
-    /*------------------------------------- PROJETOS---------------------------------- ------------------*/
-
-
-    .projetos {
-        padding-top: 5%;
-        padding-bottom: 10%;
-    }
-
-    .all-projects-wrapped {
-        display: grid;
-        grid-template-columns: repeat(auto-fill, minmax(30rem, 1fr));
-        max-width: 65%;
-        margin: auto;
-        gap: 5rem;
-        margin-top: 4rem;
-    }
-
-
-
-    /*___________________________________FIM PROJETOS __________________________________________________*/
-
-
-
-
-
     form {
-        width: 80%;
+        width: 90%;
+    }
+
+    .input-box {}
+
+
+    .input-box label {
+        font-size: 2.2rem;
     }
 
 
-
-
-
-
-
-
-    /*------------------------------------------------ FOOTER -----------------------------------------------------------------*/
-
-    .footer {
-        align-items: center;
-
+    .input-box input {
+        font-size: 1.7rem;
     }
 
 
-    .footer-icons-wrapped {
-        display: flex;
-        align-items: start;
-        gap: 3rem;
-        width: 100%;
-    }
-
-    .wrapped-icons {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        gap: 1rem;
-        color: aliceblue;
+    .input-box textarea {
+        font-size: 1.7rem;
     }
 
 
-    /*________________________________________________FIM FOOTER ___________________________________________________________________*/
+    .input-box .input-submit {}
+
+
+    .inputs-hidden {
+        display: none;
+    }
+
+    /*______________________________________ END CONTATO ______________________________________________________*/
+
+
+
 
 
 

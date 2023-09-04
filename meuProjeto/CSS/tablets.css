@@ -232,8 +232,13 @@
     .content-card {}
 
     .content-card h3 {
-        margin: 2rem 0;
+        margin: 0 0;
         font-size: 2.1rem;
+    }
+
+    .content-card h4 {
+        margin-bottom: 2rem;
+        font-size: 1.6rem;
     }
 
     .content-card p {

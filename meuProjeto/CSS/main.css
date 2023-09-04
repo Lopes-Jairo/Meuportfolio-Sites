@@ -119,7 +119,9 @@ body {
     grid-column: 1 / -1;
     min-height: 100vh;
     overflow: hidden;
+
 }
+
 
 
 /*------------ icons content*/
@@ -145,6 +147,11 @@ body {
 }
 
 .home-icons-content a:nth-child(2) {
+    opacity: 0;
+    animation: slideRight 1s 2.2s ease forwards;
+}
+
+.home-icons-content a:nth-child(3) {
     opacity: 0;
     animation: slideTop 1s 2.2s ease forwards;
 }
@@ -357,6 +364,9 @@ body {
 .content-card h3 {
     color: var(--turquesa);
 }
+
+
+.content-card h4 {}
 
 .content-card p {
 
@@ -612,7 +622,7 @@ form {
 }
 
 .menu-links-footer a {
-    font-size: 1.5rem;
+    font-size: 1.2rem;
     color: var(--secundaryStyle);
     font-weight: bold;
 }

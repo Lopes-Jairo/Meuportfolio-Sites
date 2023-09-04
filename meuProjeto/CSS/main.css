@@ -598,6 +598,7 @@ form {
     font-size: 1.6rem;
     color: var(--secundaryStyle);
     text-decoration: none;
+    transition: all 0.5s ease;
 }
 
 .icons-footer-wrapper a:hover,

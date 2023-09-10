@@ -1,0 +1,246 @@
+/*Ajustes para grandes telas*/
+@media (min-width:1350px) {
+
+
+    /*------------------------------- HEADER NAVBAR ----------------------------------------------- */
+    .header {
+
+
+        .logo {
+            font-size: 3.5rem;
+        }
+
+
+        .navbar {
+            background: transparent;
+
+            a {
+                font-size: 1.8rem;
+                margin-left: 3.5rem;
+            }
+        }
+    }
+
+    /*____________________ END HEADER NAVBAR ________________________________________________________*/
+
+
+
+
+    /*-------------------------------------------- HOME -----------------------------------------------*/
+
+    .home {
+        display: flex;
+        justify-content: space-between;
+        grid-template-columns: repeat(12, 1fr);
+        align-items: center;
+        margin: 0 10%;
+        gap: 5%;
+
+
+        .home-icons-content {
+
+
+            a {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                font-size: 1.2rem;
+
+                i {
+                    font-size: 3.5rem; // Tamanho do ícone
+                }
+            }
+        }
+
+
+
+
+        .home-content {
+
+
+            h1 {
+                font-size: 5.1rem;
+            }
+
+            h3 {
+                font-size: 3.2rem;
+            }
+
+            p {
+                font-size: 1.6rem;
+            }
+
+            .btn {
+                width: 18rem;
+                height: 4.8rem;
+                font-size: 2rem;
+            }
+        }
+
+
+
+
+        .home-img {
+            width: 38rem;
+            height: 38rem;
+
+
+            .glowing-circle {
+
+                .image {
+                    width: 35rem;
+                    height: 35rem;
+                }
+            }
+        }
+
+    }
+
+    /*____________________________________________END HOME ____________________________________________*/
+
+
+
+
+
+    /*----------------------------------------- PROJETOS ------------------------------------------------------*/
+    .projetos {
+
+
+        h1 {
+            font-size: 4.5rem;
+            margin-bottom: 10rem;
+        }
+
+        .cards-wrapper {
+            width: 90%;
+            padding: 0 2rem;
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(40rem, 1fr));
+            gap: 2rem;
+
+            .card {
+                align-items: center;
+                padding: 1rem;
+
+
+                .wrapped-img-card {
+                    width: 100%;
+                    flex: 1 1 auto;
+                    padding: 1rem;
+                    text-align: center;
+                    font-size: 5rem;
+                }
+
+
+                .content-card {
+                    text-align: center;
+                    padding: 1rem;
+
+                    h3 {
+                        margin: 0 0;
+                        font-size: 2.2rem;
+                    }
+
+                    h4 {
+                        margin-bottom: 2rem;
+                        font-size: 1.8rem;
+                    }
+
+                    p {
+                        font-size: 1.5rem;
+                        text-align: center;
+                    }
+                }
+
+                a {
+                    font-size: 1.7rem;
+                }
+
+            }
+        }
+    }
+
+    /*_______________________________________ END PROJETOS _______________________________________________________*/
+
+
+
+
+
+    /*----------------------------------------- SKILLS ------------------------------------------------------*/
+    .skills {
+        margin: 10% 0;
+
+
+        h1 {
+            font-size: 4.5rem;
+        }
+
+
+        .skills-bars {
+            width: 900px;
+
+
+            li {
+
+
+                h3 {
+                    font-size: 2rem;
+                }
+            }
+        }
+    }
+
+    /*_______________________________________ END SKILLS _______________________________________________________*/
+
+
+
+
+
+
+
+    /*--------------------------------------CONTATO -------------------------------------------------------------*/
+
+    .contato {
+
+
+        h1 {
+            font-size: 4.5rem;
+            margin-bottom: 5rem;
+        }
+
+        form {
+            width: 700px;
+
+
+            .input-box {
+
+
+                label {
+                    font-size: 2.2rem;
+                }
+
+                input {
+                    font-size: 1.7rem;
+                }
+
+                textarea {
+                    font-size: 1.7rem;
+                }
+            }
+
+            .inputs-hidden {
+                display: none;
+            }
+        }
+    }
+
+
+
+
+
+
+
+
+
+}

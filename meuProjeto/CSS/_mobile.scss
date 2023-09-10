@@ -1,0 +1,291 @@
+/*Ajustes para mobile telas normais*/
+@media (min-width:581px) and (max-width:768px) {
+
+    /*------------------------------- HEADER NAVBAR ----------------------------------------------- */
+    .header {
+
+
+        .logo {
+            font-size: 2.5rem;
+        }
+
+
+        /*--------------- CONFIGURANDO MENU HAMBURGUER NA TELA MOBILE */
+
+        /*Se o checkbox for marcado, o proximo FILHO dentro da tag menu-burger com id #menu-icon será estilizado*/
+        #check:checked~.menu-burguer #menu-icon {
+            display: none;
+        }
+
+
+        /*Se o checkbox for marcado, o proximo FILHO dentro da tag menu-burger com id #close-icon será estilizado*/
+        #check:checked~.menu-burguer #close-icon {
+            display: block;
+        }
+
+        .menu-burguer {
+            display: inline-flex;
+            position: absolute;
+            right: 5%;
+            font-size: 4rem;
+        }
+
+
+        .navbar {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 3rem;
+
+            position: absolute;
+            top: 100%;
+            left: 0;
+            width: 100%;
+            height: 0;
+
+            overflow: hidden;
+            transition: all 0.4s ease;
+
+            a {
+                font-size: 1.7rem;
+            }
+        }
+
+        #check:checked~.navbar {
+            height: 25rem;
+            padding: 2rem 0;
+        }
+
+    }
+
+    /*____________________ END HEADER NAVBAR ________________________________________________________*/
+
+
+
+
+    /*-------------------------------------------- HOME -----------------------------------------------*/
+
+    .home {
+        display: grid;
+        grid-template-columns: repeat(12, 1fr);
+        grid-template-rows: 2fr 2fr 1fr;
+        row-gap: 3rem;
+
+
+        //TERCEIRA ROW  container de icones 
+        .home-icons-content {
+            grid-column: 1 / -1;
+            grid-row: 3; // Bota este elemento na linha 3 dentro do grid .home
+
+
+            display: flex;
+            justify-content: center;
+            gap: 3rem;
+
+
+            a {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                font-size: 1.5rem;
+
+                i {
+                    font-size: 4rem; // Tamanho do ícone
+                }
+            }
+        }
+
+
+
+        // SEGUNDA ROW
+        .home-content {
+            grid-column: 1 / -1;
+            grid-row: 2; // bota este elemento na segunda linha dentro do grid .home
+
+            align-items: center;
+
+
+            h1 {
+                font-size: 3.5rem;
+            }
+
+            h3 {
+                font-size: 2.2rem;
+            }
+
+            p {
+                padding: 0 10%;
+                font-size: 1.6rem;
+                text-align: start;
+            }
+
+            .btn {
+                width: 18rem;
+                height: 4.8rem;
+                font-size: 2rem;
+            }
+        }
+
+
+
+        // PRIMEIRA ROW
+        .home-img {
+            grid-column: 1 / -1;
+            grid-row: 1; //Bota este elemento na primeira linha do grid .home
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+
+            .glowing-circle {
+
+                .image {
+                    width: 23rem;
+                    height: 23rem;
+                }
+            }
+        }
+
+    }
+
+    /*____________________________________________END HOME ____________________________________________*/
+
+
+
+
+
+    /*----------------------------------------- PROJETOS ------------------------------------------------------*/
+    .projetos {
+
+
+        h1 {
+            font-size: 3.5rem;
+            margin: 6rem 0;
+        }
+
+        .cards-wrapper {
+            width: 100%;
+            padding: 0 2rem;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 2rem;
+
+            .card {
+                align-items: center;
+                padding: 1rem;
+
+
+                .wrapped-img-card {
+                    width: 100%;
+                    flex: 1 1 auto;
+                    padding: 1rem;
+                    text-align: center;
+                    font-size: 5rem;
+                }
+
+
+                .content-card {
+                    text-align: center;
+                    padding: 1rem;
+
+                    h3 {
+                        margin: 0rem 0;
+                        font-size: 1.8rem;
+                    }
+
+                    h4 {
+                        margin-bottom: 2rem;
+                        font-size: 1.6rem;
+                    }
+
+                    p {
+                        font-size: 1.4rem;
+                        text-align: start;
+                    }
+                }
+
+                a {
+                    font-size: 1.4rem;
+                }
+
+            }
+        }
+    }
+
+    /*_______________________________________ END PROJETOS _______________________________________________________*/
+
+
+
+
+
+    /*----------------------------------------- SKILLS ------------------------------------------------------*/
+    .skills {
+        margin: 10% 0;
+
+
+        h1 {
+            font-size: 3.5rem;
+        }
+
+
+        .skills-bars {
+            width: 85%;
+
+
+            li {
+
+
+                h3 {
+                    font-size: 1.6rem;
+                }
+            }
+        }
+    }
+
+    /*_______________________________________ END SKILLS _______________________________________________________*/
+
+
+
+
+
+
+
+    /*--------------------------------------CONTATO -------------------------------------------------------------*/
+
+    .contato {
+
+
+        h1 {
+            font-size: 3.5rem;
+            margin-bottom: 5rem;
+        }
+
+        form {
+            width: 85%;
+
+
+            .input-box {
+
+
+                label {
+                    font-size: 2.2rem;
+                }
+
+                input {
+                    font-size: 1.7rem;
+                }
+
+                textarea {
+                    font-size: 1.7rem;
+                }
+            }
+
+            .inputs-hidden {
+                display: none;
+            }
+        }
+    }
+
+
+}

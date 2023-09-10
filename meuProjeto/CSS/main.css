@@ -1,645 +1,1273 @@
-@import url('https://fonts.googleapis.com/css2?family=Anton&family=Belanosima&family=Fjalla+One&family=Josefin+Sans:wght@300;400;600&family=Oswald&family=Poppins:wght@200;300;400;500;600&family=Roboto:ital,wght@0,400;0,700;1,300&family=Signika&family=Source+Code+Pro&display=swap');
-
+@charset "UTF-8";
+@import url("https://fonts.googleapis.com/css2?family=Anton&family=Belanosima&family=Fjalla+One&family=Josefin+Sans:wght@300;400;600&family=Oswald&family=Poppins:wght@200;300;400;500;600&family=Roboto:ital,wght@0,400;0,700;1,300&family=Signika&family=Source+Code+Pro&display=swap");
 :root {
-    font-size: 62.5%;
-
-    --dark-style: linear-gradient(to right, #420350, #3f0252, #44035e, #3d005c, #240339);
-    --secundaryStyle: #9818ae;
-
-    --dark-style2: #1f072c;
-    --turquesa: #00ffcc;
-
-    --shadows: 0 1.4rem 1.5rem rgb(0, 0, 0, 0.3), 0 1rem 1rem rgb(0, 0, 0, 0.5);
+  font-size: 62.5%;
 }
 
-
-
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    border: none;
-    outline: none;
-    font-family: 'Poppins', sans-serif;
-
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  border: none;
+  outline: none;
+  font-family: "Poppins", sans-serif;
 }
 
 body {
-    background: var(--dark-style);
-    color: #fff;
-    min-width: 335px;
+  background: linear-gradient(to right, #4b045b, #3e0351, #3a0251, #32014a, #1d022e);
+  color: #fff;
+  min-width: 335px;
 }
-
 
 .grid-container {
-    display: grid;
-    grid-template-columns: repeat(12, 1fr);
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
 }
 
-
-
-/*------------------------------------------------------------ HEADER -----------------------------------------------------------*/
+/* ________________________________________________ FIM DAS CONFIGURAÇÕES BÁSICAS _____________________________________________________________________*/
+/*------------------------------------------------------------ SESSÃO HEADER -----------------------------------------------------------*/
 .header {
-    grid-column: 1 / -1;
-
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-
-
-    position: sticky;
-    top: 0;
-    padding: 2rem 10%;
-    background: var(--dark-style);
-    z-index: 100;
+  grid-column: 1/-1;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: sticky;
+  top: 0;
+  padding: 2rem 10%;
+  background: linear-gradient(to right, #4b045b, #3e0351, #3a0251, #32014a, #1d022e);
+  z-index: 100;
+}
+.header .logo {
+  color: aliceblue;
+  text-decoration: none;
+  font-weight: 600;
+  pointer-events: none;
+  animation: slideTop 1s ease forwards;
+}
+.header .logo span {
+  color: #00ffcc;
+}
+.header #check {
+  display: none;
+}
+.header .menu-burguer {
+  display: none;
+  color: #00ffcc;
+  cursor: pointer;
+}
+.header .menu-burguer #close-icon {
+  display: none;
+}
+.header .navbar {
+  background: linear-gradient(to right, #4b045b, #3e0351, #3a0251, #32014a, #1d022e);
+}
+.header .navbar a {
+  color: #00ffcc;
+  text-decoration: none;
+  font-weight: 600;
+  letter-spacing: 1px;
+  margin-left: 3.5rem;
+  opacity: 0;
+  animation: slideTop 1s 0.8s ease-out forwards;
+}
+.header .navbar a:hover, .header .navbar a:focus {
+  color: aliceblue;
+  border-bottom: 2px solid aliceblue;
 }
 
-
-.logo {
-    color: aliceblue;
-    text-decoration: none;
-    font-weight: 600;
-    pointer-events: none;
-    animation: slideTop 1s ease forwards;
-}
-
-
-/*------- MENU HAMBURGER*/
-
-#check {
-    display: none;
-}
-
-.menu-burguer {
-    display: none;
-
-    color: var(--turquesa);
-    cursor: pointer;
-
-}
-
-.menu-burguer #close-icon {
-    display: none;
-}
-
-
-.navbar {}
-
-
-.navbar a {
-    color: var(--turquesa);
-    text-decoration: none;
-    font-weight: 600;
-    margin-left: 3.5rem;
-    opacity: 0;
-    animation: slideTop 1s 0.8s ease-out forwards;
-}
-
-
-.navbar a:focus,
-.navbar a:hover {
-    color: aliceblue;
-}
-
-
-/*_______________________________________ END HEADER AND NAVBAR _______________________________________________________*/
-
-
-
-
-
-
-
-
-
-
-
+/* ________________________________________________ FIM SESSÃO HEADER _____________________________________________________________________*/
 /*--------------------------------------- HOME ---------------------------------------------------------*/
 .home {
-    grid-column: 1 / -1;
-    min-height: 100vh;
-    overflow: hidden;
-
+  grid-column: 1/-1;
+  min-height: 100vh;
+  overflow: hidden;
+  /*------------ icons content*/
+  /*__________ end icons content*/
+  /*------------ home content*/
+  /*__________ end home content*/
+  /*------------ home img*/
+  /*___________ end home img*/
 }
-
-
-
-/*------------ icons content*/
-.home-icons-content {}
-
-.home-icons-content a {
-    border-radius: 50%;
-    font-weight: bold;
-    color: var(--turquesa);
-    text-decoration: none;
-    margin: 2rem 0;
-    transition: 0.5s ease;
+.home .home-icons-content a {
+  border-radius: 50%;
+  font-weight: bold;
+  color: #00ffcc;
+  text-decoration: none;
+  margin: 2rem 0;
+  transition: 0.5s ease;
 }
-
-
-.home-icons-content a:hover {
-    color: aliceblue;
+.home .home-icons-content a:hover {
+  color: aliceblue;
 }
-
-.home-icons-content a:nth-child(1) {
-    opacity: 0;
-    animation: slideBottom 1s 2.2s ease forwards;
+.home .home-icons-content a:nth-child(1) {
+  opacity: 0;
+  animation: slideBottom 1s 2.2s ease forwards;
 }
-
-.home-icons-content a:nth-child(2) {
-    opacity: 0;
-    animation: slideRight 1s 2.2s ease forwards;
+.home .home-icons-content a:nth-child(2) {
+  opacity: 0;
+  animation: slideRight 1s 2.2s ease forwards;
 }
-
-.home-icons-content a:nth-child(3) {
-    opacity: 0;
-    animation: slideTop 1s 2.2s ease forwards;
+.home .home-icons-content a:nth-child(3) {
+  opacity: 0;
+  animation: slideTop 1s 2.2s ease forwards;
 }
-
-
-/*__________ end icons content*/
-
-
-
-/*------------ home content*/
-.home-content {
-    display: flex;
-    flex-direction: column;
-
+.home .home-content {
+  display: flex;
+  flex-direction: column;
+  /*__________ end home content*/
 }
-
-.home-content h1 {
-    font-weight: 600;
-    line-height: 1.2;
-    opacity: 0;
-    animation: slideRight 1s .7s ease forwards;
+.home .home-content h1 {
+  font-weight: 600;
+  line-height: 1.2;
+  opacity: 0;
+  animation: slideRight 1s 0.7s ease forwards;
 }
-
-.home-content h3 {
-    font-weight: 600;
-    color: var(--turquesa);
-    opacity: 0;
-    animation: slideLeft 1s 1s ease forwards;
+.home .home-content h3 {
+  font-weight: 600;
+  color: #00ffcc;
+  opacity: 0;
+  animation: slideLeft 1s 1s ease forwards;
 }
-
-.home-content p {
-    margin: 2rem 0 4rem 0;
-    opacity: 0;
-    animation: slideLeft 1s 1.3s ease forwards;
+.home .home-content p {
+  margin: 2rem 0 4rem 0;
+  opacity: 0;
+  animation: slideLeft 1s 1.3s ease forwards;
 }
-
-.btn {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    color: #fff;
-    border-radius: 4rem;
-    text-decoration: none;
-    font-weight: 600;
-    letter-spacing: 1px;
-    position: relative;
-
-    opacity: 0;
-    animation: slideTop 1s 1.8s ease forwards;
+.home .home-content .btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+  border-radius: 4rem;
+  text-decoration: none;
+  font-weight: 600;
+  letter-spacing: 1px;
+  position: relative;
+  opacity: 0;
+  animation: slideTop 1s 1.8s ease forwards;
 }
-
-
-.btn::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    background: var(--turquesa);
-    background-size: 200%;
-    background-position: 0 0;
-    inset: 0;
-    z-index: -1;
-    border-radius: 4rem;
-    filter: blur(0.5rem);
-    transition: 0.4s ease-in-out;
+.home .home-content .btn::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: #00ffcc;
+  background-size: 200%;
+  background-position: 0 0;
+  inset: 0;
+  z-index: -2;
+  border-radius: 4rem;
+  filter: blur(0.5rem);
+  transition: 0.4s ease-in-out;
 }
-
-.btn:hover::before {
-    background-position: 100% 0;
-    filter: blur(2rem);
+.home .home-content .btn:hover::before, .home .home-content .btn:focus::before {
+  filter: blur(1.8rem);
 }
-
-
-
-.btn::after {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    background: var(--dark-style);
-    inset: 0;
-    z-index: -1;
-    border-radius: 4rem;
-
+.home .home-content .btn::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: linear-gradient(to right, #4b045b, #3e0351, #3a0251, #32014a, #1d022e);
+  inset: 0;
+  z-index: -1;
+  border-radius: 4rem;
 }
-
-.btn:hover::after {
-    background-position: 100% 0;
+.home .home-img {
+  opacity: 0;
+  animation: zoomIn 1s 2.2s ease forwards, floatImage 4s 2.2s ease-in-out infinite;
 }
-
-/*__________ end home content*/
-
+.home .home-img .glowing-circle {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  width: -moz-fit-content;
+  width: fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  border: 2px solid #00ffcc;
+  border-radius: 50%;
+  background-color: #00ffcc;
+}
+.home .home-img .glowing-circle .image {
+  position: relative;
+  z-index: 1;
+  border-radius: 50%;
+  overflow: hidden;
+  transform: rotate(-40deg);
+}
+.home .home-img .glowing-circle .image img {
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
 
 /*_______________________________________ END HOME _______________________________________________________*/
-
-
-
-
-
-
-
-
-
-
-
-
-/*--------------------------------------- HOME IMG ---------------------------------------------------------*/
-
-.home-img {
-    opacity: 0;
-    animation: zoomIn 1s 2.2s ease forwards, floatImage 4s 2.2s ease-in-out infinite;
-
-}
-
-
-.home-img .glowing-circle {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    position: relative;
-    width: fit-content;
-    height: fit-content;
-    border: 2px solid var(--turquesa);
-    border-radius: 50%;
-    background-color: var(--turquesa);
-}
-
-
-
-
-.glowing-circle .image {
-    position: relative;
-    z-index: 1;
-    border-radius: 50%;
-    overflow: hidden;
-}
-
-.image img {
-    width: 100%;
-    object-fit: cover;
-}
-
-
-/*_______________________________________ END HOME IMG _______________________________________________________*/
-
-
-
-
-
-
-
-
 /*----------------------------------------- PROJETOS ------------------------------------------------------*/
-
 .projetos {
-    grid-column: 1 / -1;
-
-    display: grid;
-    place-items: center;
-
-
-    color: aliceblue;
-    padding-bottom: 5rem;
+  grid-column: 1/-1;
+  display: grid;
+  place-items: center;
+  color: aliceblue;
+  padding-bottom: 5rem;
 }
-
-
 .projetos h1 {
-    opacity: 0;
-    animation: slideRight 1s .7s ease forwards;
+  opacity: 0;
+  animation: slideRight 1s 0.7s ease forwards;
 }
-
-.cards-wrapper {
-    width: 100%;
-    padding: 1rem;
-    overflow: hidden;
+.projetos .cards-wrapper {
+  width: 100%;
+  padding: 1rem;
+  overflow: hidden;
 }
-
-.card {
-    display: flex;
-    flex-direction: column;
-    padding: 1rem;
-    border-radius: 5px;
-    background-color: var(--dark-style2);
-    box-shadow: var(--shadows);
-    opacity: 0;
-    animation: slideLeft 3s 1s ease forwards;
+.projetos .cards-wrapper .card {
+  display: flex;
+  flex-direction: column;
+  padding: 1rem;
+  border-radius: 5%;
+  background-color: #1f072c;
+  opacity: 0;
+  animation: slideLeft 3s 1s ease forwards;
 }
-
-.wrapped-img-card {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: 100%;
-    flex: 1 1 auto;
+.projetos .cards-wrapper .card .wrapped-img-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  flex: 1 1 auto;
 }
-
-.wrapped-img-card img {
-    width: 12rem;
-    height: 12rem;
-    object-fit: cover;
-    border-radius: 50%;
+.projetos .cards-wrapper .card .wrapped-img-card img {
+  width: 12rem;
+  height: 12rem;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 50%;
 }
-
-.content-card {
-    text-align: center;
-    padding: 1rem;
-    box-flex: 1 1 auto;
+.projetos .cards-wrapper .card .content-card {
+  text-align: center;
+  padding: 1rem;
+  flex: 1 1 auto;
 }
-
-.content-card h3 {
-    color: var(--turquesa);
+.projetos .cards-wrapper .card .content-card h3 {
+  color: #00ffcc;
 }
-
-
-.content-card h4 {}
-
-.content-card p {
-
-    text-align: center;
-    margin-bottom: 2rem;
+.projetos .cards-wrapper .card .content-card p {
+  text-align: center;
+  margin-bottom: 2rem;
 }
-
-.card a {
-    padding: 1.5rem;
-    color: var(--turquesa);
-    background-color: var(--dark-style);
-    text-decoration: none;
-    font-weight: bold;
-    border-radius: 5px;
+.projetos .cards-wrapper .card a {
+  padding: 1.5rem;
+  color: #00ffcc;
+  background-color: linear-gradient(to right, #4b045b, #3e0351, #3a0251, #32014a, #1d022e);
+  text-decoration: none;
+  font-weight: bold;
+  border-radius: 5px;
 }
 
 /*_______________________________________ END PROJETOS _______________________________________________________*/
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 /*----------------------------------------- SKILLS ------------------------------------------------------*/
-
-
 .skills {
-    grid-column: 1 / -1;
-
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin: 10% 0;
+  grid-column: 1/-1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 10% 0;
 }
-
-
 .skills h1 {
-    margin: 0 0 7rem 0;
-    opacity: 0;
-    animation: slideLeft 1s .7s ease forwards;
+  margin: 0 0 7rem 0;
+  opacity: 0;
+  animation: slideLeft 1s 0.7s ease forwards;
 }
-
-
-
-.skills-bars {
-    background-color: var(--dark-style2);
-    box-shadow: var(--shadows);
-    border-radius: 10px;
-    padding: 3rem;
-
-    opacity: 0;
-    animation: slideRight 2s .4s ease forwards;
+.skills .skills-bars {
+  background-color: #1f072c;
+  box-shadow: 0 1.4rem 1.5rem rgba(0, 0, 0, 0.3);
+  border-radius: 10px;
+  padding: 3rem;
+  opacity: 0;
+  animation: slideRight 2s 0.4s ease forwards;
 }
-
-.skills-bars li {
-    margin: 2rem 0;
-    padding: 1rem;
-    list-style: none;
+.skills .skills-bars li {
+  margin: 2rem 0;
+  padding: 1rem;
+  list-style: none;
 }
-
-
-.skills-bars li h3 {
-    text-transform: uppercase;
+.skills .skills-bars li h3 {
+  text-transform: uppercase;
 }
-
-
-.bar {
-    display: block;
-    background: #353b48;
-    height: 2rem;
-    border: 1px solid rgb(0, 0, 0, 0.3);
-    border-radius: 1rem;
-    overflow: hidden;
-    box-shadow: var(--shadows);
-    transition: all 0.4s cubic-bezier(.25, .8, .25, .1);
+.skills .skills-bars li .bar {
+  display: block;
+  background: #353b48;
+  height: 2rem;
+  border: 1px solid rgba(0, 0, 0, 0.3);
+  border-radius: 1rem;
+  overflow: hidden;
+  box-shadow: 0 1.4rem 1.5rem rgba(0, 0, 0, 0.3);
+  transition: all 0.4s cubic-bezier(0.25, 0.8, 0.25, 0.1);
 }
-
-
-.bar span {
-    height: 2rem;
-    float: left;
-    background: var(--turquesa);
+.skills .skills-bars li .bar span {
+  height: 2rem;
+  float: left;
+  background: #00ffcc;
 }
-
-
-.bar .html {
-    width: 80%;
-    animation: bar-animation 2.5s;
+.skills .skills-bars li .bar .html {
+  width: 80%;
+  animation: bar-animation 2.5s;
 }
-
-.bar .css {
-    width: 90%;
-    animation: bar-animation 2.5s;
+.skills .skills-bars li .bar .css {
+  width: 90%;
+  animation: bar-animation 2.5s;
 }
-
-.bar .javascript {
-    width: 70%;
-    animation: bar-animation 2.5s;
+.skills .skills-bars li .bar .javascript {
+  width: 70%;
+  animation: bar-animation 2.5s;
 }
-
-
-.bar .bootstrap {
-    width: 60%;
-    animation: bar-animation 2.5s;
+.skills .skills-bars li .bar .sass {
+  width: 85%;
+  animation: bar-animation 2.5s;
 }
 
 /*_______________________________________ END SKILLS _______________________________________________________*/
-
-
-
-
 /*--------------------------------------CONTATO -------------------------------------------------------------*/
-
 .contato {
-    grid-column: 1 / -1;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding-bottom: 10%;
+  grid-column: 1/-1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-bottom: 10%;
 }
-
-
 .contato h1 {
-    opacity: 0;
-    animation: slideLeft 1s .5s ease forwards;
+  opacity: 0;
+  animation: slideLeft 1s 0.5s ease forwards;
 }
-
-form {
-    display: flex;
-    flex-direction: column;
-    gap: 5rem;
-    background: var(--dark-style2);
-    padding: 4rem 3rem;
-    border-radius: 10px;
-    box-shadow: var(--shadows);
-    opacity: 0;
-    animation: slideRight 1s .5s ease forwards;
+.contato form {
+  display: flex;
+  flex-direction: column;
+  gap: 5rem;
+  background: #1f072c;
+  padding: 4rem 3rem;
+  border-radius: 10px;
+  box-shadow: 0 1.4rem 1.5rem rgba(0, 0, 0, 0.3);
+  opacity: 0;
+  animation: slideRight 1s 0.5s ease forwards;
 }
-
-.input-box {
-    display: flex;
-    flex-direction: column;
-
-    width: 100%;
-    border-radius: 5px;
+.contato form .input-box {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  border-radius: 5px;
 }
-
-
-.input-box label {
-    font-weight: bold;
+.contato form .input-box label {
+  font-weight: bold;
 }
-
-
-.input-box input {
-    background: transparent;
-    padding: 1rem 0 0.2rem 1.5rem;
-    border-bottom: 2px solid var(--turquesa);
-    color: aliceblue;
+.contato form .input-box input {
+  background: transparent;
+  padding: 1rem 0 0.2rem 1.5rem;
+  border-bottom: 2px solid #00ffcc;
+  color: aliceblue;
 }
-
-
-.input-box textarea {
-    resize: none;
-    border-radius: 5px;
-    color: aliceblue;
-    background-color: transparent;
-    border: 1px solid var(--turquesa);
-    padding: 1rem;
+.contato form .input-box textarea {
+  resize: none;
+  border-radius: 5px;
+  color: aliceblue;
+  background-color: transparent;
+  border: 1px solid #00ffcc;
+  padding: 1rem;
 }
-
-
-.input-box .input-submit {
-    border: none;
-    padding: 1rem;
-    border-radius: 8px;
-    font-weight: bold;
-    color: var(--dark-style2);
-    background: var(--turquesa);
+.contato form .input-box .input-submit {
+  border: none;
+  padding: 1rem;
+  border-radius: 8px;
+  font-weight: bold;
+  color: #1f072c;
+  background: #00ffcc;
 }
-
-
-.inputs-hidden {
-    display: none;
+.contato form .inputs-hidden {
+  display: none;
 }
 
 /*______________________________________ END CONTATO ______________________________________________________*/
-
-
-
-
-
-
-
-
-
 /*--------------------------------------FOOTER -------------------------------------------------------------*/
-
 .footer {
-    grid-column: 1 / -1;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    background-color: var(--dark-style2);
-    padding: 2rem 0;
-    gap: 5rem;
+  grid-column: 1/-1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #1f072c;
+  padding: 2rem 0;
+  gap: 5rem;
+  /*---- footer icones*/
+  /*______ fim footer icones*/
 }
-
-/*---- footer icones*/
-.icons-footer-wrapper {
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    gap: 5rem;
+.footer .icons-footer-wrapper {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  gap: 5rem;
 }
-
-.icons-footer-wrapper a {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    font-size: 1.6rem;
-    color: var(--secundaryStyle);
-    text-decoration: none;
-    transition: all 0.5s ease;
+.footer .icons-footer-wrapper a {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.4rem;
+  color: #9818ae;
+  text-decoration: none;
+  transition: all 0.5s ease;
 }
-
-.icons-footer-wrapper a:hover,
-.icons-footer-wrapper a:focus {
-    color: var(--turquesa);
+.footer .icons-footer-wrapper a:focus, .footer .icons-footer-wrapper a:hover {
+  color: #00ffcc;
 }
-
-.icons-footer-wrapper a i {
-    font-size: 4rem;
-
+.footer .icons-footer-wrapper a i {
+  font-size: 4rem;
 }
-
-/*______ fim footer icones*/
-
-
-/*---------- footer menu*/
-.menu-links-footer {
-    display: flex;
-    justify-content: center;
-    gap: 3rem;
-    width: 100%;
+.footer .menu-links-footer {
+  display: flex;
+  justify-content: center;
+  gap: 3rem;
+  width: 100%;
 }
-
-.menu-links-footer a {
-    font-size: 1.2rem;
-    color: var(--secundaryStyle);
-    font-weight: bold;
+.footer .menu-links-footer a {
+  font-size: 1.2rem;
+  color: #9818ae;
+  font-weight: bold;
 }
-
-
-/*________ fim footer menu*/
-
-
-.developer-footer {
-    width: 100%;
-    text-align: center;
+.footer .developer-footer {
+  width: 100%;
+  text-align: center;
 }
-
-.developer-footer p {
-    font-size: 1.4rem;
-    color: var(--secundaryStyle);
+.footer .developer-footer p {
+  font-size: 1.4rem;
+  color: #9818ae;
 }
 
 /*______________________________________ END FOOTER ______________________________________________________*/
+/*Ajustes para grandes telas*/
+@media (min-width: 1350px) {
+  /*------------------------------- HEADER NAVBAR ----------------------------------------------- */
+  .header .logo {
+    font-size: 3.5rem;
+  }
+  .header .navbar {
+    background: transparent;
+  }
+  .header .navbar a {
+    font-size: 1.8rem;
+    margin-left: 3.5rem;
+  }
+  /*____________________ END HEADER NAVBAR ________________________________________________________*/
+  /*-------------------------------------------- HOME -----------------------------------------------*/
+  .home {
+    display: flex;
+    justify-content: space-between;
+    grid-template-columns: repeat(12, 1fr);
+    align-items: center;
+    margin: 0 10%;
+    gap: 5%;
+  }
+  .home .home-icons-content a {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.2rem;
+  }
+  .home .home-icons-content a i {
+    font-size: 3.5rem;
+  }
+  .home .home-content h1 {
+    font-size: 5.1rem;
+  }
+  .home .home-content h3 {
+    font-size: 3.2rem;
+  }
+  .home .home-content p {
+    font-size: 1.6rem;
+  }
+  .home .home-content .btn {
+    width: 18rem;
+    height: 4.8rem;
+    font-size: 2rem;
+  }
+  .home .home-img {
+    width: 38rem;
+    height: 38rem;
+  }
+  .home .home-img .glowing-circle .image {
+    width: 35rem;
+    height: 35rem;
+  }
+  /*____________________________________________END HOME ____________________________________________*/
+  /*----------------------------------------- PROJETOS ------------------------------------------------------*/
+  .projetos h1 {
+    font-size: 4.5rem;
+    margin-bottom: 10rem;
+  }
+  .projetos .cards-wrapper {
+    width: 90%;
+    padding: 0 2rem;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(40rem, 1fr));
+    gap: 2rem;
+  }
+  .projetos .cards-wrapper .card {
+    align-items: center;
+    padding: 1rem;
+  }
+  .projetos .cards-wrapper .card .wrapped-img-card {
+    width: 100%;
+    flex: 1 1 auto;
+    padding: 1rem;
+    text-align: center;
+    font-size: 5rem;
+  }
+  .projetos .cards-wrapper .card .content-card {
+    text-align: center;
+    padding: 1rem;
+  }
+  .projetos .cards-wrapper .card .content-card h3 {
+    margin: 0 0;
+    font-size: 2.2rem;
+  }
+  .projetos .cards-wrapper .card .content-card h4 {
+    margin-bottom: 2rem;
+    font-size: 1.8rem;
+  }
+  .projetos .cards-wrapper .card .content-card p {
+    font-size: 1.5rem;
+    text-align: center;
+  }
+  .projetos .cards-wrapper .card a {
+    font-size: 1.7rem;
+  }
+  /*_______________________________________ END PROJETOS _______________________________________________________*/
+  /*----------------------------------------- SKILLS ------------------------------------------------------*/
+  .skills {
+    margin: 10% 0;
+  }
+  .skills h1 {
+    font-size: 4.5rem;
+  }
+  .skills .skills-bars {
+    width: 900px;
+  }
+  .skills .skills-bars li h3 {
+    font-size: 2rem;
+  }
+  /*_______________________________________ END SKILLS _______________________________________________________*/
+  /*--------------------------------------CONTATO -------------------------------------------------------------*/
+  .contato h1 {
+    font-size: 4.5rem;
+    margin-bottom: 5rem;
+  }
+  .contato form {
+    width: 700px;
+  }
+  .contato form .input-box label {
+    font-size: 2.2rem;
+  }
+  .contato form .input-box input {
+    font-size: 1.7rem;
+  }
+  .contato form .input-box textarea {
+    font-size: 1.7rem;
+  }
+  .contato form .inputs-hidden {
+    display: none;
+  }
+}
+/*Ajustes para notebooks/laptops ou desktops medianos */
+@media (min-width: 993px) and (max-width: 1349px) {
+  /*------------------------------- HEADER NAVBAR ----------------------------------------------- */
+  .header .logo {
+    font-size: 3.5rem;
+  }
+  .header .navbar {
+    background: transparent;
+  }
+  .header .navbar a {
+    font-size: 1.8rem;
+    margin-left: 3.5rem;
+  }
+  /*____________________ END HEADER NAVBAR ________________________________________________________*/
+  /*-------------------------------------------- HOME -----------------------------------------------*/
+  .home {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-rows: 3fr 3fr 0.5fr;
+    padding: 20% 10% 0 10%;
+  }
+  .home .home-icons-content {
+    grid-column: 1/-1;
+    grid-row: 2;
+    display: flex;
+    justify-content: center;
+    gap: 6rem;
+  }
+  .home .home-icons-content a {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.3rem;
+    letter-spacing: 1px;
+  }
+  .home .home-icons-content a i {
+    font-size: 4.5rem;
+  }
+  .home .home-content {
+    grid-column: 6/-1;
+    grid-row: 1;
+    align-items: center;
+  }
+  .home .home-content h1 {
+    font-size: 4rem;
+  }
+  .home .home-content h3 {
+    font-size: 3rem;
+  }
+  .home .home-content p {
+    padding: 0 10%;
+    font-size: 1.7rem;
+    text-align: start;
+  }
+  .home .home-content .btn {
+    width: 20rem;
+    height: 5rem;
+    font-size: 2rem;
+  }
+  .home .home-img {
+    grid-column: 1/6;
+    grid-row: 1;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    margin-top: -20rem;
+  }
+  .home .home-img .glowing-circle .image {
+    width: 30rem;
+    height: 30rem;
+  }
+  /*____________________________________________END HOME ____________________________________________*/
+  /*----------------------------------------- PROJETOS ------------------------------------------------------*/
+  .projetos h1 {
+    font-size: 3.5rem;
+    margin-bottom: 10rem;
+  }
+  .projetos .cards-wrapper {
+    width: 90%;
+    padding: 0 2rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+  }
+  .projetos .cards-wrapper .card {
+    align-items: center;
+    padding: 1rem;
+  }
+  .projetos .cards-wrapper .card .wrapped-img-card {
+    width: 100%;
+    flex: 1 1 auto;
+    padding: 1rem;
+    text-align: center;
+    font-size: 5rem;
+  }
+  .projetos .cards-wrapper .card .content-card {
+    text-align: center;
+    padding: 1rem;
+  }
+  .projetos .cards-wrapper .card .content-card h3 {
+    margin: 0rem 0;
+    font-size: 2.1rem;
+  }
+  .projetos .cards-wrapper .card .content-card h4 {
+    margin-bottom: 2rem;
+    font-size: 1.8rem;
+  }
+  .projetos .cards-wrapper .card .content-card p {
+    font-size: 1.6rem;
+    text-align: start;
+  }
+  .projetos .cards-wrapper .card a {
+    font-size: 1.6rem;
+  }
+  /*_______________________________________ END PROJETOS _______________________________________________________*/
+  /*----------------------------------------- SKILLS ------------------------------------------------------*/
+  .skills {
+    margin: 10% 0;
+  }
+  .skills h1 {
+    font-size: 3.5rem;
+  }
+  .skills .skills-bars {
+    width: 65%;
+  }
+  .skills .skills-bars li h3 {
+    font-size: 2rem;
+  }
+  /*_______________________________________ END SKILLS _______________________________________________________*/
+  /*--------------------------------------CONTATO -------------------------------------------------------------*/
+  .contato h1 {
+    font-size: 3.5rem;
+    margin-bottom: 5rem;
+  }
+  .contato form {
+    width: 65%;
+  }
+  .contato form .input-box label {
+    font-size: 2.2rem;
+  }
+  .contato form .input-box input {
+    font-size: 1.7rem;
+  }
+  .contato form .input-box textarea {
+    font-size: 1.7rem;
+  }
+  .contato form .inputs-hidden {
+    display: none;
+  }
+}
+@media (min-width: 769px) and (max-width: 992px) {
+  /*------------------------------- HEADER NAVBAR ----------------------------------------------- */
+  .header {
+    /*--------------- CONFIGURANDO MENU HAMBURGUER NA TELA MOBILE */
+    /*Se o checkbox for marcado, o proximo FILHO dentro da tag menu-burger com id #menu-icon será estilizado*/
+    /*Se o checkbox for marcado, o proximo FILHO dentro da tag menu-burger com id #close-icon será estilizado*/
+  }
+  .header .logo {
+    font-size: 3.5rem;
+  }
+  .header #check:checked ~ .menu-burguer #menu-icon {
+    display: none;
+  }
+  .header #check:checked ~ .menu-burguer #close-icon {
+    display: block;
+  }
+  .header .menu-burguer {
+    display: inline-flex;
+    position: absolute;
+    right: 5%;
+    font-size: 4rem;
+  }
+  .header .navbar {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 3rem;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    height: 0;
+    overflow: hidden;
+    transition: all 0.4s ease;
+  }
+  .header .navbar a {
+    font-size: 1.7rem;
+  }
+  .header #check:checked ~ .navbar {
+    height: 25rem;
+    padding: 2rem 0;
+  }
+  /*____________________ END HEADER NAVBAR ________________________________________________________*/
+  /*-------------------------------------------- HOME -----------------------------------------------*/
+  .home {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-rows: 2fr 2fr 1fr;
+    row-gap: 4rem;
+  }
+  .home .home-icons-content {
+    grid-column: 1/-1;
+    grid-row: 3;
+    display: flex;
+    justify-content: center;
+    gap: 6rem;
+  }
+  .home .home-icons-content a {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.5rem;
+  }
+  .home .home-icons-content a i {
+    font-size: 4.5rem;
+  }
+  .home .home-content {
+    grid-column: 1/-1;
+    grid-row: 2;
+    align-items: center;
+  }
+  .home .home-content h1 {
+    font-size: 4rem;
+  }
+  .home .home-content h3 {
+    font-size: 3rem;
+  }
+  .home .home-content p {
+    padding: 0 15%;
+    font-size: 1.7rem;
+    text-align: start;
+  }
+  .home .home-content .btn {
+    width: 20rem;
+    height: 5rem;
+    font-size: 2rem;
+  }
+  .home .home-img {
+    grid-column: 1/-1;
+    grid-row: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .home .home-img .glowing-circle .image {
+    width: 26rem;
+    height: 26rem;
+  }
+  /*____________________________________________END HOME ____________________________________________*/
+  /*----------------------------------------- PROJETOS ------------------------------------------------------*/
+  .projetos h1 {
+    font-size: 3.5rem;
+    margin: 6rem 0;
+  }
+  .projetos .cards-wrapper {
+    width: 95%;
+    padding: 0 2rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 3rem;
+  }
+  .projetos .cards-wrapper .card {
+    align-items: center;
+  }
+  .projetos .cards-wrapper .card .wrapped-img-card {
+    width: 100%;
+    flex: 1 1 auto;
+    padding: 1rem;
+    text-align: center;
+    font-size: 5rem;
+  }
+  .projetos .cards-wrapper .card .content-card {
+    text-align: center;
+    padding: 1rem;
+  }
+  .projetos .cards-wrapper .card .content-card h3 {
+    margin: 0 0;
+    font-size: 2.1rem;
+  }
+  .projetos .cards-wrapper .card .content-card h4 {
+    margin-bottom: 2rem;
+    font-size: 1.6rem;
+  }
+  .projetos .cards-wrapper .card .content-card p {
+    font-size: 1.6rem;
+  }
+  .projetos .cards-wrapper .card a {
+    font-size: 1.6rem;
+  }
+  /*_______________________________________ END PROJETOS _______________________________________________________*/
+  /*----------------------------------------- SKILLS ------------------------------------------------------*/
+  .skills {
+    margin: 10% 0;
+  }
+  .skills h1 {
+    font-size: 3.5rem;
+  }
+  .skills .skills-bars {
+    width: 80%;
+  }
+  .skills .skills-bars li h3 {
+    font-size: 1.8rem;
+  }
+  /*_______________________________________ END SKILLS _______________________________________________________*/
+  /*--------------------------------------CONTATO -------------------------------------------------------------*/
+  .contato h1 {
+    font-size: 3.5rem;
+    margin-bottom: 5rem;
+  }
+  .contato form {
+    width: 80%;
+  }
+  .contato form .input-box label {
+    font-size: 2.2rem;
+  }
+  .contato form .input-box input {
+    font-size: 1.7rem;
+  }
+  .contato form .input-box textarea {
+    font-size: 1.7rem;
+  }
+  .contato form .inputs-hidden {
+    display: none;
+  }
+}
+/*Ajustes para mobile telas normais*/
+@media (min-width: 581px) and (max-width: 768px) {
+  /*------------------------------- HEADER NAVBAR ----------------------------------------------- */
+  .header {
+    /*--------------- CONFIGURANDO MENU HAMBURGUER NA TELA MOBILE */
+    /*Se o checkbox for marcado, o proximo FILHO dentro da tag menu-burger com id #menu-icon será estilizado*/
+    /*Se o checkbox for marcado, o proximo FILHO dentro da tag menu-burger com id #close-icon será estilizado*/
+  }
+  .header .logo {
+    font-size: 2.5rem;
+  }
+  .header #check:checked ~ .menu-burguer #menu-icon {
+    display: none;
+  }
+  .header #check:checked ~ .menu-burguer #close-icon {
+    display: block;
+  }
+  .header .menu-burguer {
+    display: inline-flex;
+    position: absolute;
+    right: 5%;
+    font-size: 4rem;
+  }
+  .header .navbar {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 3rem;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    height: 0;
+    overflow: hidden;
+    transition: all 0.4s ease;
+  }
+  .header .navbar a {
+    font-size: 1.7rem;
+  }
+  .header #check:checked ~ .navbar {
+    height: 25rem;
+    padding: 2rem 0;
+  }
+  /*____________________ END HEADER NAVBAR ________________________________________________________*/
+  /*-------------------------------------------- HOME -----------------------------------------------*/
+  .home {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-rows: 2fr 2fr 1fr;
+    row-gap: 3rem;
+  }
+  .home .home-icons-content {
+    grid-column: 1/-1;
+    grid-row: 3;
+    display: flex;
+    justify-content: center;
+    gap: 3rem;
+  }
+  .home .home-icons-content a {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.5rem;
+  }
+  .home .home-icons-content a i {
+    font-size: 4rem;
+  }
+  .home .home-content {
+    grid-column: 1/-1;
+    grid-row: 2;
+    align-items: center;
+  }
+  .home .home-content h1 {
+    font-size: 3.5rem;
+  }
+  .home .home-content h3 {
+    font-size: 2.2rem;
+  }
+  .home .home-content p {
+    padding: 0 10%;
+    font-size: 1.6rem;
+    text-align: start;
+  }
+  .home .home-content .btn {
+    width: 18rem;
+    height: 4.8rem;
+    font-size: 2rem;
+  }
+  .home .home-img {
+    grid-column: 1/-1;
+    grid-row: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .home .home-img .glowing-circle .image {
+    width: 23rem;
+    height: 23rem;
+  }
+  /*____________________________________________END HOME ____________________________________________*/
+  /*----------------------------------------- PROJETOS ------------------------------------------------------*/
+  .projetos h1 {
+    font-size: 3.5rem;
+    margin: 6rem 0;
+  }
+  .projetos .cards-wrapper {
+    width: 100%;
+    padding: 0 2rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+  }
+  .projetos .cards-wrapper .card {
+    align-items: center;
+    padding: 1rem;
+  }
+  .projetos .cards-wrapper .card .wrapped-img-card {
+    width: 100%;
+    flex: 1 1 auto;
+    padding: 1rem;
+    text-align: center;
+    font-size: 5rem;
+  }
+  .projetos .cards-wrapper .card .content-card {
+    text-align: center;
+    padding: 1rem;
+  }
+  .projetos .cards-wrapper .card .content-card h3 {
+    margin: 0rem 0;
+    font-size: 1.8rem;
+  }
+  .projetos .cards-wrapper .card .content-card h4 {
+    margin-bottom: 2rem;
+    font-size: 1.6rem;
+  }
+  .projetos .cards-wrapper .card .content-card p {
+    font-size: 1.4rem;
+    text-align: start;
+  }
+  .projetos .cards-wrapper .card a {
+    font-size: 1.4rem;
+  }
+  /*_______________________________________ END PROJETOS _______________________________________________________*/
+  /*----------------------------------------- SKILLS ------------------------------------------------------*/
+  .skills {
+    margin: 10% 0;
+  }
+  .skills h1 {
+    font-size: 3.5rem;
+  }
+  .skills .skills-bars {
+    width: 85%;
+  }
+  .skills .skills-bars li h3 {
+    font-size: 1.6rem;
+  }
+  /*_______________________________________ END SKILLS _______________________________________________________*/
+  /*--------------------------------------CONTATO -------------------------------------------------------------*/
+  .contato h1 {
+    font-size: 3.5rem;
+    margin-bottom: 5rem;
+  }
+  .contato form {
+    width: 85%;
+  }
+  .contato form .input-box label {
+    font-size: 2.2rem;
+  }
+  .contato form .input-box input {
+    font-size: 1.7rem;
+  }
+  .contato form .input-box textarea {
+    font-size: 1.7rem;
+  }
+  .contato form .inputs-hidden {
+    display: none;
+  }
+}
+/*ajustes para mobile pequenas telas*/
+@media (max-width: 580px) and (orientation: portrait) {
+  /*------------------------------- HEADER NAVBAR ----------------------------------------------- */
+  .header {
+    /*--------------- CONFIGURANDO MENU HAMBURGUER NA TELA MOBILE */
+    /*Se o checkbox for marcado, o proximo FILHO dentro da tag menu-burger com id #menu-icon será estilizado*/
+    /*Se o checkbox for marcado, o proximo FILHO dentro da tag menu-burger com id #close-icon será estilizado*/
+  }
+  .header .logo {
+    font-size: 1.8rem;
+  }
+  .header #check:checked ~ .menu-burguer #menu-icon {
+    display: none;
+  }
+  .header #check:checked ~ .menu-burguer #close-icon {
+    display: block;
+  }
+  .header .menu-burguer {
+    display: inline-flex;
+    position: absolute;
+    right: 5%;
+    font-size: 3rem;
+  }
+  .header .navbar {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 3rem;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    height: 0;
+    overflow: hidden;
+    transition: all 0.4s ease;
+  }
+  .header .navbar a {
+    font-size: 1.7rem;
+  }
+  .header #check:checked ~ .navbar {
+    height: 25rem;
+    padding: 2rem 0;
+  }
+  /*____________________ END HEADER NAVBAR ________________________________________________________*/
+  /*-------------------------------------------- HOME -----------------------------------------------*/
+  .home {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-rows: 2fr 2fr 1fr;
+    row-gap: 3rem;
+    padding: 5% 5%;
+  }
+  .home .home-icons-content {
+    grid-column: 1/-1;
+    grid-row: 3;
+    display: flex;
+    justify-content: center;
+    gap: 3rem;
+  }
+  .home .home-icons-content a {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.5rem;
+  }
+  .home .home-icons-content a i {
+    font-size: 3.5rem;
+  }
+  .home .home-content {
+    grid-column: 1/-1;
+    grid-row: 2;
+    align-items: center;
+  }
+  .home .home-content h1 {
+    font-size: 2.5rem;
+  }
+  .home .home-content h3 {
+    font-size: 1.6rem;
+  }
+  .home .home-content p {
+    padding: 0 10%;
+    font-size: 1.4rem;
+    text-align: start;
+  }
+  .home .home-content .btn {
+    width: 18rem;
+    height: 4.8rem;
+    font-size: 2rem;
+  }
+  .home .home-img {
+    grid-column: 1/-1;
+    grid-row: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .home .home-img .glowing-circle .image {
+    width: 20rem;
+    height: 20rem;
+  }
+  /*____________________________________________END HOME ____________________________________________*/
+  /*----------------------------------------- PROJETOS ------------------------------------------------------*/
+  .projetos {
+    padding-top: 10%;
+  }
+  .projetos h1 {
+    font-size: 2.5rem;
+    margin-bottom: 5rem;
+  }
+  .projetos .cards-wrapper {
+    width: 90%;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 4rem;
+  }
+  .projetos .cards-wrapper .card {
+    align-items: center;
+    padding: 1rem;
+  }
+  .projetos .cards-wrapper .card .wrapped-img-card {
+    width: 100%;
+    flex: 1 1 auto;
+    padding: 1rem;
+    text-align: center;
+    font-size: 5rem;
+  }
+  .projetos .cards-wrapper .card .wrapped-img-card img {
+    width: 15rem;
+    height: 15rem;
+  }
+  .projetos .cards-wrapper .card .content-card {
+    text-align: center;
+    padding: 1rem;
+  }
+  .projetos .cards-wrapper .card .content-card h3 {
+    margin: 0rem 0;
+    font-size: 1.6rem;
+  }
+  .projetos .cards-wrapper .card .content-card h4 {
+    margin-bottom: 2rem;
+    font-size: 1.4rem;
+  }
+  .projetos .cards-wrapper .card .content-card p {
+    font-size: 1.2rem;
+    text-align: start;
+  }
+  .projetos .cards-wrapper .card a {
+    font-size: 1.2rem;
+  }
+  /*_______________________________________ END PROJETOS _______________________________________________________*/
+  /*----------------------------------------- SKILLS ------------------------------------------------------*/
+  .skills {
+    margin: 10% 0 20% 0;
+  }
+  .skills h1 {
+    font-size: 2.5rem;
+  }
+  .skills .skills-bars {
+    width: 90%;
+  }
+  .skills .skills-bars li h3 {
+    font-size: 1.6rem;
+  }
+  /*_______________________________________ END SKILLS _______________________________________________________*/
+  /*--------------------------------------CONTATO -------------------------------------------------------------*/
+  .contato {
+    margin-bottom: 10%;
+  }
+  .contato h1 {
+    font-size: 2.5rem;
+    margin-bottom: 5rem;
+  }
+  .contato form {
+    width: 90%;
+  }
+  .contato form .input-box label {
+    font-size: 2.2rem;
+  }
+  .contato form .input-box input {
+    font-size: 1.7rem;
+  }
+  .contato form .input-box textarea {
+    font-size: 1.7rem;
+  }
+  .contato form .inputs-hidden {
+    display: none;
+  }
+}/*# sourceMappingURL=main.css.map */

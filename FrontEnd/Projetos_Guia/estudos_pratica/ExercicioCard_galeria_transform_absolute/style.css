@@ -1,0 +1,88 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    font-size: 62.5%;
+
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.6rem;
+    height: 100vh;
+    background-color: rgb(227, 226, 225);
+}
+
+img{
+    max-width: 100%;
+}
+
+
+h1{
+    margin-bottom: 3%;
+}
+
+.container{
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 70%;
+    gap: 0.5rem;
+    min-width: 38rem;
+    background-color: rgb(255, 255, 255);
+    padding: 1.2rem;
+    overflow: hidden;
+    box-shadow: 2px 2px 12px 3px rgb(174, 174, 173);
+}
+
+.card{
+    flex: 1 1 calc(25% - 0.5rem);
+    position: relative;
+    overflow: hidden;
+}
+
+.card img{
+    display: block;
+    transition: all 0.3s;
+    position: relative;
+}
+
+.card p{
+    background-color: rgba(0, 0, 0, 0.9);
+    color: aliceblue;
+    text-align: center;
+    padding: 0.7rem;
+    transform: translateY(150%);
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    transition: 0.3s;
+}
+
+
+.card:hover p {
+    transform: translateY(0);
+}
+
+.card:hover img{
+    transform: scale(1.5) rotate(-20deg);
+}
+
+.card::after{
+    content: "";
+    display: block;
+    background-color: rgba(247, 243, 243, 0.4);
+    position: absolute;
+    inset: 0;
+    transition: all 0.7s;
+}
+
+.card:hover::after{
+    background-color: rgba(247, 243, 243, 0);
+}

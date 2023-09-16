@@ -1,0 +1,23 @@
+$gradient-main: #dbe8f6fc;
+
+
+$white-blue-gradient: linear-gradient(to right, rgba(219, 232, 246, 1) 0%, rgba(161, 202, 246, 1) 85%);
+
+$colorText: #4d004d;
+$colorRed: #200120;
+$colorThird: #eb6624;
+
+@mixin bgDesktop {
+    background: $teste-gradient, url(../Imagens/halloween-dektop.jpg);
+}
+
+@mixin bgMobile {
+    background-image: $gradient-main, url(../Imagens/work-mobile.jpg);
+}
+
+@mixin ajustaBg {
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center;
+}

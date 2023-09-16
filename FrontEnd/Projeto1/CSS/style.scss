@@ -1,0 +1,262 @@
+@import url('https://fonts.googleapis.com/css2?family=Anton&family=Belanosima&family=Fjalla+One&family=Josefin+Sans:wght@300;400;600&family=Oswald&family=Poppins:wght@200;300;400;500;600&family=Roboto:ital,wght@0,400;0,700;1,300&family=Signika&family=Source+Code+Pro&display=swap');
+@import 'features';
+
+:root {
+    font-size: 62.5%;
+
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    outline: none;
+    border: none;
+    list-style: none;
+    text-decoration: none;
+}
+
+body {
+    font-size: 1.6rem;
+    font-family: 'Poppins', sans-serif;
+    min-width: 350px;
+    width: 100%;
+    height: 100vh;
+    background: $white-blue-gradient;
+
+
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+}
+
+
+
+//------------------------------- HEADER
+.header {
+    grid-column: 1 / -1;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    background: $white-blue-gradient;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+
+
+    .logo {
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+        font-size: 2rem;
+        font-weight: bold;
+        color: $colorText;
+        opacity: 0;
+        animation: slideTop 1s .7s ease forwards;
+        transition: all 0.5s;
+
+        img {
+            width: 5rem;
+            height: 5rem;
+        }
+
+        span {
+            color: $colorThird;
+        }
+    }
+
+    #check {
+        display: none;
+    }
+
+    label {
+
+        #menu-icon,
+        #menu-exit {
+            color: $colorText;
+            font-size: 3.5rem;
+            z-index: 101;
+            cursor: pointer;
+            display: none;
+            opacity: 0;
+            animation: slideTop 1s 0.8s ease forwards;
+        }
+    }
+
+
+    .nav {
+
+        text-align: center;
+        opacity: 0;
+        animation: slideBottom 1s 1.2s ease forwards;
+
+        a {
+            color: $colorRed;
+            text-transform: capitalize;
+            font-weight: bold;
+            margin: 0 1.5rem;
+            padding: 0 1rem;
+            border-bottom: 2px solid transparent;
+            transition: all .8s;
+
+
+            &:hover {
+                border-bottom: 2px solid $colorText;
+            }
+        }
+    }
+
+    .home-btn {
+        display: inline-block;
+        color: $colorText;
+        font-weight: bold;
+        text-transform: capitalize;
+        border: 2px solid $colorThird;
+        background-color: $colorThird;
+        border-radius: 30px;
+        padding: 0.8rem 1.5rem;
+        opacity: 0;
+        animation: slideTop 1s 2s ease forwards;
+        transition: all 0.72s;
+
+        &:hover {
+            background-color: transparent;
+            border: 2px solid $colorText;
+        }
+    }
+
+}
+
+// ____________________________END HEADER
+
+
+
+
+
+//--------------------------- HOME
+
+.home {
+
+    grid-column: 1 / -1;
+    grid-row: 2;
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    align-items: center;
+    padding: 0 5%;
+    min-height: 100vh;
+
+
+    .home-text {
+
+        grid-column: 1 / 8;
+
+
+        .btn-shop-now {
+            display: none;
+            color: $colorThird;
+            font-weight: bold;
+            text-transform: capitalize;
+            border: 2px solid $colorText;
+            background-color: $colorText;
+            border-radius: 30px;
+            padding: 0.8rem 1.5rem;
+            margin-bottom: 4rem;
+            opacity: 0;
+            animation: slideBottom 1s 0.9s ease forwards;
+            transition: all 0.72s;
+
+            &:hover {
+                background-color: transparent;
+                border: 2px solid $colorText;
+            }
+        }
+
+
+        h4 {
+            color: $colorThird;
+            font-weight: bold;
+            opacity: 0;
+            animation: slideLeft 1s 1.2s ease forwards;
+        }
+
+        h1 {
+
+            text-transform: uppercase;
+            color: $colorText;
+            font-weight: 700;
+            margin-bottom: 1rem;
+            opacity: 0;
+            animation: slideRight 1s 1.2s ease forwards;
+        }
+
+        p {
+            color: $colorRed;
+            max-width: 46rem;
+            margin-bottom: 2rem;
+            opacity: 0;
+            animation: slideLeft 1s 1.2s ease forwards;
+
+            span {
+                font-weight: bold;
+                color: $colorThird;
+            }
+        }
+    }
+
+    .home-banner {
+
+        .wrapper-banner-img {
+            display: flex;
+            justify-content: center;
+
+            img {
+                opacity: 0;
+                animation: spinTitle 0.3s 2.5s ease forwards, floatImage 4s 2.9s ease-in-out infinite;
+            }
+        }
+    }
+
+}
+
+//___________________________ END HOME
+
+
+
+
+//--------------------------- ASIDE
+
+.aside {
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+    background: $white-blue-gradient;
+    opacity: 0;
+    animation: slideTop 1s 2s ease forwards;
+
+    a {
+        color: $colorText;
+        margin: 0 1.5rem;
+        font-weight: bold;
+        transition: all 0.42s;
+
+        &:hover {
+            color: $colorRed;
+        }
+
+        i {
+            transition: all 0.42s;
+        }
+    }
+}
+
+//___________________________ END ASIDE
+
+
+
+@import 'largeScreen';
+@import 'desktop';
+@import 'tablet';
+@import 'mobile';

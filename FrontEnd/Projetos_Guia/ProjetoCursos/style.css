@@ -1,0 +1,292 @@
+:root {
+    --YellowStandard: #FED001;
+    --blackGray: #2a2a2a;
+    --light: #fafafa;
+    --blue: #003464;
+}
+
+html,
+body {
+    font-size: 62.5%;
+    width: 160rem;
+}
+
+
+p {
+    font-size: 1.6rem;
+}
+
+.button {
+    font-size: 1.8rem;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    background-color: wheat;
+    padding: 0.8rem 3.8rem;
+    border-radius: 1.2rem;
+    text-align: center;
+    width: fit-content;
+    background-color: var(--YellowStandard);
+    text-decoration: none;
+    color: var(--blackGray);
+    font-weight: bold;
+}
+
+.button:hover {
+    background-color: var(--blackGray);
+    color: var(--YellowStandard);
+}
+
+.upper {
+    text-transform: uppercase;
+}
+
+h2 {
+    font-size: 4rem;
+}
+
+
+h3 {
+    font-size: 3.2rem;
+}
+
+.section_title {
+    padding: 3.5rem 0;
+    text-align: center;
+}
+
+.paddingForAnchor_banner {
+    padding-top: 15rem;
+}
+
+.paddingForAnchor_cards {
+    padding-top: 6.5rem;
+}
+
+.paddingForAnchor_sobre {
+    padding-top: 15rem;
+}
+
+.paddingForAnchor_contatos {
+    padding-top: 16rem;
+}
+
+/*--------------------------------------- HEADER MENU ---------------------------------------------*/
+/*HEADER DA PAGINA*/
+.topMenu {
+    display: flex;
+    justify-content: space-between;
+    background-color: var(--blackGray);
+    padding-left: 5rem;
+    padding-right: 5rem;
+    padding: 1rem 5rem 3rem 5rem;
+    position: fixed;
+    top: 0;
+    width: 150rem;
+}
+
+/*MENU DO HEADER*/
+.menu_topMenu {
+    display: flex;
+    gap: 1.5rem;
+    margin-top: 2rem;
+}
+
+/*LINK DA LISTA(ul) DO HEADER*/
+.menu_topMenu a {
+    color: var(--YellowStandard);
+    font-size: 1.8rem;
+    border: 1px solid var(--YellowStandard);
+    padding: 1rem;
+    text-decoration: none;
+
+}
+
+.menu_topMenu a:hover {
+    background-color: var(--YellowStandard);
+    color: black;
+
+}
+
+/*_______________________________ FIM DO HEADER MENU ___________________________________________*/
+
+
+
+/* -------------------------- BANNER - MULHER CHEIRANDO FLOR*/
+
+.wrapped_container_banner {
+    background-color: var(--light);
+}
+
+.banner {
+    background-image: linear-gradient(transparent, rgb(246, 246, 59));
+    display: flex;
+    padding-left: 5%;
+    justify-content: space-around;
+
+}
+
+.elements_banner {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.elements_banner h1 {
+    font-size: 5rem;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color: var(--blackGray);
+}
+
+
+/*____________________________________ FIM DO BANNER - MULHER CHEIRANDO FLOR _____________________________________*/
+
+
+
+
+/*--------------------------- CONTAINER DOS CARDS*/
+.wrapped_container_infoMiddle {}
+
+
+.infoMiddle {
+    width: 80%;
+    margin: auto;
+    text-align: center;
+
+}
+
+.infoMiddle h1 {
+    font-size: 4.5rem;
+    color: var(--blackGray);
+    text-align: center;
+
+}
+
+.cards {
+    display: flex;
+    gap: 2rem;
+
+
+}
+
+.Article_infoMiddle {
+    flex: 1;
+
+}
+
+.Article_infoMiddle img {
+    width: 100%;
+}
+
+.cursos-cards-container {
+    display: inline-block;
+    margin-top: 0;
+    border: 1px solid gray;
+    border-top: transparent;
+    border-radius: 0 0 8px 8px;
+    padding: 0.5rem 2rem;
+}
+
+.cursos-cards-container h3 {
+    font-size: 2.4rem;
+    margin-top: 0;
+}
+
+.cursos-cards-container p {
+    font-size: 1.8rem;
+    line-height: 1.5;
+}
+
+.cursos_infoMiddle {
+    display: inline-block;
+    margin-top: 3rem;
+}
+
+/*________________________________ FIM DO CONTAINER DOS CARDS ________________________________________________________*/
+
+
+
+
+
+/*------------------------------  CONTAINER AZUL, MULHER MEXENDO NO LAPTOP*/
+.wrapped_container_infoBottom {
+    background-color: var(--light);
+    margin-top: 10rem;
+
+}
+
+.infoBottom {
+    background-color: var(--blue);
+    color: #fafafa;
+    max-width: 95%;
+    margin: auto;
+    padding: 7rem;
+}
+
+.infoBottom {
+    display: flex;
+    gap: 5rem;
+}
+
+
+.nossa-escola {
+    padding: 3rem;
+}
+
+.nossa-escola h1 {
+    font-size: 4rem;
+    text-align: center;
+}
+
+.nossa-escola p {
+    font-size: 2rem;
+    text-align-last: auto;
+}
+
+/*____________________________________ FIM DO CONTAINER AZUL, MULHER MEXENDO NO LAPTOP __________________________________*/
+
+
+
+/*------------------------------------- CONTAINER CONTATOS, GOOGLE MAPS --------------------------------------------------*/
+.wrapped_container_footerSupport {}
+
+.footerSupport {
+    max-width: 95%;
+    margin: auto;
+}
+
+.title_footerSupport {
+    text-align: center;
+    font-size: 3.5rem;
+}
+
+.info_footerSupport {
+    text-align: right;
+    font-size: 1.7rem;
+    list-style-type: none;
+
+}
+
+/*___________________________________________ FIM DO CONTAINER CONTATOS, GOOGLE MAPS_________________________________-*/
+
+
+
+
+
+
+/*------------------------------------------------------ CONTAINER DOS CREDITOS DO DESENVOLVEDOR ------------------------------------------*/
+.wrapped_container_credits {
+    background-color: var(--blackGray);
+    width: 160rem;
+}
+
+.credits {
+    padding: 1.2rem;
+}
+
+.dev_credits {
+    color: #fafafa;
+    font-size: 1.7rem;
+    text-align: center;
+    font-weight: bolder;
+}
+
+/*__________________________________________________ FIM DO CONTAINER DOS CREDITOS DO DESENVOLVEDOR _______________________________________________*/

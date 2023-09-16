@@ -93,8 +93,6 @@ body {
   position: absolute;
   top: 1rem;
   right: 1rem;
-}
-.home .language a {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -103,7 +101,7 @@ body {
   font-size: 1.5rem;
   text-decoration: none;
 }
-.home .language a i {
+.home .language i {
   font-size: 3rem;
 }
 .home .home-icons-content a {

@@ -93,6 +93,8 @@ body {
   position: absolute;
   top: 1rem;
   right: 1rem;
+  opacity: 0;
+  animation: slideTop 1s 2.2s ease forwards;
 }
 .home .language a {
   display: flex;

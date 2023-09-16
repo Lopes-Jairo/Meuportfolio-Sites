@@ -81,12 +81,30 @@ body {
   grid-column: 1/-1;
   min-height: 100vh;
   overflow: hidden;
+  position: relative;
   /*------------ icons content*/
   /*__________ end icons content*/
   /*------------ home content*/
   /*__________ end home content*/
   /*------------ home img*/
   /*___________ end home img*/
+}
+.home .language {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+}
+.home .language a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  color: rgb(206, 228, 248);
+  font-size: 1.5rem;
+  text-decoration: none;
+}
+.home .language a i {
+  font-size: 3rem;
 }
 .home .home-icons-content a {
   border-radius: 50%;

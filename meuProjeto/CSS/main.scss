@@ -5,7 +5,7 @@ $dark-style: linear-gradient(to right, #4b045b, #3e0351, #3a0251, #32014a, #1d02
 $secundaryStyle: #9818ae;
 
 $dark-style2: #1f072c;
-$turquesa: #00ffcc;
+$turquesa: #ff5500;
 
 $shadows: 0 1.4rem 1.5rem rgb(0, 0, 0, 0.3);
 
@@ -33,10 +33,25 @@ body {
 }
 
 
+.hidden {
+    opacity: 0;
+    transition: 1.4s;
+}
+
+.show {
+    transition: 1.4s;
+    opacity: 0;
+    animation: slideRight 1s 0.2s ease forwards;
+}
+
+
 .grid-container {
     display: grid;
     grid-template-columns: repeat(12, 1fr);
 }
+
+
+
 
 /* ________________________________________________ FIM DAS CONFIGURAÇÕES BÁSICAS _____________________________________________________________________*/
 
@@ -148,8 +163,6 @@ body {
         position: absolute;
         top: 1rem;
         right: 1rem;
-        opacity: 0;
-        animation: slideTop 1s 2.2s ease forwards;
 
         a {
             display: flex;
@@ -355,10 +368,7 @@ body {
     padding-bottom: 5rem;
 
 
-    h1 {
-        opacity: 0;
-        animation: slideRight 1s .7s ease forwards;
-    }
+    h1 {}
 
 
     .cards-wrapper {
@@ -373,8 +383,8 @@ body {
             padding: 1rem;
             border-radius: 5%;
             background-color: $dark-style2;
-            opacity: 0;
-            animation: slideLeft 3s 1s ease forwards;
+
+
 
 
             .wrapped-img-card {
@@ -452,8 +462,6 @@ body {
 
     h1 {
         margin: 0 0 7rem 0;
-        opacity: 0;
-        animation: slideLeft 1s .7s ease forwards;
     }
 
 
@@ -463,8 +471,6 @@ body {
         border-radius: 10px;
         padding: 3rem;
 
-        opacity: 0;
-        animation: slideRight 2s .4s ease forwards;
 
 
         li {
@@ -538,10 +544,7 @@ body {
     align-items: center;
     padding-bottom: 10%;
 
-    h1 {
-        opacity: 0;
-        animation: slideLeft 1s .5s ease forwards;
-    }
+    h1 {}
 
     form {
         display: flex;
@@ -551,8 +554,6 @@ body {
         padding: 4rem 3rem;
         border-radius: 10px;
         box-shadow: $shadows;
-        opacity: 0;
-        animation: slideRight 1s .5s ease forwards;
 
 
         .input-box {

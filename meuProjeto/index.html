@@ -7,7 +7,7 @@
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     <link rel="stylesheet" href="CSS/animations.css">
     <link rel="stylesheet" href="CSS/main.css">
-
+    <script src="JS/script.js" defer></script>
 
     <link rel="shortcut icon" href="img/moon.ico" type="image/x-icon">
     <title>Portfólio</title>
@@ -40,7 +40,7 @@
 
         <section class="home">
 
-            <div class="language">
+            <div class="language hidden">
                 <a href="en.html"><i class='bx bx-globe'></i>English</a>
             </div>
 
@@ -81,11 +81,11 @@
 
         <section class="projetos" id="projects_anchor">
 
-            <h1>Projetos</h1>
+            <h1 class="hidden">Projetos</h1>
 
             <div class="cards-wrapper">
 
-                <div class="card">
+                <div class="card hidden">
 
                     <div class="wrapped-img-card">
                         <img src="img/ghost-logo.png" alt="">
@@ -100,7 +100,7 @@
                 </div>
 
 
-                <div class="card">
+                <div class="card hidden">
 
                     <div class="wrapped-img-card">
                         <img src="img/coming-soon.png" alt="">
@@ -115,7 +115,7 @@
                 </div>
 
 
-                <div class="card">
+                <div class="card hidden">
 
                     <div class="wrapped-img-card">
                         <img src="img/coming-soon.png" alt="">
@@ -136,10 +136,9 @@
         </section>
 
         <section class="skills" id="skills_anchor">
-            <h1>Habilidades</h1>
+            <h1 class="hidden">Habilidades</h1>
 
-            <div class="skills-bars">
-
+            <div class="hidden skills-bars">
 
                 <li>
                     <h3>html</h3>
@@ -184,9 +183,9 @@
 
 
         <section class="contato" id="contact_anchor">
-            <h1>Contato</h1>
+            <h1 class="hidden">Contato</h1>
 
-            <form action="https://formsubmit.co/lopes.1993@proton.me" method="POST">
+            <form class="hidden" action="https://formsubmit.co/lopes.1993@proton.me" method="POST">
 
                 <div class="input-box">
                     <label for="email">Email</label>
@@ -213,34 +212,34 @@
 
 
         <footer class="footer">
-            <div class="icons-footer-wrapper">
+            <div class="icons-footer-wrapper hidden">
                 <a href="https://github.com/JairoLopes" target="_blank">
                     <i class='bx bxl-github'></i>
                     Github
                 </a>
 
 
-                <a href="https://ko-fi.com/lopes" target="_blank">
+                <a class="hidden" href="https://ko-fi.com/lopes" target="_blank">
                     <i class='bx bxs-coffee'></i>
                     Ko-Fi
                 </a>
 
 
-                <a href="https://www.linkedin.com/in/jairo-lopes-6351b5197/" target="_blank">
+                <a class="hidden" href="https://www.linkedin.com/in/jairo-lopes-6351b5197/" target="_blank">
                     <i class='bx bxl-linkedin'></i>
                     Linkedin
                 </a>
 
             </div>
 
-            <div class="menu-links-footer">
+            <div class="menu-links-footer hidden">
                 <a href="#top_anchor">Home</a>
                 <a href="#projects_anchor">Projetos</a>
                 <a href="#skills_anchor">Habilidades</a>
                 <a href="#contact_anchor">Contato</a>
             </div>
 
-            <div class="developer-footer">
+            <div class="developer-footer hidden">
                 <p>Desenvolvido por Jairo Lopes</p>
             </div>
         </footer>

@@ -18,7 +18,7 @@ html {
 }
 
 body {
-  background: linear-gradient(to right, #4b045b, #3e0351, #3a0251, #32014a, #1d022e);
+  background: linear-gradient(to right, #410551, #3e0651, #300242, #2d0242, #11011a);
   color: #fff;
   min-width: 335px;
 }
@@ -49,7 +49,7 @@ body {
   position: sticky;
   top: 0;
   padding: 2rem 10%;
-  background: linear-gradient(to right, #4b045b, #3e0351, #3a0251, #32014a, #1d022e);
+  background: linear-gradient(to right, #410551, #3e0651, #300242, #2d0242, #11011a);
   z-index: 100;
 }
 .header .logo {
@@ -74,7 +74,7 @@ body {
   display: none;
 }
 .header .navbar {
-  background: linear-gradient(to right, #4b045b, #3e0351, #3a0251, #32014a, #1d022e);
+  background: linear-gradient(to right, #410551, #3e0651, #300242, #2d0242, #11011a);
 }
 .header .navbar a {
   color: #ff5500;
@@ -201,7 +201,7 @@ body {
   position: absolute;
   top: 0;
   left: 0;
-  background: linear-gradient(to right, #4b045b, #3e0351, #3a0251, #32014a, #1d022e);
+  background: linear-gradient(to right, #410551, #3e0651, #300242, #2d0242, #11011a);
   inset: 0;
   z-index: -1;
   border-radius: 4rem;
@@ -286,7 +286,7 @@ body {
 .projetos .cards-wrapper .card a {
   padding: 1.5rem;
   color: #ff5500;
-  background-color: linear-gradient(to right, #4b045b, #3e0351, #3a0251, #32014a, #1d022e);
+  background-color: linear-gradient(to right, #410551, #3e0651, #300242, #2d0242, #11011a);
   text-decoration: none;
   font-weight: bold;
   border-radius: 5px;

@@ -1,0 +1,726 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+/*----------------------------------------------------------------------- configurações pré página ------------------------ */
+
+.to-hide {
+    @apply opacity-0 -translate-x-3/4;
+    transition: all 0.7s;
+
+}
+
+.to-show {
+    @apply opacity-100 translate-x-0;
+    transition: all 0.7s;
+
+}
+
+
+
+
+html {
+    scroll-behavior: smooth;
+}
+
+
+
+#grid-container {
+    @apply grid grid-cols-12;
+}
+
+
+
+
+
+
+/*------------------------------------- HEADER ---------------------------------------------------------*/
+
+
+header {
+    @apply col-span-full sticky top-0 left-0 right-0 z-10 p-3;
+    @apply flex justify-between items-center px-5percent text-gray-100 bg-gray-800;
+}
+
+
+
+header>h1 span {
+    @apply inline-block text-5xl text-color-text animate-bounce;
+}
+
+nav {
+    @apply bg-transparent flex transition-all;
+
+
+    /*BREAKPOINTS*/
+    @apply desknav:gap-7;
+
+    @apply mobnav2:flex mobnav2:flex-col items-center mobnav2:gap-5 mobnav2:absolute mobnav2:top-0 mobnav2:left-0 mobnav2:right-0;
+    @apply mobnav2:bg-gray-800 mobnav2:mt-16 mobnav2:h-0 mobnav2:overflow-hidden transition-all border-gray-200;
+}
+
+
+/*ABRE A NAV QUANDO O MENU FOR CLICADO*/
+input:checked~nav {
+    @apply mobnav2:h-56;
+}
+
+
+nav a {
+    @apply text-color-text text-lg hover:text-gray-100 font-semibold transition-all font-sans;
+
+}
+
+/*OCULTA BOTAO MENU QUANDO CHECK MARCADO*/
+input:checked~label .btn-menu {
+    @apply !hidden;
+}
+
+/* MOSTRA BOTAO X QUANDO CHECK MARCADO*/
+input:checked~label .btn-x {
+    @apply !block;
+}
+
+
+/*OCULTA O MENU HAMBURGUER QUANDO A TELA CHEGAR EM 1050PX*/
+.btn-menu,
+.btn-x {
+    @apply text-3xl absolute top-4 right-3 mobnav3:hidden;
+
+}
+
+/*_________________________________________ FIM DO HEADER _____________________________________*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*------------------------------------------------------ HERO BANNER --------------------------------------------------------------- */
+
+
+
+#hero {
+
+    @apply col-span-full flex items-center justify-center bg-gray-200 pt-10 px-10 pb-10;
+
+    @apply bg-cube bg-no-repeat bg-cover bg-fixed;
+}
+
+
+#hero #card-wrapped {
+
+    @apply relative max-w-2xl mx-auto break-words bg-white mb-6 shadow-lg rounded-xl mt-16 p-5;
+
+
+    /*Breakpoints*/
+
+}
+
+
+/*engloba a parte superior inteira do card*/
+
+#card-wrapped #top-card {
+
+    @apply flex flex-wrap justify-center;
+
+}
+
+
+
+/*Container da imagem*/
+
+#top-card #image-wrapped {
+
+    @apply w-full flex justify-center p-10 relative;
+
+}
+
+
+#image-wrapped img {
+
+    @apply shadow-xl rounded-full align-middle border-8 border-white absolute -m-16 -ml-20 lg:-ml-16 max-w-[150px];
+
+    @apply -translate-y-10;
+
+}
+
+
+
+/*container que engloba os links sociais*/
+
+#top-card #socials-wrapped {
+
+    @apply flex justify-center gap-2 w-full lg:pt-4 pt-8 pb-0;
+
+}
+
+
+#socials-wrapped .social-link-zip {
+
+    @apply p-3 text-center;
+
+}
+
+
+/*icones sociais*/
+
+.social-link-zip a {
+    @apply text-slate-600 hover:text-color-text focus:text-color-text transition-all;
+}
+
+
+.social-link-zip a i {
+
+    @apply text-4xl block;
+
+}
+
+
+.social-link-zip a span {
+
+    @apply text-lg;
+
+
+
+}
+
+
+/*PARTE MÉDIA DO CARD*/
+
+#mid-card {
+
+    @apply text-center mt-5;
+
+}
+
+
+#mid-card h1 {
+
+    @apply text-2xl mt-0 mb-2 text-slate-600 font-bold uppercase;
+
+}
+
+
+#mid-card h3 {
+
+    @apply text-xl mt-0 mb-2 text-color-text font-bold;
+
+}
+
+
+/*PARTE FINAL DO CARD*/
+
+#bottom-card {
+
+    @apply mt-6 py-6 border-t border-slate-200 text-center;
+
+}
+
+
+#bottom-card #bottom-card-2 {
+
+    @apply flex flex-wrap justify-center;
+
+}
+
+#bottom-card-2 #desc-bottom-wrapped {
+
+    @apply w-full px-4;
+
+}
+
+
+#desc-bottom-wrapped p {
+
+    @apply font-light leading-relaxed text-slate-600 mb-4;
+
+}
+
+
+#desc-bottom-wrapped a {
+
+    @apply inline-block bg-gray-800 p-3 rounded text-color-text font-bold mt-3 hover:bg-color-text hover:text-gray-800 transition-all;
+
+}
+
+/*________________________________________________________ FIM HERO BANNER _________________________________________________________-*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*---------------------------------------------------- SKILLS -------------------------------------------*/
+
+
+
+#skills {
+
+    @apply col-span-full overflow-hidden flex items-center justify-center;
+
+}
+
+/*Container que engloba quem engloba os cards*/
+#skills #wrapped {
+
+    @apply px-2 md:lg:xl:px-40 border-t border-b py-20 bg-white w-full;
+
+
+}
+
+
+#wrapped h1 {
+    @apply text-4xl text-gray-600 text-center pb-10;
+}
+
+
+/*Container que engloba os cards*/
+#wrapped #cards-wrapped {
+
+    @apply grid bg-gray-200 shadow-2xl border-2 p-5 rounded-2xl m-auto max-w-7xl;
+
+    /*Breakpoints*/
+    @apply small:grid-cols-1 mobile:grid-cols-2 tablet:grid-cols-2 desktop:grid-cols-3 grid-cols-4;
+    @apply small:w-90percent mobile:w-90percent tablet:w-90percent;
+
+}
+
+/*Cards individuais*/
+#cards-wrapped #card {
+
+    @apply flex flex-col items-center text-center gap-2 p-10 m-5 md:lg:xl:border-b hover:bg-slate-50 cursor-pointer;
+
+    @apply border-b-2 border-r-4 border-gray-300 rounded-xl shadow-2xl bg-gray-100;
+}
+
+/*Icones dentro dos cards individuais*/
+#card span i {
+    /*As cores individuais de cada icone estão sendo definidas no HTML*/
+    @apply bg-red-500 text-white text-7xl rounded-full p-2;
+
+}
+
+#card h2 {
+
+    @apply text-xl font-medium text-slate-700 mt-3;
+
+}
+
+#card p {
+
+    @apply flex justify-center;
+
+}
+
+#card p i {
+    @apply text-2xl text-color-text;
+}
+
+
+/*___________________________________________________FIM DO SKILLS ___________________________________________*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*------------------------------------- PROJECTS ---------------------------------------------------------*/
+#projects {
+    @apply bg-gray-200 col-span-full min-h-screen overflow-hidden flex items-center justify-center;
+
+    @apply bg-cube bg-contain bg-fixed bg-bottom;
+
+}
+
+
+/*Engloba a sessao de cards inteira*/
+#projects #wrapped-cards {
+
+    @apply p-7 w-full;
+}
+
+
+/*CONTAINER QUE ENGLOBA QUEM ENGLOBA OS CARDS*/
+#wrapped-cards #cards {
+    @apply container m-auto text-gray-500 xl:px-0 w-full;
+}
+
+#cards h1 {
+    @apply text-4xl text-gray-600 text-center pb-10;
+}
+
+
+/*CONTAINER QUE ENGLOBA OS CARDS INDIVIDAIS*/
+#cards #zip-cards {
+    @apply mx-auto grid gap-6 w-full;
+
+    /*BREAKPOINTS*/
+    @apply small:grid-cols-1 mobile:grid-cols-1 tablet:grid-cols-2 desktop:grid-cols-3 grid-cols-4;
+
+}
+
+
+/*CARD INDIVIDUAL*/
+#zip-cards .card {
+    @apply bg-white rounded-2xl px-8 py-12 sm:px-12 lg:px-8 shadow-2xl small:w-full overflow-hidden;
+}
+
+.card .card-desc {
+    @apply mb-12 space-y-4;
+}
+
+.card-desc h3 {
+    @apply text-2xl font-semibold text-color-text;
+}
+
+.card-desc p {
+    @apply mb-6;
+}
+
+.card-desc h4 {
+    @apply font-bold text-gray-600 p-2 text-xl;
+}
+
+.card-desc #card-usage-tec {
+    @apply text-4xl
+}
+
+.card-desc a {
+    @apply block font-medium text-color-text underline hover:text-gray-800 text-xl w-fit transition-all;
+}
+
+.card img {
+    @apply w-2/4 ml-auto -mb-12 opacity-30 flex-1;
+}
+
+/*_____________________________________ FIM DO PROJECTS ________________________________________*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*-------------------------------------------------- CONTATO -------------------------------------------------------------------------*/
+
+#contact {
+
+    @apply col-span-full overflow-hidden flex items-center justify-center;
+
+}
+
+
+#contact #wrapped {
+    @apply w-full pt-24;
+
+}
+
+#wrapped>h1 {
+    @apply mt-5;
+}
+
+
+#wrapped #teste {
+
+    @apply w-full flex items-start gap-10 justify-center px-10 py-16 bg-transparent small:px-5 mobile:px-5;
+
+}
+
+
+/*LADO ESQUERDO DA SESSAO CONTATOS, FRASES*/
+#teste #desc-contact {
+
+    /*quando o container de frases tiver largura menor que 1049px, ficará hidden*/
+    @apply p-10 mobnav2:hidden max-w-2xl;
+
+}
+
+#desc-contact .wrapped-titles {
+    @apply flex flex-col items-center;
+}
+
+.wrapped-titles h1 {}
+
+
+.wrapped-titles h3 {
+    @apply text-2xl text-color-text mb-16;
+}
+
+
+#desc-contact .wrapped-p {
+    @apply text-gray-600 leading-7;
+}
+
+
+
+/*LADO DIREITO DA SESSAO CONTATOS, FORMULARIO*/
+#teste #wrapped-form {
+
+    @apply p-10 bg-gray-200 mt-5 rounded-xl shadow-2xl min-w-fit max-w-2xl;
+
+    @apply mobnav2:w-full;
+
+}
+
+#wrapped-form h1 {
+
+    @apply text-3xl font-semibold mb-6 text-color-text text-center;
+
+}
+
+#wrapped-form p {
+
+    @apply text-sm font-semibold mb-6 text-gray-500 text-center;
+
+}
+
+#wrapped-form form {
+
+    @apply space-y-4;
+
+}
+
+form div #wrapped-inputs {
+
+    @apply block text-sm font-medium text-gray-700;
+
+}
+
+form div input {
+
+    @apply mt-1 p-2 w-full border rounded-md focus:border-gray-200 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-300 transition-colors duration-300;
+
+}
+
+form #textarea-div {
+
+    @apply flex flex-col;
+
+}
+
+form div #button {
+
+    @apply w-full bg-gray-600 text-white p-2 rounded-md hover:bg-gray-800 focus:bg-black focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-900 transition-colors duration-300;
+
+}
+
+form .inputs-hidden {
+
+    @apply hidden;
+
+}
+
+/*____________________________________________________ FIM CONTATOS __________________________________________________________*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*----------------------------------------------------- FOOTER ---------------------------------------*/
+
+footer {
+
+    @apply col-span-full overflow-hidden flex items-center justify-center;
+
+}
+
+
+
+
+footer #sub-footer {
+
+    @apply mx-auto text-white py-5 bg-gray-800 w-full;
+
+}
+
+
+
+
+/*Parte superior do footer*/
+
+#top-footer {
+
+    @apply text-center;
+
+}
+
+
+
+#top-footer h3 {
+
+    @apply text-3xl mb-3 mt-14;
+
+}
+
+
+
+
+#top-footer>p {
+
+    @apply text-lg text-color-text;
+
+}
+
+
+
+/*Parte do meio do footer, onde fica os icones*/
+
+#desc-icon-footer {
+
+    @apply flex flex-wrap justify-center my-1;
+
+}
+
+
+
+
+#desc-icon-footer .wrapped-icon-footer {
+
+    @apply flex flex-col items-center w-auto rounded-lg px-4 pt-16 mx-2;
+
+}
+
+
+
+
+.wrapped-icon-footer i {
+
+    @apply text-7xl;
+
+}
+
+
+
+#bot-footer {
+
+    @apply mt-28 flex flex-col md:flex-row md:justify-between items-center text-sm text-gray-400;
+
+}
+
+
+
+#bot-footer p {
+
+    @apply order-2 md:order-1 mt-8 md:mt-0;
+
+}
+
+
+
+/*____________________________________________________FIM DO FOOTER _____________________________________*/

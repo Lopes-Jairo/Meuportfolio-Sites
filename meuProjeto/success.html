@@ -4,34 +4,36 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="./dist/output.css" rel="stylesheet">
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
-    <link rel="stylesheet" href="CSS/success.css">
-    <link rel="stylesheet" href="CSS/animations.css">
-
-
-    <title>Portfólio</title>
+    <link rel="shortcut icon" href="img/rocketman.ico" type="image/x-icon">
+    <title>Email Enviado</title>
 </head>
 
-<body>
-    <section class="popup-success">
-        <label class="arrow-success">
-            <i class='bx bxs-chevron-down'></i>
-        </label>
+<body class="bg-gray-300 flex items-center justify-center pt-15percent text-gray-800 px-10">
 
-        <div class="message-success">
-            <h1>Email enviado!</h1>
-            <p>
-                Sua mensagem será analisada e muito em breve você terá um retorno, fique atento ao seu email informado.
-            </p>
+
+    <section id="Send-wrapper" class=" bg-white rounded-xl p-12 shadow-2xl">
+
+        <div class="flex flex-col items-center justify-center gap-5">
+
+            <i class='bx bx-mail-send text-9xl text-gray-800 opacity-70'></i>
+            <h1 class="text-3xl font-semibold text-color-text">Email Enviado!</h1>
+
         </div>
 
-        <div class="rollback-success">
-            <a href="index.html">
-                <i class='bx bxs-chevrons-left'></i>
-                Voltar Para página principal
-            </a>
-        </div>
+        <p class="text-xl mt-16 font-montserrat">
+            Sua mensagem será analisada e muito em breve você terá um retorno, fique atento ao seu email informado.
+        </p>
+
+
+        <a href="index.html" class="flex items-center mt-16 font-bold">
+            <i class='bx bxs-left-arrow-circle text-6xl mr-3'></i>
+            <span class="underline text-xl">Voltar a página inicial.</span>
+        </a>
+
     </section>
+
 </body>
 
 </html>

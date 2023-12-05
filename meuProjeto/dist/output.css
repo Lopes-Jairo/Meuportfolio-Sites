@@ -534,6 +534,10 @@ video {
   --tw-backdrop-sepia:  ;
 }
 
+.pointer-events-none {
+  pointer-events: none;
+}
+
 .mr-3 {
   margin-right: 0.75rem;
 }
@@ -860,10 +864,10 @@ nav {
 }
 
 nav a {
-  font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  font-family: Montserrat, sans-serif !important;
   font-size: 1.125rem;
   line-height: 1.75rem;
-  font-weight: 600;
+  font-weight: 500;
   --tw-text-opacity: 1;
   color: rgb(0 153 255 / var(--tw-text-opacity));
   transition-property: all;
@@ -1532,7 +1536,6 @@ input:checked~label .btn-x {
   font-weight: 500;
   --tw-text-opacity: 1;
   color: rgb(0 153 255 / var(--tw-text-opacity));
-  text-decoration-line: underline;
   transition-property: all;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   transition-duration: 150ms;

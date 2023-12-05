@@ -68,7 +68,7 @@ input:checked~nav {
 
 
 nav a {
-    @apply text-color-text text-lg hover:text-gray-100 font-semibold transition-all font-sans;
+    @apply text-color-text text-lg hover:text-gray-100 font-medium transition-all !font-montserrat;
 
 }
 
@@ -468,8 +468,9 @@ input:checked~label .btn-x {
 }
 
 .card-desc a {
-    @apply block font-medium text-color-text underline hover:text-gray-800 text-xl w-fit transition-all;
+    @apply block font-medium text-color-text hover:text-gray-800 text-xl w-fit transition-all;
 }
+
 
 .card img {
     @apply w-2/4 ml-auto -mb-12 opacity-30 flex-1;

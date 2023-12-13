@@ -7,6 +7,22 @@ module.exports = {
       //-------------------------------- ANIMAÇÕES -------------------------------------------------
       keyframes: {
 
+        cloudLeft: {
+          '0%': { opacity: '0', transform: 'translateX(-100%)' },
+          '5%': { opacity: '1' },
+          '50%': { opacity: '1' },
+          '90%': { opacity: '1' },
+          '100%': { opacity: '0', transform: 'translateX(-100vw)' }
+        },
+
+        cloudRight: {
+          '0%': { opacity: '0', transform: 'translateX(-100%)' },
+          '5%': { opacity: '1' },
+          '50%': { opacity: '1' },
+          '90%': { opacity: '1' },
+          '100%': { opacity: '0', transform: 'translateX(100vw)' }
+        },
+
         slideTop: {
           '0%': { opacity: '0', transform: 'translateY(10rem)' },
           '100%': { opacity: '1', transform: 'translateY(0)' }
@@ -41,6 +57,9 @@ module.exports = {
 
 
       animation: {
+        cloudLeft: 'cloudLeft 32s linear infinite',
+        cloudRight: 'cloudRight 32s linear infinite',
+
         slideTop: 'slideTop 1s 0.4s ease forwards',
         slideBottom: 'slideBottom 1s 0.4s ease forwards',
         slideLeft: 'slideLeft 1s 0.5s ease forwards',
@@ -64,8 +83,7 @@ module.exports = {
 
       backgroundImage: {
 
-        'cube': 'url(../img/cube.jpg)',
-        'cube2': 'url(../img/cube2.jpg)'
+        'mountain': 'url(../img/mountain-bg.jpg)'
 
       },
 

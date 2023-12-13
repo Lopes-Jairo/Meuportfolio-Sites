@@ -147,15 +147,20 @@ input:checked~label .btn-x {
     @apply col-span-full flex items-center justify-center bg-gray-200 pt-10 px-10 pb-10 relative;
 
     @apply bg-mountain bg-no-repeat bg-cover bg-fixed overflow-hidden;
+
+    /*Breakpoints*/
+    @apply little:px-4;
+
 }
 
 
 #hero #card-wrapped {
 
-    @apply relative max-w-2xl mx-auto break-words bg-white mb-6 shadow-lg rounded-xl mt-16 p-5 z-10;
+    @apply relative max-w-2xl mx-auto break-words bg-white mb-6 shadow-2xl rounded-xl mt-16 p-5 z-10;
 
 
     /*Breakpoints*/
+    @apply little:p-2;
 
 }
 
@@ -275,7 +280,10 @@ input:checked~label .btn-x {
 
 #desc-bottom-wrapped p {
 
-    @apply font-light leading-relaxed text-slate-600 mb-4;
+    @apply font-light leading-relaxed text-slate-600 mb-4 text-center;
+
+    /*Breakpoints*/
+    @apply little:leading-5 little:text-sm;
 
 }
 
@@ -458,7 +466,7 @@ input:checked~label .btn-x {
 
 /*------------------------------------- PROJECTS ---------------------------------------------------------*/
 #projects {
-    @apply bg-gray-200 col-span-full min-h-screen overflow-hidden flex items-center justify-center;
+    @apply bg-gray-100 col-span-full min-h-screen overflow-hidden flex items-center justify-center;
 
 }
 
@@ -560,12 +568,12 @@ input:checked~label .btn-x {
 
 
 #contact #wrapped {
-    @apply w-full pt-24;
+    @apply w-full pt-20;
 
 }
 
 #wrapped>h1 {
-    @apply mt-5 font-semibold text-shadow;
+    @apply font-semibold text-shadow;
 }
 
 

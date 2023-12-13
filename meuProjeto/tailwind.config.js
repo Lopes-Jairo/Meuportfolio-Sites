@@ -111,7 +111,7 @@ module.exports = {
         // telas adaptaveis para BANNER
         'deskbanner': { 'max': '1200px' }, // telas do nav para desktop em diante
 
-
+        'little': { 'max': '500px' },
         'small': { 'max': '639px' },
         'mobile': { 'min': '640px', 'max': '767px' },
         'tablet': { 'min': '768px', 'max': '1280px' },

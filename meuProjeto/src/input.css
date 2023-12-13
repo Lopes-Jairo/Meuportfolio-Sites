@@ -623,11 +623,14 @@ input:checked~label .btn-x {
 
     @apply text-3xl mb-6 text-color-text text-center font-semibold text-shadow;
 
+    /*Breakpoints*/
+    @apply little:text-2xl;
+
 }
 
 #wrapped-form p {
 
-    @apply text-sm font-semibold mb-6 text-gray-500 text-center;
+    @apply text-sm font-semibold mb-10 text-gray-500 text-center;
 
 }
 

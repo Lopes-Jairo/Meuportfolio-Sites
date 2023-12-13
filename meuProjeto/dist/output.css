@@ -1806,10 +1806,18 @@ input:checked~label .btn-x{
   --tw-text-opacity: 1;
   color: rgb(0 153 255 / var(--tw-text-opacity));
   text-shadow: 2px 2px 6px rgb(213, 211, 211);
+  /*Breakpoints*/
+}
+
+@media (max-width: 500px){
+  #wrapped-form h1{
+    font-size: 1.5rem;
+    line-height: 2rem;
+  }
 }
 
 #wrapped-form p{
-  margin-bottom: 1.5rem;
+  margin-bottom: 2.5rem;
   text-align: center;
   font-size: 0.875rem;
   line-height: 1.25rem;

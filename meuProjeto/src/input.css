@@ -658,6 +658,10 @@ form #textarea-div {
 
 }
 
+#textarea-div textarea {
+    @apply resize-none;
+}
+
 form div #button {
 
     @apply w-full bg-gray-600 text-white p-2 rounded-md hover:bg-gray-800 focus:bg-black focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-900 transition-colors duration-300;

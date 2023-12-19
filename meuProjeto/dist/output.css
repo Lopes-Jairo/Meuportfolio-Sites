@@ -536,6 +536,10 @@ video {
   --tw-backdrop-sepia:  ;
 }
 
+.pointer-events-none{
+  pointer-events: none;
+}
+
 .mr-3{
   margin-right: 0.75rem;
 }
@@ -1865,6 +1869,10 @@ form div input:focus{
 form #textarea-div{
   display: flex;
   flex-direction: column;
+}
+
+#textarea-div textarea{
+  resize: none;
 }
 
 form div #button{

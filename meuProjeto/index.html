@@ -15,19 +15,22 @@
 
 <body>
 
-    <div id="#grid-container">
+    <div id="container">
 
         <header>
+            <div id="logo-zip">
+                <h2 class="nav_logo"> <a href="#">Portfólio</a></h2>
+                <span>.</span>
+            </div>
 
-            <h1 class="text-2xl font-bold animate-slideBottom">Portfólio <span>.</span></h1>
 
-            <input type="checkbox" id="check" class="hidden">
+            <input type="checkbox" id="check" class="!hidden">
             <label for="check">
                 <i class='bx bx-menu btn-menu'></i>
-                <i class='bx bxs-x-square btn-x hidden'></i>
+                <i class='bx bx-x btn-x !hidden'></i>
             </label>
 
-            <nav>
+            <nav class="menu-items">
                 <a href="#hero">Home</a>
                 <a href="#skills">Conhecimentos</a>
                 <a href="#projects">Projetos</a>
@@ -38,192 +41,229 @@
         </header>
 
         <section id="hero">
+            <div id="sub-hero">
 
-            <div id="card-wrapped" class="to-hide">
+                <div id="subtitles-hero-zip">
+                    <h1 class="to-hide">Jairo Lopes</h1>
+                    <h2 class="to-hide !delay-300">Desenvolvedor Front-End</h2>
+                </div>
 
-                <div id="top-card">
+                <div id="buttons-img-zip">
+                    <div id="desc-buttons-zip">
 
-                    <div id="image-wrapped">
-                        <img src="img/profile.jpeg" alt="Foto de perfil">
-                    </div>
+                        <p class="to-hide !delay-500">
+                            Graduado em redes de computadores, e especializado em desenvolvimento Front-end, priorizando
+                            o desenvolvimento de páginas responsivas e com boa performance, abrangendo conhecimentos em
+                            HTML, CSS, Tailwind, SASS e Javascript.
+                        </p>
 
-                    <div id="socials-wrapped">
-                        <div class="social-link-zip">
+                        <span class="to-hide !delay-500">
+                            De-me a oportunidade de desenvolver o seu projeto!
+                        </span>
+
+                        <div class="to-hide !delay-500" id="buttons-wrapped">
                             <a href="https://github.com/JairoLopes" target="_blank">
                                 <i class='bx bxl-github'></i>
-                                <span>Github</span>
+                                <span class="relative z-10">Github</span>
                             </a>
-                        </div>
 
-
-                        <div class="social-link-zip">
-                            <a href="https://ko-fi.com/lopes" target="_blank">
-                                <i class='bx bxs-coffee'></i>
-                                <span>Ko-fi</span>
-                            </a>
-                        </div>
-
-                        <div class="social-link-zip">
                             <a href="https://www.linkedin.com/in/jairo-lopes-6351b5197/" target="_blank">
-                                <i class='bx bxl-linkedin'></i>
-                                <span>Linkedin</span>
+                                <i class='bx bxl-linkedin-square'></i>
+                                <span class="relative z-10">Linkedin</span>
+                            </a>
+
+                            <a id="contact-button" href="#contact">
+                                <span>
+                                    Contactar
+                                </span>
                             </a>
                         </div>
 
 
                     </div>
 
-                </div>
+                    <div id="img-wrapped" class="">
 
-
-                <div id="mid-card">
-                    <h1>Jairo Lopes</h1>
-                    <h3>Desenvolvedor Front-End</h3>
-                </div>
-
-
-                <div id="bottom-card">
-                    <div id="bottom-card-2">
-                        <div id="desc-bottom-wrapped">
-                            <p>
-                                Graduado em redes de computadores, e especializado em desenvolvimento Front-end,
-                                priorizando
-
-                                o desenvolvimento de páginas responsivas e com boa performance, abrangendo conhecimentos
-                                em
-
-                                HTML, CSS, Tailwind, SASS e Javascript.
-                            </p>
-                            <a href="#contact">Contactar</a>
+                        <div id="shadow-blue-zip">
                         </div>
 
+
+                        <img src="img/DESKTOP2.png" loading="lazy">
                     </div>
 
                 </div>
-            </div>
-
-            <div id="clouds-icons-left">
-                <img src="img/cloud-icon.png" alt="">
-                <img src="img/cloud-icon.png" alt="">
-            </div>
-
-            <div id="clouds-icons-right">
-                <img src="img/cloud-icon.png" alt="">
-                <img src="img/cloud-icon.png" alt="">
             </div>
         </section>
-
 
         <section id="skills">
-            <div id="wrapped">
 
-                <h1 class="to-hide">Conhecimentos</h1>
+            <div class="title_global_wrapped">
+                <h1 class="to-hide">Habilidades</h1>
+            </div>
 
-                <div id="cards-wrapped" class="to-hide">
+            <div id="all-wrapped_skills">
 
-                    <!-- HTML5 -->
-                    <div id="card" class="to-hide !delay-150">
-                        <span>
-                            <i class='bx bxl-html5 !bg-orange-600'></i>
-                        </span>
+                <div id="sub-wrapped_skills">
 
-                        <h2>HTML5</h2>
+                    <div id="img-zip_skills">
 
-                        <p>
-                            <i class='bx bxs-star icon-star-full'></i>
-                            <i class='bx bxs-star icon-star-full'></i>
-                            <i class='bx bxs-star icon-star-full'></i>
-                            <i class='bx bxs-star-half icon-star-half'></i>
-                            <i class='bx bx-star'></i>
+                        <div id="sub-img-zip_skills">
 
-                        </p>
+                            <div id="sub-sub-img-zip-skills">
+                                <div id="shadow-img">
 
+                                </div>
+
+                                <img alt="..." src="img/brain.png">
+                            </div>
+
+
+                            <blockquote>
+
+                                <h4 class="to-hide">
+                                    Sempre em evolução!
+                                </h4>
+
+                                <p class="to-hide !delay-300">
+                                    Busco além do conhecimento técnico, aprimorar a criatividade, para desenvolver
+                                    projetos um tanto fora do padrão, dando uma identidade única para cada trabalho
+                                    produzido.
+                                </p>
+
+                            </blockquote>
+                        </div>
                     </div>
 
-                    <!-- CSS3 -->
-                    <div id="card" class="to-hide !delay-300">
-                        <span>
-                            <i class='bx bxl-css3 !bg-green-600'></i>
-                        </span>
+                    <div id="skills-topics-zip">
 
-                        <h2>CSS3</h2>
+                        <div class="cards-skills">
 
-                        <p>
-                            <i class='bx bxs-star icon-star-full'></i>
-                            <i class='bx bxs-star icon-star-full'></i>
-                            <i class='bx bxs-star icon-star-full'></i>
-                            <i class='bx bxs-star icon-star-full'></i>
-                            <i class='bx bx-star'></i>
-                        </p>
+                            <!-- CARD 1 -->
+                            <div class="skills-unique to-hide">
 
+                                <div class="icon-wrapped_skills">
+                                    <i class='bx bxl-html5'></i>
+                                </div>
+
+                                <h6>HTML</h6>
+                                <p>
+                                    Escrita semântica e dominio na estruturação dos elementos de forma limpa e
+                                    organizada.
+                                </p>
+
+                                <div class="skill-stars-zip">
+                                    <i class='bx bxs-star'></i>
+                                    <i class='bx bxs-star'></i>
+                                    <i class='bx bxs-star'></i>
+                                    <i class='bx bxs-star'></i>
+                                    <i class='bx bx-star'></i>
+                                </div>
+                            </div>
+
+                            <!-- CARD 2 -->
+                            <div class="skills-unique to-hide !delay-100">
+
+                                <div class="icon-wrapped_skills">
+                                    <i class='bx bxl-css3'></i>
+                                </div>
+
+                                <h6>CSS</h6>
+                                <p>
+                                    Conhecimentos avançados em CSS, flexbox, grid-layout e responsividade.
+                                </p>
+
+                                <div class="skill-stars-zip">
+                                    <i class='bx bxs-star'></i>
+                                    <i class='bx bxs-star'></i>
+                                    <i class='bx bxs-star'></i>
+                                    <i class='bx bxs-star'></i>
+                                    <i class='bx bx-star'></i>
+                                </div>
+                            </div>
+
+
+                            <!-- CARD 3 -->
+                            <div class="skills-unique to-hide !delay-200">
+
+                                <div class="icon-wrapped_skills">
+                                    <i class='bx bxl-javascript'></i>
+                                </div>
+
+                                <h6>Javascript</h6>
+                                <p>
+                                    Fluência em Javascript, escrita de código limpo, organizado e de fácil manutenção.
+                                </p>
+
+                                <div class="skill-stars-zip">
+                                    <i class='bx bxs-star'></i>
+                                    <i class='bx bxs-star'></i>
+                                    <i class='bx bxs-star'></i>
+                                    <i class='bx bx-star'></i>
+                                    <i class='bx bx-star'></i>
+                                </div>
+                            </div>
+
+
+
+                            <!-- CARD 4 -->
+                            <div class="skills-unique to-hide !delay-300">
+
+                                <div class="icon-wrapped_skills">
+                                    <i class='bx bxl-tailwind-css'></i>
+                                </div>
+
+                                <h6>Tailwind CSS</h6>
+                                <p>
+                                    Maestria na utilização do Tailwind, tanto inline quanto em arquivo separados,
+                                    criação de componentes, domínio das principais classes.
+                                </p>
+
+                                <div class="skill-stars-zip">
+                                    <i class='bx bxs-star'></i>
+                                    <i class='bx bxs-star'></i>
+                                    <i class='bx bxs-star'></i>
+                                    <i class='bx bxs-star'></i>
+                                    <i class='bx bxs-star-half'></i>
+                                </div>
+                            </div>
+
+
+                            <!-- CARD 5 -->
+                            <div class="skills-unique to-hide !delay-500">
+
+                                <div class="icon-wrapped_skills">
+                                    <i class='bx bxl-sass'></i>
+                                </div>
+
+                                <h6>SASS</h6>
+                                <p>
+                                    Experiência do uso dos recursos desta extensão do CSS.
+                                </p>
+
+                                <div class="skill-stars-zip">
+                                    <i class='bx bxs-star'></i>
+                                    <i class='bx bxs-star'></i>
+                                    <i class='bx bxs-star'></i>
+                                    <i class='bx bx-star'></i>
+                                    <i class='bx bx-star'></i>
+                                </div>
+                            </div>
+
+                        </div>
                     </div>
-
-                    <!-- TAILWIND -->
-                    <div id="card" class="to-hide !delay-700">
-                        <span>
-                            <i class='bx bxl-tailwind-css !bg-blue-500'></i>
-                        </span>
-
-                        <h2>Tailwind</h2>
-
-                        <p>
-                            <i class='bx bxs-star icon-star-full'></i>
-                            <i class='bx bxs-star icon-star-full'></i>
-                            <i class='bx bxs-star icon-star-full'></i>
-                            <i class='bx bxs-star icon-star-full'></i>
-                            <i class='bx bxs-star-half icon-star-half'></i>
-                        </p>
-
-                    </div>
-
-                    <!-- SASS -->
-                    <div id="card" class="to-hide !delay-1000">
-                        <span>
-                            <i class='bx bxl-sass !bg-pink-600'></i>
-                        </span>
-
-                        <h2>SASS</h2>
-
-                        <p>
-                            <i class='bx bxs-star icon-star-full'></i>
-                            <i class='bx bxs-star icon-star-full'></i>
-                            <i class='bx bxs-star icon-star-full'></i>
-                            <i class='bx bx-star'></i>
-                            <i class='bx bx-star'></i>
-                        </p>
-
-                    </div>
-
-                    <!-- JAVASCRIPT -->
-                    <div id="card" class="to-hide !delay-1500">
-                        <span>
-                            <i class='bx bxl-javascript !bg-yellow-500'></i>
-                        </span>
-
-                        <h2>Javascript</h2>
-
-                        <p>
-                            <i class='bx bxs-star icon-star-full'></i>
-                            <i class='bx bxs-star icon-star-full'></i>
-                            <i class='bx bxs-star icon-star-full'></i>
-                            <i class='bx bx-star'></i>
-                            <i class='bx bx-star'></i>
-                        </p>
-
-                    </div>
-
                 </div>
 
             </div>
         </section>
 
-
         <section id="projects">
+
+            <div class="title_global_wrapped">
+                <h1 class="to-hide">Projetos</h1>
+            </div>
+
             <div id="wrapped-cards">
                 <div id="cards">
-
-                    <h1 class="to-hide">Projetos</h1>
-
                     <div id="zip-cards">
 
                         <div class="card to-hide delay-700">
@@ -266,7 +306,7 @@
 
                         <div class="card to-hide delay-1500">
                             <div class="card-desc">
-                                <h3>Template Site Ecommerce</h3>
+                                <h3>Template Personal Trainer</h3>
                                 <p>
                                     Projeto em fase de estruturação e em Desenvolvimento
                                 </p>
@@ -287,12 +327,13 @@
             </div>
         </section>
 
-
         <section id="contact">
 
-            <div id="wrapped">
-
+            <div class="title_global_wrapped">
                 <h1 class="to-hide">Contato</h1>
+            </div>
+
+            <div id="wrapped">
 
                 <div id="teste" class="to-hide delay-700">
 
@@ -361,7 +402,6 @@
             </div>
 
         </section>
-
 
         <footer id="footer">
 

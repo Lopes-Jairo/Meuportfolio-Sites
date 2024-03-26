@@ -19,3 +19,4 @@ const observador = new IntersectionObserver((entries) => {
 
 // informamos que o observador irá observar todos as tags dentro da variavel elementos.
 elementos.forEach((el) => observador.observe(el))
+

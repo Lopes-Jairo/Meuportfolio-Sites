@@ -10,79 +10,155 @@
 
 /*----------------------------------------------------------------------- configurações pré página ------------------------ */
 
+html {
+    scroll-behavior: smooth;
+}
 
 .text-shadow {
-    text-shadow: 2px 2px 6px rgb(213, 211, 211);
+    text-shadow: 2px 2px 6px #323131;
+}
+
+.text-shadow-white {
+    text-shadow: 2px 2px 6px rgb(89, 87, 87);
 }
 
 
 
-.to-hide {
-    @apply opacity-0 -translate-x-3/4;
-    transition: all 0.7s;
 
+
+
+
+/*----- ANIMAÇÕES DE CARREGAMENTO ---------*/
+.to-hide {
+    @apply opacity-0 -translate-x-full;
+    transition: all 0.7s;
 }
 
 .to-show {
     @apply opacity-100 translate-x-0;
     transition: all 0.7s;
-
 }
 
 
 
 
-html {
-    scroll-behavior: smooth;
+/*______ FIM ANIMAÇÕES DE CARREGAMENTO ______*/
+
+
+
+
+
+
+
+/*------------------------------ CONFIGURANDO GRADIENTES ------------*/
+.gradient-bg {
+    /*ROXO*/
+    background-image: linear-gradient(to left, #21033d, #160838, #0e0a31, #080a2a, #040921);
+}
+
+.gradient-default {
+    @apply bg-gradient-to-r from-cyan-400 to-blue-600;
+    /* @apply bg-gradient-to-r from-orange-500 to-rose-600; */
+    /* @apply bg-gradient-to-r from-lime-500 to-green-600; */
+    /* @apply bg-gradient-to-r from-rose-600 to-purple-600; */
+
+}
+
+.gradient-text {
+    @apply bg-clip-text gradient-default;
+    -webkit-text-fill-color: transparent;
+}
+
+/*________________________________________________________________________________*/
+
+
+
+
+
+/*SOMBRA DAS IMAGENS*/
+.shadow-images-default {
+    @apply absolute scale-75 inset-0 m-auto rounded-full rotate-45 gradient-default blur-3xl;
+
+    /*Breakpoints*/
+    /*  @apply md:w-96 md:h-96; */
 }
 
 
+/*----------CONFIGURANDO TITULO DA SESSÃO PARA TODAS AS SESSÕES*/
+.title_global_wrapped {
+    @apply flex justify-center pt-5percent pb-28 pt-36;
 
-#grid-container {
-    @apply grid grid-cols-12 font-poppins;
+}
+
+.title_global_wrapped h1 {
+    @apply text-5xl font-semibold text-white transition-all duration-500 text-shadow;
+
+    /*breakpoint*/
+    @apply skillMob:text-3xl;
 }
 
 
+/*-------------------------*/
 
 
-
-
-/*------------------------------------- HEADER ---------------------------------------------------------*/
-
-
-header {
-    @apply col-span-full sticky top-0 left-0 right-0 z-10 p-3 z-50;
-    @apply flex justify-between items-center px-5percent text-gray-100 bg-gray-800;
+#container {
+    @apply grid grid-cols-12 gradient-bg;
 }
 
 
+/*------------------------------------- HEADER -------------------------------------------------------*/
 
-header>h1 span {
-    @apply inline-block text-5xl text-color-text animate-bounce;
+#container header {
+    @apply col-span-full flex items-center sticky left-0 right-0 top-0 justify-between px-10 py-7 bg-gray-950;
+    @apply border-0 border-gray-800 text-white transition-all z-50;
+
+    /*Breakpoint*/
+    /*  @apply lap:mx-10; */
+
+    /*Marcação*/
+    /* @apply bg-yellow-400; */
 }
 
-nav {
-    @apply bg-transparent flex transition-all;
+header #logo-zip {
+    @apply flex items-center;
+}
+
+#logo-zip h2 {
+    @apply text-4xl bg-clip-text gradient-text;
 
 
-    /*BREAKPOINTS*/
-    @apply desknav:gap-7;
+    /*breakpoints*/
+    @apply tbl:text-2xl;
 
-    @apply mobnav2:flex mobnav2:flex-col items-center mobnav2:gap-5 mobnav2:absolute mobnav2:top-0 mobnav2:left-0 mobnav2:right-0;
-    @apply mobnav2:bg-gray-800 mobnav2:mt-16 mobnav2:h-0 mobnav2:overflow-hidden transition-all border-gray-200;
+    /*Marcação*/
+    /* @apply bg-rose-400; */
 }
 
 
-/*ABRE A NAV QUANDO O MENU FOR CLICADO*/
-input:checked~nav {
-    @apply mobnav2:h-56;
+/*PONTO ANIMADO DA LOGO*/
+#logo-zip span {
+    @apply inline-block animate-bounce ml-1 text-5xl text-white;
+}
+
+.nav_logo a {
+    @apply font-semibold;
 }
 
 
-nav a {
-    @apply text-color-text text-lg hover:text-gray-100 font-semibold transition-all;
+/*Label que engloba o icone que servirá de botão*/
+header label {
+    @apply absolute right-6 text-3xl text-gray-700 hidden;
+
+    /*breakpoints*/
+    @apply tbl:block;
 
 }
+
+/*ícone X que é o botão*/
+label i {
+    @apply text-white;
+}
+
 
 /*OCULTA BOTAO MENU QUANDO CHECK MARCADO*/
 input:checked~label .btn-menu {
@@ -95,14 +171,34 @@ input:checked~label .btn-x {
 }
 
 
-/*OCULTA O MENU HAMBURGUER QUANDO A TELA CHEGAR EM 1050PX*/
-.btn-menu,
-.btn-x {
-    @apply text-3xl absolute top-4 right-3 mobnav3:hidden;
+header nav {
+    @apply flex gap-10 relative transition-all bg-transparent font-semibold text-lg;
+
+    /*breakpoints*/
+    /*Quando menor que 860px, a nav irá virará um menu lateral*/
+    @apply tbl:bg-gray-950 tbl:fixed tbl:top-0 tbl:left-0 tbl:h-full tbl:flex-col tbl:pl-7 tbl:pt-10 tbl:w-56 tbl:-translate-x-60 tbl:border-r-2 tbl:border-gray-700;
+
+    /*Marcação*/
+    /* @apply bg-sky-400; */
+}
+
+/*Mostra a nav que está oculta com o translate de volta para 0*/
+input:checked~nav {
+    @apply tbl:translate-x-0;
+}
+
+nav a {
+    @apply text-white;
 
 }
 
-/*_________________________________________ FIM DO HEADER _____________________________________*/
+nav a:hover {
+    @apply gradient-text;
+
+
+}
+
+/*__________________________________________________ FIM DO HEADER __________________________________________*/
 
 
 
@@ -138,203 +234,191 @@ input:checked~label .btn-x {
 
 
 
-/*------------------------------------------------------ HERO BANNER --------------------------------------------------------------- */
 
 
 
-#hero {
+/*------------------------------------- HERO -------------------------------------------------------*/
 
-    @apply col-span-full flex items-center justify-center bg-gray-200 pt-10 px-10 pb-10 relative;
 
-    @apply bg-mountain bg-no-repeat bg-cover bg-fixed overflow-hidden;
+#container #hero {
+    @apply col-span-full relative pt-24 pb-0 gradient-bg;
+
+
+    /*breakpoints*/
+    @apply lg:pt-28 lg:pb-72;
+
+    /*Marcação*/
+    /* @apply bg-rose-600; */
+}
+
+
+#hero #sub-hero {
+    @apply relative m-auto px-6;
+
+    /*breakpoints*/
+    @apply xl:container md:px-12 lg:px-6;
+
+    /*Marcação*/
+    /*  @apply bg-green-800; */
+}
+
+#sub-hero #subtitles-hero-zip {
+    @apply flex flex-col gap-7 mb-8;
+}
+
+#subtitles-hero-zip h1 {
+    @apply font-black text-4xl text-center text-white;
+
+    /*breakpoints*/
+    @apply sm:mx-auto sm:w-10/12 md:w-2/3 sm:text-5xl md:text-6xl lg:w-auto xl:text-7xl;
+
+}
+
+#subtitles-hero-zip h2 {
+    @apply font-black text-center text-transparent bg-clip-text gradient-default;
+
+    /*breakpoints*/
+    @apply sm:mx-auto sm:w-10/12 md:w-2/3 sm:text-4xl md:text-4xl lg:w-auto xl:text-6xl small:text-3xl mini:text-xl;
+}
+
+
+/*CONTAINER QUE ENGLOBA TUDO APÓS OS TITULOS*/
+#sub-hero #buttons-img-zip {
+    @apply flex flex-col items-center lg:flex;
+
+    /*Marcação*/
+    /* @apply bg-orange-500 p-3; */
+}
+
+
+/*CONTAINER QUE ENGLOBA BOTÕES E DESCRIÇÃO*/
+#buttons-img-zip #desc-buttons-zip {
+    @apply relative mt-8 space-y-8 text-center;
+
+    /*breakpoints*/
+    @apply md:mt-16 sm:w-10/12 md:w-2/3 lg:ml-0 sm:mx-auto lg:text-left lg:mr-auto lg:w-7/12;
+
+    /*Marcação*/
+    /* @apply bg-purple-400; */
+}
+
+
+#desc-buttons-zip p {
+    @apply text-white;
 
     /*Breakpoints*/
-    @apply little:px-4;
-
+    @apply sm:text-lg lg:w-11/12;
 }
 
 
-#hero #card-wrapped {
+/*FRASE ISOLADA ACIMA DO DOS BOTÕES*/
+#desc-buttons-zip>span {
+    @apply block text-xl font-semibold gradient-text;
 
-    @apply relative max-w-2xl mx-auto break-words bg-white mb-6 shadow-2xl rounded-xl mt-16 p-5 z-10;
+    /*Breakpoint*/
+    @apply small:text-lg mini:text-sm;
 
+    /*Marcação*/
+    /* @apply bg-green-300; */
+}
+
+
+/*CONTAINER QUE ENGLOBA ICONES GITHUB LINKEDIN E KO-FI*/
+#desc-buttons-zip #buttons-wrapped {
+    @apply grid grid-cols-3 gap-2;
 
     /*Breakpoints*/
-    @apply little:p-2;
+    @apply md:space-x-6 md:flex md:justify-center lg:justify-start;
 
+    /*Marcação*/
+    /*  @apply bg-red-800 p-2; */
 }
 
 
-/*engloba a parte superior inteira do card*/
+/*ICONES GITHUB LINKEDIN*/
+#buttons-wrapped a {
+    @apply flex justify-center items-center relative px-4 py-2 font-semibold gap-2 shadow-2xl transition-all;
 
-#card-wrapped #top-card {
+    /*Bordas*/
+    @apply rounded border border-gray-50 bg-transparent text-gray-50;
 
-    @apply flex flex-wrap justify-center;
+    /*Pseudo Elementos*/
+    @apply before:absolute before:left-0 before:top-0 before:h-full before:w-0 before:duration-700;
+}
 
+#buttons-wrapped a:hover {
+    @apply text-gray-950 before:w-full before:bg-sky-500;
+
+}
+
+#buttons-wrapped a i {
+    @apply text-4xl z-10;
+}
+
+#buttons-wrapped a span {
+    @apply little:hidden;
+}
+
+
+/*------------Botão CONTACTAR*/
+#buttons-wrapped #contact-button {
+    @apply relative px-7 py-3 overflow-hidden transition-all rounded;
+
+    /*Texto, bg e bordas*/
+    @apply text-xl font-semibold border border-gray-700 gradient-default text-white shadow-2xl;
+
+    /*Pseudo elementos Before*/
+    @apply before:absolute before:left-0 before:top-0 before:h-full before:w-0 before:duration-700;
+
+    /*Pseudo elementos After*/
+    @apply after:absolute after:right-0 after:top-0 after:h-full after:w-0 after:duration-700;
 }
 
 
 
-/*Container da imagem*/
+#buttons-wrapped #contact-button:hover {
+    @apply text-sky-500;
 
-#top-card #image-wrapped {
+    /*Pseudo Before*/
+    @apply hover:before:w-2/4 hover:before:bg-gray-950;
 
-    @apply w-full flex justify-center p-10 relative;
-
+    /*Pseudo Before*/
+    @apply after:w-2/4 after:bg-gray-950;
 }
 
 
-#image-wrapped img {
-
-    @apply rounded-full align-middle border-8 border-white absolute -m-16 -ml-20 lg:-ml-16 max-w-[150px];
-
-    @apply -translate-y-10;
-
+#buttons-wrapped #contact-button span {
+    @apply relative z-10 little:block little:text-sm;
 }
 
-
-
-/*container que engloba os links sociais*/
-
-#top-card #socials-wrapped {
-
-    @apply flex justify-center gap-2 w-full lg:pt-4 pt-8 pb-0;
-
-}
-
-
-#socials-wrapped .social-link-zip {
-
-    @apply p-3 text-center;
-
-}
-
-
-/*icones sociais*/
-
-.social-link-zip a {
-    @apply text-slate-600 hover:text-color-text focus:text-color-text transition-all;
-}
-
-
-.social-link-zip a i {
-
-    @apply text-4xl block;
-
-}
-
-
-.social-link-zip a span {
-
-    @apply text-lg;
+/*--------------------- FIM BOTÃO CONTACTAR*/
 
 
 
-}
-
-
-/*PARTE MÉDIA DO CARD*/
-
-#mid-card {
-
-    @apply text-center mt-5;
-
-}
-
-
-#mid-card h1 {
-
-    @apply text-3xl mt-0 mb-2 text-slate-600 font-bold text-shadow;
-
-}
-
-
-#mid-card h3 {
-
-    @apply text-xl mt-0 mb-2 text-color-text font-bold text-shadow;
-
-}
-
-
-/*PARTE FINAL DO CARD*/
-
-#bottom-card {
-
-    @apply mt-6 py-6 border-t border-slate-200 text-center;
-
-}
-
-
-#bottom-card #bottom-card-2 {
-
-    @apply flex flex-wrap justify-center;
-
-}
-
-#bottom-card-2 #desc-bottom-wrapped {
-
-    @apply w-full px-4;
-
-}
-
-
-#desc-bottom-wrapped p {
-
-    @apply font-light leading-relaxed text-slate-600 mb-4 text-center;
+/*IMAGEM HERO BANNER*/
+#buttons-img-zip #img-wrapped {
+    @apply relative mt-3 w-[75%] animate-floatImage;
 
     /*Breakpoints*/
-    @apply little:leading-5 little:text-sm;
+    @apply md:mt-2 lg:absolute lg:w-7/12 lg:-right-10 large:w-[50%] large:right-5 little:w-full;
 
+    /*Marcação*/
+    /* @apply bg-yellow-50; */
 }
 
 
-#desc-bottom-wrapped a {
+#img-wrapped #shadow-blue-zip {
+    @apply absolute scale-90 inset-0 m-auto w-full h-full rounded-full rotate-45 gradient-default blur-3xl;
 
-    @apply inline-block bg-gray-800 p-3 rounded text-color-text font-bold mt-3 hover:bg-color-text hover:text-gray-800 transition-all;
-
+    /*Breakpoints*/
+    @apply md:scale-110 md:w-96 md:h-96 lg:scale-110 large:scale-125;
 }
 
-/* -------------- NUVENS DA ESQUERDA <-- */
-#clouds-icons-left {
-    @apply absolute left-0 top-0 flex flex-col gap-48;
-    /*-left-28*/
+#img-wrapped img {
+    @apply relative w-full;
 }
 
-#clouds-icons-left img {
-    @apply w-28 opacity-0 animate-cloudRight;
-}
-
-#clouds-icons-left img:nth-child(1) {
-    animation-delay: 0.2s;
-}
-
-#clouds-icons-left img:nth-child(2) {
-    animation-delay: 5s;
-}
-
-
-/*---------- NUVENS DA DIREITA --> */
-#clouds-icons-right {
-    @apply absolute right-0 flex flex-col gap-24;
-    /*-right-28*/
-
-}
-
-#clouds-icons-right img {
-    @apply w-28 opacity-0 animate-cloudLeft;
-}
-
-#clouds-icons-right img:nth-child(1) {
-    animation-delay: 0.2s;
-}
-
-#clouds-icons-right img:nth-child(2) {
-    animation-delay: 6s;
-}
-
-/*________________________________________________________ FIM HERO BANNER _________________________________________________________-*/
-
-
+/*__________________________________________________ FIM DO HERO __________________________________________*/
 
 
 
@@ -378,66 +462,164 @@ input:checked~label .btn-x {
 
 #skills {
 
-    @apply col-span-full overflow-hidden flex items-center justify-center;
+    @apply col-span-full overflow-hidden flex flex-col items-center justify-center gradient-bg;
+
+
+    /*Marcação*/
 
 }
 
-/*Container que engloba quem engloba os cards*/
-#skills #wrapped {
+#skills #all-wrapped_skills {
+    @apply flex flex-col container relative mx-auto p-4;
 
-    @apply px-2 md:lg:xl:px-40 border-t border-b py-20 bg-white w-full;
 
+    /*Marcação*/
+    /* @apply bg-rose-600; */
+}
+
+
+/*ONDE ENGLOBA OS DOIS LADOS DOS ELEMENTOS*/
+#all-wrapped_skills #sub-wrapped_skills {
+    @apply flex items-center flex-col;
+
+    /*Breakpoint*/
+    @apply skillTab:flex-row skillTab:items-start;
+
+    /*Marcação*/
+    /* @apply bg-blue-500 p-5; */
+}
+
+
+/*CONTAINER DA IMAGEM*/
+#sub-wrapped_skills #img-zip_skills {
+    @apply w-10/12 px-12;
+
+    /*Breakpoint*/
+    @apply skillDK:w-2/5 skilltab2:w-full;
+
+    /*Marcação*/
+    /* @apply bg-green-500 p-5; */
+}
+
+
+#img-zip_skills #sub-img-zip_skills {
+    @apply relative flex flex-col break-words w-full mb-6 shadow-lg rounded-lg order-1;
+
+
+    /*Breakpoint*/
+    @apply skillMob:hidden skilltab2:flex-row;
+
+    /*Marcação*/
+    /* @apply bg-pink-500 p-5; */
+}
+
+#sub-img-zip_skills #sub-sub-img-zip-skills {
+    @apply relative;
+
+
+    /*Marcação*/
+    /* @apply bg-amber-700 p-4; */
+}
+
+
+/*SOMBRA DA IMAGEM*/
+#sub-sub-img-zip-skills #shadow-img {
+    @apply shadow-images-default;
+
+    /*breakpoint*/
+    @apply skilltab2:w-[40%];
 
 }
 
 
-#wrapped h1 {
-    @apply text-4xl text-gray-600 text-center pb-10 font-semibold text-shadow;
+#sub-img-zip_skills img {
+    @apply w-full align-middle rounded-t-lg animate-floatImage;
+
+
+    /*breakpoint*/
+    @apply p-0;
+
+    /*Marcação*/
+    /* @apply bg-yellow-500 p-5; */
 }
 
 
-/*Container que engloba os cards*/
-#wrapped #cards-wrapped {
+#sub-img-zip_skills blockquote {
+    @apply relative p-8 mb-4 shadow-2xl;
 
-    @apply grid bg-gray-200 shadow-2xl border-2 p-5 rounded-2xl m-auto max-w-7xl;
-
-    /*Breakpoints*/
-    @apply small:grid-cols-1 mobile:grid-cols-2 tablet:grid-cols-2 desktop:grid-cols-3 grid-cols-4;
-    @apply small:w-90percent mobile:w-90percent tablet:w-90percent;
-
+    /*Marcação*/
+    /* @apply bg-lime-500 p-5; */
 }
 
-/*Cards individuais*/
-#cards-wrapped #card {
-
-    @apply flex flex-col items-center text-center gap-2 p-10 m-5 md:lg:xl:border-b hover:bg-slate-50 cursor-pointer;
-
-    @apply border-b-2 border-r-4 border-gray-300 rounded-xl shadow-2xl bg-gray-100;
+#sub-img-zip_skills blockquote h4 {
+    @apply text-xl font-bold text-white;
 }
 
-/*Icones dentro dos cards individuais*/
-#card span i {
-    /*As cores individuais de cada icone estão sendo definidas no HTML*/
-    @apply bg-red-500 text-white text-7xl rounded-full p-2;
 
+#sub-img-zip_skills blockquote p {
+    @apply font-light mt-2 text-white;
 }
 
-#card h2 {
 
-    @apply text-xl font-medium text-slate-700 mt-3;
+/*CONTAINER DOS CARDS*/
+#sub-wrapped_skills #skills-topics-zip {
+    @apply w-full px-4 mx-auto;
 
+    /*Breakpoint*/
+    @apply skillDK:w-[65%];
+
+    /*Marcação*/
+    /* @apply bg-orange-500 p-5; */
 }
 
-#card p {
 
-    @apply flex justify-center;
 
+
+#skills-topics-zip .cards-skills {
+    @apply w-full p-2;
+
+    /*Breakpoint*/
+    @apply skillDK:grid skillDK:grid-cols-2 skillDK:gap-x-5 skillDK:gap-y-12 skillMob:flex skillMob:flex-col skillMob:gap-y-10;
+
+    /*Marcação*/
+    /* @apply bg-sky-300; */
 }
 
-#card p i {
-    @apply text-2xl text-color-text;
+
+.cards-skills .skills-unique {
+    @apply relative flex flex-col mt-4 text-white shadow-2xl;
+    @apply bg-gray-950 p-4 rounded-lg;
+
+    /*Breakpoint*/
+    @apply skillDK:justify-end;
+
+    /*Marcação*/
+    /* @apply bg-red-700 p-2; */
 }
 
+
+
+.skills-unique .icon-wrapped_skills i {
+    @apply text-5xl gradient-text animate-lateralSpin;
+}
+
+
+.skills-unique h6 {
+    @apply text-xl mb-1 font-semibold text-shadow;
+}
+
+.skills-unique p {
+    @apply mb-4;
+}
+
+.skills-unique .skill-stars-zip {
+    @apply flex gap-2 w-[50%];
+}
+
+
+.skill-stars-zip i {
+    @apply text-xl text-yellow-400;
+}
 
 /*___________________________________________________FIM DO SKILLS ___________________________________________*/
 
@@ -466,7 +648,11 @@ input:checked~label .btn-x {
 
 /*------------------------------------- PROJECTS ---------------------------------------------------------*/
 #projects {
-    @apply bg-gray-100 col-span-full min-h-screen overflow-hidden flex items-center justify-center;
+    @apply col-span-full min-h-screen overflow-hidden flex flex-col items-center justify-center;
+
+
+    /*Marcação*/
+    /* @apply bg-purple-700; */
 
 }
 
@@ -475,12 +661,18 @@ input:checked~label .btn-x {
 #projects #wrapped-cards {
 
     @apply p-7 w-full;
+
+    /*Marcação*/
+    /* @apply bg-orange-600; */
 }
 
 
 /*CONTAINER QUE ENGLOBA QUEM ENGLOBA OS CARDS*/
 #wrapped-cards #cards {
     @apply container m-auto text-gray-500 xl:px-0 w-full;
+
+    /*Marcação*/
+    /* @apply bg-cyan-400; */
 }
 
 #cards h1 {
@@ -500,7 +692,9 @@ input:checked~label .btn-x {
 
 /*CARD INDIVIDUAL*/
 #zip-cards .card {
-    @apply flex flex-col bg-white rounded-2xl px-8 py-12 sm:px-12 lg:px-8 shadow-2xl small:w-full overflow-hidden;
+    @apply flex flex-col rounded-2xl px-8 py-12 sm:px-12 lg:px-8 shadow-2xl small:w-full overflow-hidden;
+    @apply border border-gray-950 border-b-4 border-r-4 bg-gray-950;
+
 }
 
 
@@ -509,28 +703,28 @@ input:checked~label .btn-x {
 }
 
 .card-desc h3 {
-    @apply text-2xl font-semibold text-color-text text-shadow;
+    @apply text-2xl font-semibold gradient-text;
 }
 
 .card-desc p {
-    @apply mb-6;
+    @apply mb-6 text-white;
 }
 
 .card-desc h4 {
-    @apply font-bold text-gray-600 p-2 text-xl;
+    @apply font-bold gradient-text p-2 text-xl;
 }
 
 .card-desc #card-usage-tec {
-    @apply text-4xl
+    @apply text-4xl text-white;
 }
 
 .card-desc a {
-    @apply block font-medium text-color-text hover:text-gray-800 text-xl w-fit transition-all;
+    @apply block font-medium text-rose-600 hover:text-gray-800 text-xl w-fit transition-all;
 }
 
 
 .card #icon-card {
-    @apply text-7xl ml-auto -mb-10 opacity-60;
+    @apply text-7xl ml-auto -mb-10 opacity-60 gradient-text;
 }
 
 /*_____________________________________ FIM DO PROJECTS ________________________________________*/
@@ -561,19 +755,24 @@ input:checked~label .btn-x {
 /*-------------------------------------------------- CONTATO -------------------------------------------------------------------------*/
 
 #contact {
+    @apply col-span-full overflow-hidden flex flex-col items-center justify-center;
 
-    @apply col-span-full overflow-hidden flex items-center justify-center;
-
+    /*Marcação*/
+    /* @apply bg-green-500; */
 }
 
 
 #contact #wrapped {
     @apply w-full pt-20;
 
+    /*Marcação*/
+    /* @apply bg-blue-500; */
+
 }
 
-#wrapped>h1 {
-    @apply font-semibold text-shadow;
+#contact #wrapped h1 {
+    @apply font-semibold text-4xl text-center pb-10 gradient-text;
+
 }
 
 
@@ -596,16 +795,18 @@ input:checked~label .btn-x {
     @apply flex flex-col items-center;
 }
 
-.wrapped-titles h1 {}
 
 
 .wrapped-titles h3 {
-    @apply text-2xl text-color-text mb-16 font-semibold text-shadow;
+    @apply text-2xl text-white mb-16 font-semibold;
+
+    /*Marcação*/
+    /* @apply bg-purple-600; */
 }
 
 
 #desc-contact .wrapped-p {
-    @apply text-gray-600 leading-7;
+    @apply text-white leading-7;
 }
 
 
@@ -613,15 +814,18 @@ input:checked~label .btn-x {
 /*LADO DIREITO DA SESSAO CONTATOS, FORMULARIO*/
 #teste #wrapped-form {
 
-    @apply p-10 bg-gray-200 mt-5 rounded-xl shadow-2xl min-w-fit max-w-2xl;
+    @apply bg-gray-950 p-10 mt-5 rounded-xl shadow-2xl min-w-fit max-w-2xl border-2 border-gray-950;
 
     @apply mobnav2:w-full;
 
+    /*Marcação*/
+    /* @apply bg-yellow-600; */
+
 }
 
-#wrapped-form h1 {
+#teste #wrapped-form h1 {
 
-    @apply text-3xl mb-6 text-color-text text-center font-semibold text-shadow;
+    @apply text-3xl mb-6 text-center font-semibold gradient-text;
 
     /*Breakpoints*/
     @apply little:text-2xl;
@@ -630,7 +834,7 @@ input:checked~label .btn-x {
 
 #wrapped-form p {
 
-    @apply text-sm font-semibold mb-10 text-gray-500 text-center;
+    @apply text-sm font-semibold mb-10 text-white text-center;
 
 }
 
@@ -639,6 +843,14 @@ input:checked~label .btn-x {
     @apply space-y-4;
 
 }
+
+
+#wrapped-form form label {
+
+    @apply text-white;
+
+}
+
 
 form div #wrapped-inputs {
 
@@ -664,7 +876,7 @@ form #textarea-div {
 
 form div #button {
 
-    @apply w-full bg-gray-600 text-white p-2 rounded-md hover:bg-gray-800 focus:bg-black focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-900 transition-colors duration-300;
+    @apply w-full gradient-default text-white font-bold p-2 rounded-md hover:bg-white focus:bg-white focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-900 transition-colors duration-300;
 
 }
 
@@ -710,7 +922,7 @@ footer {
 
 footer #sub-footer {
 
-    @apply mx-auto text-white py-5 bg-gray-800 w-full;
+    @apply mx-auto text-gray-500 py-5 bg-gray-950 w-full;
 
 }
 
@@ -738,7 +950,7 @@ footer #sub-footer {
 
 #top-footer>p {
 
-    @apply text-lg text-color-text font-semibold;
+    @apply text-lg gradient-text font-semibold;
 
 }
 
@@ -774,7 +986,7 @@ footer #sub-footer {
 
 #bot-footer {
 
-    @apply mt-28 flex flex-col md:flex-row md:justify-between items-center text-sm text-gray-400;
+    @apply mt-28 flex flex-col md:flex-row md:justify-between items-center text-sm gradient-text font-semibold ml-2;
 
 }
 

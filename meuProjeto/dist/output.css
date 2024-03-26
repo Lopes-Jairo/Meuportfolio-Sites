@@ -656,14 +656,9 @@ video {
   border-radius: 0.75rem;
 }
 
-.bg-gray-300{
+.bg-gray-950{
   --tw-bg-opacity: 1;
-  background-color: rgb(209 213 219 / var(--tw-bg-opacity));
-}
-
-.bg-white{
-  --tw-bg-opacity: 1;
-  background-color: rgb(255 255 255 / var(--tw-bg-opacity));
+  background-color: rgb(3 7 18 / var(--tw-bg-opacity));
 }
 
 .p-12{
@@ -712,22 +707,23 @@ video {
   font-weight: 600;
 }
 
-.text-color-text{
-  --tw-text-opacity: 1;
-  color: rgb(51 153 255 / var(--tw-text-opacity));
-}
-
 .text-gray-800{
   --tw-text-opacity: 1;
   color: rgb(31 41 55 / var(--tw-text-opacity));
 }
 
-.underline{
-  text-decoration-line: underline;
+.text-rose-600{
+  --tw-text-opacity: 1;
+  color: rgb(225 29 72 / var(--tw-text-opacity));
 }
 
-.opacity-70{
-  opacity: 0.7;
+.text-white{
+  --tw-text-opacity: 1;
+  color: rgb(255 255 255 / var(--tw-text-opacity));
+}
+
+.underline{
+  text-decoration-line: underline;
 }
 
 .shadow-2xl{
@@ -901,11 +897,12 @@ html {
 
 body{
   position: relative;
+  overflow-x: auto;
 }
 
 #container{
   display: grid;
-  width: 100vw;
+  width: 100%;
   grid-template-columns: repeat(12, minmax(0, 1fr));
   /*ROXO*/
   background-image: linear-gradient(to left, #21033d, #160838, #0e0a31, #080a2a, #040921);

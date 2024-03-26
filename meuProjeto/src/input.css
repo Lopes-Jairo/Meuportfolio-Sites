@@ -108,12 +108,12 @@ html {
 
 /*-------------------------*/
 body {
-    @apply relative;
+    @apply relative overflow-x-auto;
 }
 
 
 #container {
-    @apply grid grid-cols-12 gradient-bg w-screen;
+    @apply grid grid-cols-12 gradient-bg w-full;
 }
 
 

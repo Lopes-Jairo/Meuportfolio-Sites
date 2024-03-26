@@ -107,10 +107,13 @@ html {
 
 
 /*-------------------------*/
+body {
+    @apply relative;
+}
 
 
 #container {
-    @apply grid grid-cols-12 gradient-bg overflow-hidden;
+    @apply grid grid-cols-12 gradient-bg w-screen;
 }
 
 

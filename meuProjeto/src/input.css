@@ -110,7 +110,7 @@ html {
 
 
 #container {
-    @apply grid grid-cols-12 gradient-bg;
+    @apply grid grid-cols-12 gradient-bg overflow-hidden;
 }
 
 

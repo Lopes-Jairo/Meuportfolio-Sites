@@ -902,6 +902,7 @@ html {
 #container{
   display: grid;
   grid-template-columns: repeat(12, minmax(0, 1fr));
+  overflow: hidden;
   /*ROXO*/
   background-image: linear-gradient(to left, #21033d, #160838, #0e0a31, #080a2a, #040921);
 }

@@ -798,6 +798,8 @@ html {
 
 /*------------------------------ CONFIGURANDO GRADIENTES ------------*/
 
+/*background do template*/
+
 .gradient-bg {
   /*ROXO*/
   background-image: linear-gradient(to left, #21033d, #160838, #0e0a31, #080a2a, #040921);
@@ -814,6 +816,8 @@ html {
   /* @apply bg-gradient-to-r from-rose-600 to-purple-600; */
 }
 
+/*Background dos textos*/
+
 .gradient-text{
   -webkit-background-clip: text;
           background-clip: text;
@@ -826,6 +830,14 @@ html {
   /* @apply bg-gradient-to-r from-lime-500 to-green-600; */
   /* @apply bg-gradient-to-r from-rose-600 to-purple-600; */
   -webkit-text-fill-color: transparent;
+}
+
+.color-default{
+  --tw-text-opacity: 1;
+  color: rgb(225 29 72 / var(--tw-text-opacity));
+  --tw-shadow: 0 25px 50px -12px rgb(0 0 0 / 0.25);
+  --tw-shadow-colored: 0 25px 50px -12px var(--tw-shadow-color);
+  box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
 }
 
 /*________________________________________________________________________________*/
@@ -989,6 +1001,8 @@ header #logo-zip{
 
 .nav_logo a{
   font-weight: 600;
+  /*Marcação*/
+  /* @apply bg-rose-300; */
 }
 
 /*Label que engloba o icone que servirá de botão*/
@@ -1083,18 +1097,13 @@ nav a{
   color: rgb(255 255 255 / var(--tw-text-opacity));
 }
 
-nav a:hover{
-  -webkit-background-clip: text;
-          background-clip: text;
-  background-image: linear-gradient(to right, var(--tw-gradient-stops));
-  --tw-gradient-from: #22d3ee var(--tw-gradient-from-position);
-  --tw-gradient-to: rgb(34 211 238 / 0) var(--tw-gradient-to-position);
-  --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to);
-  --tw-gradient-to: #2563eb var(--tw-gradient-to-position);
-  /* @apply bg-gradient-to-r from-orange-500 to-rose-600; */
-  /* @apply bg-gradient-to-r from-lime-500 to-green-600; */
-  /* @apply bg-gradient-to-r from-rose-600 to-purple-600; */
-  -webkit-text-fill-color: transparent;
+nav a:hover,
+nav a:focus{
+  --tw-text-opacity: 1;
+  color: rgb(225 29 72 / var(--tw-text-opacity));
+  --tw-shadow: 0 25px 50px -12px rgb(0 0 0 / 0.25);
+  --tw-shadow-colored: 0 25px 50px -12px var(--tw-shadow-color);
+  box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
 }
 
 /*__________________________________________________ FIM DO HEADER __________________________________________*/
@@ -1418,17 +1427,11 @@ nav a:hover{
   font-size: 1.25rem;
   line-height: 1.75rem;
   font-weight: 600;
-  -webkit-background-clip: text;
-          background-clip: text;
-  background-image: linear-gradient(to right, var(--tw-gradient-stops));
-  --tw-gradient-from: #22d3ee var(--tw-gradient-from-position);
-  --tw-gradient-to: rgb(34 211 238 / 0) var(--tw-gradient-to-position);
-  --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to);
-  --tw-gradient-to: #2563eb var(--tw-gradient-to-position);
-  /* @apply bg-gradient-to-r from-orange-500 to-rose-600; */
-  /* @apply bg-gradient-to-r from-lime-500 to-green-600; */
-  /* @apply bg-gradient-to-r from-rose-600 to-purple-600; */
-  -webkit-text-fill-color: transparent;
+  --tw-text-opacity: 1;
+  color: rgb(225 29 72 / var(--tw-text-opacity));
+  --tw-shadow: 0 25px 50px -12px rgb(0 0 0 / 0.25);
+  --tw-shadow-colored: 0 25px 50px -12px var(--tw-shadow-color);
+  box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
   /*Breakpoint*/
 }
 
@@ -2006,7 +2009,10 @@ nav a:hover{
   line-height: 1.75rem;
   font-weight: 700;
   --tw-text-opacity: 1;
-  color: rgb(255 255 255 / var(--tw-text-opacity));
+  color: rgb(225 29 72 / var(--tw-text-opacity));
+  --tw-shadow: 0 25px 50px -12px rgb(0 0 0 / 0.25);
+  --tw-shadow-colored: 0 25px 50px -12px var(--tw-shadow-color);
+  box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
 }
 
 #sub-img-zip_skills blockquote p{
@@ -2128,6 +2134,11 @@ nav a:hover{
   line-height: 1.75rem;
   font-weight: 600;
   text-shadow: 2px 2px 6px #323131;
+  --tw-text-opacity: 1;
+  color: rgb(225 29 72 / var(--tw-text-opacity));
+  --tw-shadow: 0 25px 50px -12px rgb(0 0 0 / 0.25);
+  --tw-shadow-colored: 0 25px 50px -12px var(--tw-shadow-color);
+  box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
 }
 
 .skills-unique p{
@@ -2415,11 +2426,14 @@ nav a:hover{
   font-size: 1.25rem;
   line-height: 1.75rem;
   font-weight: 500;
-  --tw-text-opacity: 1;
-  color: rgb(225 29 72 / var(--tw-text-opacity));
   transition-property: all;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   transition-duration: 150ms;
+  --tw-text-opacity: 1;
+  color: rgb(225 29 72 / var(--tw-text-opacity));
+  --tw-shadow: 0 25px 50px -12px rgb(0 0 0 / 0.25);
+  --tw-shadow-colored: 0 25px 50px -12px var(--tw-shadow-color);
+  box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
 }
 
 .card-desc a:hover{
@@ -2540,7 +2554,10 @@ nav a:hover{
   line-height: 2rem;
   font-weight: 600;
   --tw-text-opacity: 1;
-  color: rgb(255 255 255 / var(--tw-text-opacity));
+  color: rgb(225 29 72 / var(--tw-text-opacity));
+  --tw-shadow: 0 25px 50px -12px rgb(0 0 0 / 0.25);
+  --tw-shadow-colored: 0 25px 50px -12px var(--tw-shadow-color);
+  box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
   /*Marcação*/
   /* @apply bg-purple-600; */
 }

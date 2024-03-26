@@ -107,24 +107,20 @@ html {
 
 
 /*-------------------------*/
-body {
-    @apply relative overflow-x-auto;
-}
-
 
 #container {
-    @apply grid grid-cols-12 gradient-bg w-full;
+    @apply relative grid grid-cols-12 gradient-bg w-full overflow-hidden;
 }
 
 
 /*------------------------------------- HEADER -------------------------------------------------------*/
 
 #container header {
-    @apply col-span-full flex items-center sticky left-0 right-0 top-0 justify-between px-10 py-7 bg-gray-950;
+    @apply col-span-full flex items-center fixed left-0 right-0 top-1 justify-between px-10 py-6 bg-gray-950;
     @apply border-0 border-gray-800 text-white transition-all z-50;
 
     /*Breakpoint*/
-    /*  @apply lap:mx-10; */
+    @apply lg:top-0;
 
     /*Marcação*/
     /* @apply bg-yellow-400; */
@@ -256,11 +252,11 @@ nav a:focus {
 
 
 #container #hero {
-    @apply col-span-full relative pt-24 pb-0 gradient-bg;
+    @apply col-span-full relative pt-44 pb-0 gradient-bg;
 
 
     /*breakpoints*/
-    @apply lg:pt-28 lg:pb-72;
+    @apply lg:pt-56 lg:pb-72;
 
     /*Marcação*/
     /* @apply bg-rose-600; */

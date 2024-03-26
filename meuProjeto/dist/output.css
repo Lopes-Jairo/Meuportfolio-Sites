@@ -895,15 +895,12 @@ html {
 
 /*-------------------------*/
 
-body{
-  position: relative;
-  overflow-x: auto;
-}
-
 #container{
+  position: relative;
   display: grid;
   width: 100%;
   grid-template-columns: repeat(12, minmax(0, 1fr));
+  overflow: hidden;
   /*ROXO*/
   background-image: linear-gradient(to left, #21033d, #160838, #0e0a31, #080a2a, #040921);
 }
@@ -911,10 +908,10 @@ body{
 /*------------------------------------- HEADER -------------------------------------------------------*/
 
 #container header{
-  position: sticky;
+  position: fixed;
   left: 0px;
   right: 0px;
-  top: 0px;
+  top: 0.25rem;
   grid-column: 1 / -1;
   display: flex;
   align-items: center;
@@ -923,8 +920,8 @@ body{
   background-color: rgb(3 7 18 / var(--tw-bg-opacity));
   padding-left: 2.5rem;
   padding-right: 2.5rem;
-  padding-top: 1.75rem;
-  padding-bottom: 1.75rem;
+  padding-top: 1.5rem;
+  padding-bottom: 1.5rem;
   z-index: 50;
   border-width: 0px;
   --tw-border-opacity: 1;
@@ -935,7 +932,15 @@ body{
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   transition-duration: 150ms;
   /*Breakpoint*/
-  /*  @apply lap:mx-10; */
+}
+
+@media (min-width: 1024px){
+  #container header{
+    top: 0px;
+  }
+}
+
+#container header {
   /*Marcação*/
   /* @apply bg-yellow-400; */
 }
@@ -1115,7 +1120,7 @@ nav a:focus{
 #container #hero{
   position: relative;
   grid-column: 1 / -1;
-  padding-top: 6rem;
+  padding-top: 11rem;
   padding-bottom: 0px;
   /*ROXO*/
   background-image: linear-gradient(to left, #21033d, #160838, #0e0a31, #080a2a, #040921);
@@ -1124,7 +1129,7 @@ nav a:focus{
 
 @media (min-width: 1024px){
   #container #hero{
-    padding-top: 7rem;
+    padding-top: 14rem;
     padding-bottom: 18rem;
   }
 }

@@ -74,7 +74,7 @@ module.exports = {
         slideRight: 'slideRight 1s 0.5s ease forwards',
         zoomIn: 'zoomIn 1s 0.2s ease forwards',
         floatImage: 'floatImage 4s 0.2s ease-in-out infinite',
-        lateralSpin: 'lateralSpin 2.2s 0.1s linear infinite',
+        lateralSpin: 'lateralSpin 6.2s 0.1s linear infinite',
         diagonalSpin: 'diagonalSpin 1.5s 0.1s linear infinite',
       },
 

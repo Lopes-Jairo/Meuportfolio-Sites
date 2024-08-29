@@ -55,6 +55,10 @@ html {
 .gradient-bg {
     /*ROXO*/
     background-image: linear-gradient(to left, #21033d, #160838, #0e0a31, #080a2a, #040921);
+
+
+    /*FIRE*/
+    /* background-image: linear-gradient(to right, #000000, #130008, #1b0014, #1d0020, #17022e); */
 }
 
 
@@ -74,7 +78,7 @@ html {
 
 
 .color-default {
-    @apply text-rose-600 shadow-2xl;
+    @apply text-sky-500 shadow-2xl;
 }
 
 /*________________________________________________________________________________*/
@@ -116,7 +120,7 @@ html {
 /*------------------------------------- HEADER -------------------------------------------------------*/
 
 #container header {
-    @apply col-span-full flex items-center fixed left-0 right-0 top-1 justify-between px-10 py-6 bg-gray-950;
+    @apply col-span-full flex items-center fixed left-0 right-0 top-[2px] justify-between px-10 py-6 bg-gray-950;
     @apply border-0 border-gray-800 text-white transition-all z-50;
 
     /*Breakpoint*/
@@ -602,16 +606,21 @@ nav a:focus {
     @apply bg-gray-950 p-4 rounded-lg;
 
     /*Breakpoint*/
-    @apply skillDK:justify-end;
+    
 
     /*Marcação*/
     /* @apply bg-red-700 p-2; */
 }
 
+.skills-unique .titles-icons{
+    @apply flex items-center gap-2 ;
 
+    /*Marcação*/
+    /* @apply bg-sky-200; */
+}
 
-.skills-unique .icon-wrapped_skills i {
-    @apply text-5xl gradient-text animate-lateralSpin;
+.skills-unique .icon-wrapped_skills img {
+    @apply w-12;
 }
 
 
@@ -620,11 +629,14 @@ nav a:focus {
 }
 
 .skills-unique p {
-    @apply mb-4;
+    @apply mb-4 mt-5;
 }
 
 .skills-unique .skill-stars-zip {
     @apply flex gap-2 w-[50%];
+
+    /*breakpoint*/
+    
 }
 
 
@@ -703,8 +715,12 @@ nav a:focus {
 
 /*CARD INDIVIDUAL*/
 #zip-cards .card {
-    @apply flex flex-col rounded-2xl px-8 py-12 sm:px-12 lg:px-8 shadow-2xl small:w-full overflow-hidden;
+    @apply flex flex-col rounded-2xl px-8 pt-12 sm:px-12 lg:px-8 shadow-2xl small:w-full overflow-hidden;
     @apply border border-gray-950 border-b-4 border-r-4 bg-gray-950;
+
+
+    /*MARCAÇÃO*/
+    /* @apply bg-sky-400; */
 
 }
 

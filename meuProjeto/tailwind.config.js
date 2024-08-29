@@ -119,6 +119,7 @@ module.exports = {
 
         // telas adaptaveis para BANNER
         'deskbanner': { 'max': '1200px' }, // telas do nav para desktop em diante
+        'mobileWhatsap': { 'max': '430px' },
 
         'little': { 'max': '500px' },
         'small': { 'max': '639px' },
@@ -135,6 +136,7 @@ module.exports = {
         'skillTab': { 'min': '861px' },
         'skillMob': { 'max': '630px' },
         'skilltab2': { 'max': '860px' },
+
 
 
       },

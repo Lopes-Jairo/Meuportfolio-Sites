@@ -1540,10 +1540,17 @@ nav a:focus{
   }
 }
 
+@media (max-width: 430px){
+  #buttons-wrapped a #textoContactar{
+    display: none !important;
+  }
+}
+
 /*------------Botão CONTACTAR*/
 
 #buttons-wrapped #contact-button{
   position: relative;
+  display: flex;
   overflow: hidden;
   border-radius: 0.25rem;
   padding-left: 1.75rem;
@@ -1598,6 +1605,12 @@ nav a:focus{
   width: 0px;
   content: var(--tw-content);
   transition-duration: 700ms;
+}
+
+@media (max-width: 430px){
+  #contact-button span{
+    display: none;
+  }
 }
 
 #buttons-wrapped #contact-button:hover{

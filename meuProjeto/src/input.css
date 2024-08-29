@@ -323,6 +323,7 @@ nav a:focus {
 
     /*Breakpoints*/
     @apply sm:text-lg lg:w-11/12;
+    
 }
 
 
@@ -374,10 +375,14 @@ nav a:focus {
     @apply little:hidden;
 }
 
+#buttons-wrapped a #textoContactar {
+    @apply mobileWhatsap:!hidden;
+}
+
 
 /*------------Botão CONTACTAR*/
 #buttons-wrapped #contact-button {
-    @apply relative px-7 py-3 overflow-hidden transition-all rounded;
+    @apply flex relative px-7 py-3 overflow-hidden transition-all rounded;
 
     /*Texto, bg e bordas*/
     @apply text-xl font-semibold border border-gray-700 gradient-default text-white shadow-2xl;
@@ -387,8 +392,12 @@ nav a:focus {
 
     /*Pseudo elementos After*/
     @apply after:absolute after:right-0 after:top-0 after:h-full after:w-0 after:duration-700;
+
 }
 
+#contact-button span{
+    @apply mobileWhatsap:hidden;
+}
 
 
 #buttons-wrapped #contact-button:hover {

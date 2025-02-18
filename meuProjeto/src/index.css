@@ -1,0 +1,136 @@
+@import "tailwindcss";
+
+/* IMPORTANDO FONTE */
+@import url("https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&family=Space+Grotesk:wght@300..700&display=swap");
+
+html {
+  scroll-behavior: smooth;
+}
+
+html,
+body {
+  background-color: #000000; /* Cor durante a transição */
+}
+
+* {
+  box-sizing: border-box;
+}
+
+@theme {
+  --color-mainTheme: #7f22fe;
+  --color-secondaryTheme: #1e90ff;
+  --color-myWhite: #e2e6e9;
+  --color-deepBlue: #050514;
+  --color-navBlack: #050514;
+  --font-SpaceGrotesk: "Space Grotesk", sans-serif;
+
+  /* ANIMAÇÕES */
+  /* Animação de carregamento */
+  --animate-loading: loading 0.8s ease-in-out infinite;
+  @keyframes loading {
+    0% {
+      transform: translateX(-100%);
+    }
+    100% {
+      transform: translateX(250%);
+    }
+  }
+
+  /* Efeito de cursor piscando */
+  --animate-blink: blink 0.8s step-end infinite;
+  @keyframes blink {
+    0%,
+    100% {
+      opacity: 1;
+    }
+    50% {
+      opacity: 0;
+    }
+  }
+
+  /* Animação de giro suave */
+  --animate-calmSpin: calm-spin 1.5s ease-in-out infinite;
+  @keyframes calm-spin {
+    0% {
+      transform: rotate(0deg);
+    }
+    80% {
+      transform: rotate(360deg); /* Giro rápido */
+    }
+    90% {
+      transform: rotate(360deg); /* Suavização no final */
+      animation-timing-function: ease-out;
+    }
+    100% {
+      transform: rotate(360deg); /* Pequena pausa antes do próximo giro */
+    }
+  }
+
+  /* Animação balanço */
+  --animate-balanco: balanco 1.5s ease-in-out infinite;
+  @keyframes balanco {
+    0%,
+    100% {
+      transform: rotate(-3deg);
+    }
+    50% {
+      transform: rotate(3deg);
+    }
+  }
+}
+
+strong {
+  @apply text-secondaryTheme italic;
+}
+
+.gradient-text {
+  @apply bg-gradient-to-r from-mainTheme/40 via-purple-600 to-mainTheme/50 bg-clip-text text-transparent;
+}
+
+.btn-hover {
+  /* Estilização padrão */
+  @apply bg-mainTheme text-white py-3 px-6 font-medium transition relative 
+         overflow-hidden rounded-sm border border-mainTheme shadow-lg;
+
+  /* Estilização do before (efeito de fundo animado) */
+  @apply before:absolute before:top-1/2 before:h-0 before:w-64 before:origin-center 
+         before:-translate-x-20 before:rotate-45 before:bg-deepBlue before:duration-1000;
+
+  /* Estilização do hover */
+  @apply hover:text-white hover:shadow-mainTheme hover:shadow-lg hover:before:h-64 
+         hover:before:-translate-y-32 transition-shadow duration-1000;
+
+  /* Estilização do active */
+  @apply active:scale-95;
+}
+
+.btn-hover2 {
+  /* Estilização padrão */
+  @apply bg-deepBlue text-white py-3 px-6 font-medium transition relative 
+         overflow-hidden rounded-sm border border-mainTheme shadow-lg;
+
+  /* Estilização do before (efeito de fundo animado) */
+  @apply before:absolute before:top-1/2 before:h-0 before:w-64 before:origin-center 
+         before:-translate-x-20 before:rotate-45 before:bg-mainTheme before:duration-1000;
+
+  /* Estilização do hover */
+  @apply shadow-mainTheme hover:shadow-none transition-shadow duration-1000 hover:before:h-64 
+         hover:before:-translate-y-32;
+
+  /* Estilização do active */
+  @apply active:scale-95;
+}
+
+.btn-submit {
+  /* Estilização padrão */
+  @apply bg-deepBlue text-white py-3 px-6 font-medium transition relative 
+         overflow-hidden rounded-sm border border-mainTheme shadow-lg;
+
+  /* Estilização do before (efeito de fundo animado) */
+  @apply transition-all duration-1000;
+
+  @apply shadow-mainTheme hover:shadow-secondaryTheme hover:border-secondaryTheme hover:-translate-y-1;
+}
+.input-style {
+  @apply w-full bg-white/5 font-semibold border border-white/10 rounded px-4 py-3 text-white transition focus:outline-none focus:border-secondaryTheme focus:bg-secondaryTheme/5;
+}

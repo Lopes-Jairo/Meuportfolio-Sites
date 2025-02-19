@@ -1,5 +1,3 @@
-import { delay } from "framer-motion";
-
 // Animação: Texto inicia pequeno e sem opacidade, crescendo até o tamanho original e ganhando opacidade
 const growIn = {
   initial: { scale: 0.5, opacity: 0 },

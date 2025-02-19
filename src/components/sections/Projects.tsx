@@ -7,17 +7,18 @@ const Projects = () => {
       nome: "Site Personal",
       desc: "Landing page de portfólio e contratação de personal trainer",
       tech_usadas: ["Tailwind CSS", "Javascript"],
-      link_projeto: "#",
+      link_projeto:
+        "https://tallespersonal.netlify.app/?fbclid=PAZXh0bgNhZW0CMTEAAaaPMvKtWX69xeTB1D4cAk62TXUPKd_7D9Z9hk1PK5h7bJ3TdYSOLVlVYHo_aem_IoYciumQZkrUEC4UvDGBYA",
     },
     {
       nome: "Gerador de senhas customizável",
-      desc: "Gerador de senhas fortes altamente customizável",
+      desc: "(EM BREVE) - Gerador de senhas fortes altamente customizável",
       tech_usadas: ["React", "Tailwind CSS", "Typescript", "Framer Motion"],
       link_projeto: "#",
     },
     {
       nome: "Plataforma E-comerce",
-      desc: "Front-end funcional de uma plataforma de e-comerce",
+      desc: "(EM BREVE) - Front-end funcional de uma plataforma de e-comerce",
       tech_usadas: ["React", "Tailwind CSS", "Typescript", "Framer Motion"],
       link_projeto: "#",
     },

@@ -1,11 +1,9 @@
-import { useState, useEffect } from "react";
 import Digitando from "../Digitando";
 import { motion } from "framer-motion";
 import {
   slideRight,
   slideLeft,
   slideDownFadeIn,
-  slideUpFadeIn,
   pulseIn,
 } from "../../animations";
 

@@ -1,5 +1,4 @@
-import { useState, useEffect, useRef } from "react";
-import { motion, useInView } from "framer-motion";
+import { useEffect } from "react";
 import { Menu } from "lucide-react";
 
 interface navProps {

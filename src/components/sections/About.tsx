@@ -1,5 +1,4 @@
 import { easeInOut, motion } from "framer-motion";
-import { div, span } from "framer-motion/client";
 import { slideUpFadeIn } from "../../animations";
 
 const About = () => {

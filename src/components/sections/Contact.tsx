@@ -2,7 +2,6 @@ import emailjs from "@emailjs/browser";
 import { useState, useEffect } from "react";
 import { slideUpFadeIn } from "../../animations";
 import { easeInOut, motion } from "framer-motion";
-import { span } from "framer-motion/m";
 
 const Contact = () => {
   const [nome, setNome] = useState("");

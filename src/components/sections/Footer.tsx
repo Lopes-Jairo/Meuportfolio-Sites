@@ -1,5 +1,3 @@
-import { span } from "framer-motion/client";
-
 const Footer = () => {
   const skillsFront = [
     {
